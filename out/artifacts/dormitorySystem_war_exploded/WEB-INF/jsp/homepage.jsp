@@ -181,7 +181,7 @@
 
                 <li>
                     <a href="javascript:;">
-                        <i class="layui-icon">&#xe613;</i>
+                        <i class="layui-icon">&#xe770;</i>
                         <cite>访客管理</cite>
                         <i class="iconfont nav_right">&#xe697;</i>
                     </a>

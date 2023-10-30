@@ -9,47 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="modify README.md">
-      <change afterPath="$PROJECT_DIR$/web/images/img.png" afterDir="false" />
+    <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="strengthen login module and modify css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_Studentlist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/css/font.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/css/xadmin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_Studentlist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dormitory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dormitory.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/visitor_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/visitor_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/usersLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/usersLogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/images/timg-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/class_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/class_Studentlist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/class_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/class_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/css/font.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/css/xadmin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/visitor_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/visitor_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/usersLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/usersLogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/timg-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -499,7 +464,7 @@
       <workItem from="1698631350490" duration="4315000" />
       <workItem from="1698636040949" duration="303000" />
       <workItem from="1698659697336" duration="759000" />
-      <workItem from="1698669390450" duration="6502000" />
+      <workItem from="1698669390450" duration="7765000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -541,7 +506,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698658808708</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="strengthen login module and modify css">
+      <option name="closed" value="true" />
+      <created>1698676003895</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698676003895</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -592,6 +565,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
@@ -599,7 +583,8 @@
     <MESSAGE value="replace the &quot;mysql-connector-java&quot; jar package" />
     <MESSAGE value="fix privileges of admin" />
     <MESSAGE value="modify README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify README.md" />
+    <MESSAGE value="strengthen login module and modify css" />
+    <option name="LAST_COMMIT_MESSAGE" value="strengthen login module and modify css" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DormitoryManager_master$dormitorySystem.ic" NAME="dormitorySystem Coverage Results" MODIFIED="1698501431280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
