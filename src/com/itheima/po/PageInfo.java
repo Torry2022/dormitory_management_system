@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PageInfo<T> implements Serializable {
-    private Integer pageIndex =1;//页码
-    private Integer pageSize =3;//显示条数
-    private Integer totalCount =0; //总条数
-    private Integer pageTotalCount =0; //总页数
+    private Integer pageIndex = 1; //页码
+    private Integer pageSize = 15; //显示条数
+    private Integer totalCount = 0; //总条数
+    private Integer pageTotalCount = 0; //总页数
     //每页显示的数据集合
-    private List<T> list = new ArrayList<T>();
+    private List<T> list = new ArrayList<>();
 
     public Integer getPageIndex() {
         return pageIndex;
@@ -18,8 +18,8 @@ public class PageInfo<T> implements Serializable {
 
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
-        if (pageIndex==null || pageIndex<1){
-            this.pageIndex =1;
+        if (pageIndex == null || pageIndex < 1) {
+            this.pageIndex = 1;
         }
     }
 
@@ -29,8 +29,8 @@ public class PageInfo<T> implements Serializable {
 
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
-        if (pageSize ==null || pageSize<1){
-            this.pageSize =3;
+        if (pageSize == null || pageSize < 1) {
+            this.pageSize = 15;
         }
     }
 
@@ -45,9 +45,9 @@ public class PageInfo<T> implements Serializable {
     //获取总页数
     public Integer getPageTotalCount() {
 
-        this.pageTotalCount = totalCount/pageSize;
-        if(totalCount%pageSize!=0){
-            this.pageTotalCount ++;
+        this.pageTotalCount = totalCount / pageSize;
+        if (totalCount % pageSize != 0) {
+            this.pageTotalCount++;
         }
         return pageTotalCount;
     }

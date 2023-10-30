@@ -13,30 +13,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
-/**
- * @program: dormitorySystem
- * @description: 访客管理
- * @author: Joyrocky
- * @create: 2019-05-14 12:37
- **/
 @Controller
 public class VisitorController {
-    //依赖注入
     @Autowired
     private VisitorService visitorService;
+
     /**
      * 分页查询
      * pageIndex 当前页码
      * pageSize  显示条数
      */
     @RequestMapping(value = "/findVisitor")
-    public String findVisitor(String v_name, Integer v_phone , Integer pageIndex,
+    public String findVisitor(String v_name, Integer v_phone, Integer pageIndex,
                               Integer pageSize, Model model) {
-
-        PageInfo<Visitor> pi = visitorService.findPageInfo(v_name,v_phone,
-                                                pageIndex,pageSize);
-        model.addAttribute("pi",pi);
-        model.addAttribute("v_name",v_name);
+        PageInfo<Visitor> pi = visitorService.findPageInfo(v_name, v_phone,
+                pageIndex, pageSize);
+        model.addAttribute("pi", pi);
+        model.addAttribute("v_name", v_name);
         return "visitor_list";
     }
 
@@ -45,21 +38,17 @@ public class VisitorController {
      */
     @RequestMapping(value = "/exportvisitorlist", method = RequestMethod.POST)
     @ResponseBody
-    public List<Visitor> exportVisitor(){
-        List<Visitor> visitorList = visitorService.getAll();
-        return visitorList;
+    public List<Visitor> exportVisitor() {
+        return visitorService.getAll();
     }
 
     /**
      * 添加学生信息
      */
-
-    @RequestMapping(value = "/addVisitor" ,method = RequestMethod.POST)
+    @RequestMapping(value = "/addVisitor", method = RequestMethod.POST)
     @ResponseBody
     public String addStudent(@RequestBody Visitor visitor) {
-        int v = visitorService.addVisitor(visitor);
+        visitorService.addVisitor(visitor);
         return "visitor_list";
     }
-
 }
-

@@ -15,15 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-/**
- * @program: dormitorySystem
- * @description: 维修登记
- * @author: Joyrocky
- * @create: 2019-04-27 17:13
- **/
 @Controller
 public class DormRepairController {
-    // 依赖注入
     @Autowired
     private DormRepairService dormRepairService;
 
@@ -33,12 +26,11 @@ public class DormRepairController {
      * pageSize  显示条数
      */
     @RequestMapping(value = "/findDormRepair")
-    public String findDormRepair(Integer d_id,String d_dormbuilding,
+    public String findDormRepair(Integer d_id, String d_dormbuilding,
                                  Integer pageIndex, Integer pageSize, Model model) {
-
-        PageInfo<DormRepair> di = dormRepairService.findPageInfo(d_id,d_dormbuilding,
-                                                    pageIndex,pageSize);
-        model.addAttribute("di",di);
+        PageInfo<DormRepair> di = dormRepairService.findPageInfo(d_id, d_dormbuilding,
+                pageIndex, pageSize);
+        model.addAttribute("di", di);
         return "dormrepair_list";
     }
 
@@ -47,49 +39,44 @@ public class DormRepairController {
      */
     @RequestMapping(value = "/exportdormrepairlist", method = RequestMethod.POST)
     @ResponseBody
-    public List<DormRepair> exportDormrepair(){
-        List<DormRepair> dormRepairList = dormRepairService.getAll();
-        return dormRepairList;
+    public List<DormRepair> exportDormrepair() {
+        return dormRepairService.getAll();
     }
-
 
     /**
      * 添加宿舍信息
      */
-    @RequestMapping(value = "/addDormRepair" ,method = RequestMethod.POST)
+    @RequestMapping(value = "/addDormRepair", method = RequestMethod.POST)
     @ResponseBody
-    public String addDormitory( @RequestBody DormRepair dormrepair) {
-        int d = dormRepairService.addDormRepair(dormrepair);
+    public String addDormitory(@RequestBody DormRepair dormrepair) {
+        dormRepairService.addDormRepair(dormrepair);
         return "dormrepair_list";
     }
 
     /**
      * 删除宿舍信息
      */
-    @RequestMapping( "/deleteDormRepair")
+    @RequestMapping("/deleteDormRepair")
     @ResponseBody
     public String deleteDormRepair(Integer r_id) {
-        int d = dormRepairService.deleteDormRepair(r_id);
+        dormRepairService.deleteDormRepair(r_id);
         return "dormrepair_list";
     }
 
     /**
      * 修改学生信息
      */
-    @RequestMapping( "/updateDormRepair")
-    public String updateDormRepair( DormRepair dormrepair) {
-        int d = dormRepairService.updateDormRepair(dormrepair);
+    @RequestMapping("/updateDormRepair")
+    public String updateDormRepair(DormRepair dormrepair) {
+        dormRepairService.updateDormRepair(dormrepair);
         return "redirect:/findDormRepair";
     }
 
-
-    @RequestMapping( "/findDormRepairById")
+    @RequestMapping("/findDormRepairById")
     public String findDormRepairById(Integer r_id, HttpSession session) {
-
-        DormRepair d= dormRepairService.findDormRepairById(r_id);
-        session.setAttribute("d",d);
+        DormRepair d = dormRepairService.findDormRepairById(r_id);
+        session.setAttribute("d", d);
         return "dormrepair_edit";
     }
-
 }
 

@@ -16,16 +16,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-/**
- * @program: dormitorySystem
- * @description: 宿舍卫生控制器
- * @author: Joyrocky
- * @create: 2019-04-24 11:19
- **/
-
 @Controller
 public class DormCleanController {
-
     //依赖注入
     @Autowired
     private DormCleanService dormCleanService;
@@ -36,12 +28,12 @@ public class DormCleanController {
      * pageSize  显示条数
      */
     @RequestMapping(value = "/findDormClean")
-    public String findDormClean(Integer d_id,String d_dormbuilding,
+    public String findDormClean(Integer d_id, String d_dormbuilding,
                                 Integer pageIndex, Integer pageSize, Model model) {
 
-        PageInfo<DormClean> di = dormCleanService.findPageInfo(d_id,d_dormbuilding,
-                                            pageIndex,pageSize);
-        model.addAttribute("di",di);
+        PageInfo<DormClean> di = dormCleanService.findPageInfo(d_id, d_dormbuilding,
+                pageIndex, pageSize);
+        model.addAttribute("di", di);
         return "dormclean_list";
     }
 
@@ -50,49 +42,44 @@ public class DormCleanController {
      */
     @RequestMapping(value = "/exportdormcleanlist", method = RequestMethod.POST)
     @ResponseBody
-    public List<DormClean> exportDormclean(){
-        List<DormClean> dormclean = dormCleanService.getAll();
-        return dormclean;
+    public List<DormClean> exportDormclean() {
+        return dormCleanService.getAll();
     }
 
     /**
      * 添加宿舍卫生信息
      */
-    @RequestMapping(value = "/addDormClean" ,method = RequestMethod.POST)
+    @RequestMapping(value = "/addDormClean", method = RequestMethod.POST)
     @ResponseBody
-    public String addDormClean( @RequestBody DormClean dormclean) {
-        int d = dormCleanService.addDormClean(dormclean);
+    public String addDormClean(@RequestBody DormClean dormclean) {
+        dormCleanService.addDormClean(dormclean);
         return "dormclean_list";
     }
 
     /**
      * 删除宿舍卫生信息
      */
-    @RequestMapping( "/deleteDormClean")
+    @RequestMapping("/deleteDormClean")
     @ResponseBody
     public String deleteDormClean(Integer g_id) {
-        int d = dormCleanService.deleteDormClean(g_id);
+        dormCleanService.deleteDormClean(g_id);
         return "dormclean_list";
     }
 
     /**
      * 修改宿舍卫生信息
      */
-    @RequestMapping( "/updateDormClean")
-    public String updateDormClean( DormClean dormclean) {
-        int d = dormCleanService.updateDormClean(dormclean);
+    @RequestMapping("/updateDormClean")
+    public String updateDormClean(DormClean dormclean) {
+        dormCleanService.updateDormClean(dormclean);
         return "redirect:/findDormClean";
     }
 
-
-    @RequestMapping( "/findDormCleanById")
+    @RequestMapping("/findDormCleanById")
     public String findDormCleanById(Integer g_id, HttpSession session) {
-
-        DormClean d= dormCleanService.findDormCleanById(g_id);
-        session.setAttribute("d",d);
+        DormClean d = dormCleanService.findDormCleanById(g_id);
+        session.setAttribute("d", d);
         return "dormclean_edit";
     }
-
-
 }
 

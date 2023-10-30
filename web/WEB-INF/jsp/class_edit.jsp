@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hkw
-  Date: 2018/11/14
-  Time: 16:35
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
@@ -53,8 +46,7 @@
                        autocomplete="off" value="${sessionScope.c.c_counsellor}" class="layui-input">
             </div>
         </div>
-
-
+        
         <div class="layui-form-item" id="btn_xg">
             <button  class="layui-btn" id="btn_on"  lay-submit="" lay-filter="updateClass">
                 修改

@@ -3,20 +3,14 @@ package com.itheima.po;
 import java.io.Serializable;
 import java.util.List;
 
-public class Dormitory implements Serializable {
-    private static final long serialVersionUID = 1L;
-    private  Integer d_id;
-    private  Integer s_dormitoryid;
-    private  String  d_dormbuilding;
-    private  String  d_bedtotal;
-    private  String  d_bed;
-    private  String  a_name;
-
+public class Dormitory {
+    private Integer d_id;
+    private Integer s_dormitoryid;
+    private String d_dormbuilding;
+    private String d_bedtotal;
+    private String d_bed;
+    private String a_name;
     private List<Student> students;
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
 
     public Integer getD_id() {
         return d_id;
@@ -34,9 +28,13 @@ public class Dormitory implements Serializable {
         this.s_dormitoryid = s_dormitoryid;
     }
 
-    public String getD_dormbuilding() {return d_dormbuilding;}
+    public String getD_dormbuilding() {
+        return d_dormbuilding;
+    }
 
-    public void setD_dormbuilding(String d_dormbuilding) {this.d_dormbuilding = d_dormbuilding;}
+    public void setD_dormbuilding(String d_dormbuilding) {
+        this.d_dormbuilding = d_dormbuilding;
+    }
 
     public String getD_bedtotal() {
         return d_bedtotal;

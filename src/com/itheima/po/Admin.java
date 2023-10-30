@@ -3,32 +3,26 @@ package com.itheima.po;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class Admin {
-    private  Integer a_id;
-    private  String  a_username;
-
-    @JsonIgnore
-    private  String  a_password;
-
-    private  String  a_name;
-    private  Integer a_phone;
-
-    @JsonIgnore
-    private  Integer a_power;
-
-    private  String  a_describe;
-
+    private Integer a_id;
+    private String a_username;
+    private String a_password;
+    private String a_name;
+    private Integer a_phone;
+    private Integer a_power;
+    private String a_describe;
+    
     public Integer getA_id() {
         return a_id;
     }
-
+    
     public void setA_id(Integer a_id) {
         this.a_id = a_id;
     }
-
+    
     public String getA_username() {
         return a_username;
     }
-
+    
     public void setA_username(String a_username) {
         this.a_username = a_username;
     }

@@ -6,24 +6,26 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * @program: dormitorySystem
- * @description: 学生卫生
- * @author: Joyrocky
- * @create: 2019-04-25 12:14
+ * 学生卫生Dao层接口
  **/
 public interface StudentCleanDao {
-    /**
-     * 进行分页查询
-     */
     //获取总条数
-    public Integer totalCount(@Param("s_studentid") Integer s_studentid, @Param("s_name") String s_name,@Param("s_dormitoryid") Integer s_dormitoryid);
+    Integer totalCount(@Param("s_studentid") Integer s_studentid, @Param("s_name") String s_name, @Param("s_dormitoryid") Integer s_dormitoryid);
+
     //获取用户列表
-    public List<StudentClean> getStudentCleanList(@Param("s_studentid") Integer s_studentid, @Param("s_name") String s_name, @Param("s_dormitoryid") Integer s_dormitoryid, @Param("currentPage") Integer currentPage, @Param("pageSize") Integer pageSize);
+    List<StudentClean> getStudentCleanList(@Param("s_studentid") Integer s_studentid, @Param("s_name") String s_name,
+                                           @Param("s_dormitoryid") Integer s_dormitoryid, @Param("currentPage") Integer currentPage, @Param("pageSize") Integer pageSize);
 
-    public int addStudentClean(StudentClean studentclean);    //添加宿舍卫生信息
-    public int deleteStudentClean(Integer g_id);   //删除宿舍卫生信息
-    public int updateStudentClean(StudentClean studentclean); //修改宿舍卫生信息
-    public StudentClean findStudentCleanById(Integer g_id);
+    //添加宿舍卫生信息
+    void addStudentClean(StudentClean studentclean);
 
-    public List<StudentClean> getAll();
+    //删除宿舍卫生信息
+    void deleteStudentClean(Integer g_id);
+
+    //修改宿舍卫生信息
+    void updateStudentClean(StudentClean studentclean);
+
+    StudentClean findStudentCleanById(Integer g_id);
+
+    List<StudentClean> getAll();
 }

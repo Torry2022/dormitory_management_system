@@ -17,10 +17,8 @@ import java.util.List;
 @Service("studentService")
 @Transactional
 public class StudentServiceImpl implements StudentService {
-	// 注入studentDao
 	@Autowired
 	private StudentDao studentDao;
-
 
 	//分页查询
 	@Override
@@ -44,8 +42,7 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public List<Student> getAll(){
-		List<Student> studentList = studentDao.getAll();
-		return studentList;
+        return studentDao.getAll();
 	}
 
 	//通过id删除学生信息
@@ -53,20 +50,21 @@ public class StudentServiceImpl implements StudentService {
 	public int deleteStudent(Integer s_id) {
 		return studentDao.deleteStudent(s_id);
 	}
+	
     //添加学生信息
 	@Override
-	public  int addStudent(Student student) {
-		return studentDao.addStudent(student);
+	public void addStudent(Student student) {
+		studentDao.addStudent(student);
 	}
+	
 	//修改学生信息
 	@Override
-	public int updateStudent(Student student) { return studentDao.updateStudent(student); }
+	public void updateStudent(Student student) {
+		studentDao.updateStudent(student);
+	}
 
 	@Override
 	public Student findStudentById (Integer s_id){
-		Student s = studentDao.findStudentById(s_id);
-         return  s;
+        return studentDao.findStudentById(s_id);
 	}
-
-
 }

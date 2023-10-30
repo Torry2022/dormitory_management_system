@@ -4,12 +4,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
-/**
- * @program: dormitorySystem
- * @description: 访客
- * @author: Joyrocky
- * @create: 2019-05-14 00:37
- **/
 public class Visitor {
     private Integer v_id;
     private String v_name;

@@ -1,23 +1,23 @@
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.header{
-    background: url("../images/bti.jpg")no-repeat;
+.header {
+    background: url("../images/bti.jpg") no-repeat;
     width: 100%;
     height: 200px;
 }
 
-.body{
+.body {
     background: url("../images/timg-1.jpg");
     width: 100%;
     height: 650px;
     margin-top: -100px;
 }
 
-.panel{
+.panel {
     width: 350px;
     height: 420px;
     position: relative;
@@ -27,12 +27,12 @@
     border: 1px solid #dff0d8;
 }
 
-.top{
-    height:60px;
-    border-bottom:1px solid #dff0d8;
+.top {
+    height: 60px;
+    border-bottom: 1px solid #dff0d8;
 }
 
-.top>p{
+.top > p {
     text-align: center;
     padding-top: 15px;
     /*margin: 20px 0;*/
@@ -40,35 +40,35 @@
     color: #f57421;
 }
 
-.middle{
+.middle {
     position: relative;
     height: 290px;
     margin: 10px 0;
     /*background-color: red;*/
-    border-bottom:1px solid #dff0d8;
+    border-bottom: 1px solid #dff0d8;
 }
 
-.middle>form>input{
+.middle > form > input {
     height: 40px;
     width: 290px;
     margin: 20px 30px;
     border: 1px solid #e0e0e0;
 }
 
-.middle>form>input:last-child{
+.middle > form > input:last-child {
     background-color: #f57421;
     font-size: 18px;
     color: #FFFFFF;
 }
 
-.middle>form>input:last-child:hover{
+.middle > form > input:last-child:hover {
     background-color: #f57421;
     opacity: 0.7;
     cursor: pointer;
     font-size: 18px;
 }
 
-.middle>form>.s1{
+.middle > form > .s1 {
     height: 40px;
     width: 40px;
     position: absolute;
@@ -77,7 +77,7 @@
     background: url("../images/J1.PNG") no-repeat;
 }
 
-.middle>form>.s2{
+.middle > form > .s2 {
     height: 40px;
     width: 40px;
     position: absolute;
@@ -86,32 +86,33 @@
     background: url("../images/J2.PNG") no-repeat;
 }
 
-.middle>form>.erro{
+.middle > form > .erro {
     color: red;
     font-size: 14px;
-    margin-left:10px;
+    margin-left: 10px;
 }
 
-.tail>a{
+.tail > a {
     float: right;
     font-size: 12px;
     padding: 10px;
-    text-decoration:none;
+    text-decoration: none;
     color: black;
 }
 
-.tail>a:hover{
+.tail > a:hover {
     color: red;
 }
 
-.middle>form>.iputs:hover{
-    border:1px solid red;
+.middle > form > .iputs:hover {
+    border: 1px solid red;
 }
 
-.footer{
+.footer {
     margin-top: 20px;
 }
-.footer>span{
+
+.footer > span {
     font-size: 15px;
     position: relative;
     left: 45%;
