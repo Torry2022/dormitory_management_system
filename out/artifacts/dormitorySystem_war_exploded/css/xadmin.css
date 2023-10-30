@@ -477,9 +477,8 @@ table th, table td {
 }
 
 .footer .copyright {
-    margin-left: 10px;
+    text-align: center;
 }
-
 
 @media screen and (max-width: 768px) {
     .fast-add {
