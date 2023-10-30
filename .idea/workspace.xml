@@ -9,7 +9,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="modify README.md" />
+    <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="modify README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/interceptor/Loginlnterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_Studentlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/interceptor/Loginlnterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/interceptor/Loginlnterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,9 +79,9 @@
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="custom" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -458,7 +475,7 @@
       <workItem from="1698631350490" duration="4315000" />
       <workItem from="1698636040949" duration="303000" />
       <workItem from="1698659697336" duration="759000" />
-      <workItem from="1698669390450" duration="8813000" />
+      <workItem from="1698669390450" duration="10567000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -524,7 +541,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698678131214</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="modify README.md">
+      <option name="closed" value="true" />
+      <created>1698678430002</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698678430002</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">

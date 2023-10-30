@@ -75,7 +75,7 @@
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="/findStudent">
+                            <a _href="/findStudent">
                                 <%--点击在右侧出现动态的Tab--%>
                                 <i class="iconfont">&#xe6a7;</i>
                                 <cite>学生信息</cite>
@@ -226,7 +226,7 @@
                     <div class="layui-col-md6"
                          style="box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
                          top: 40px;left: 100px;background-color: #F2F2F2;">
-                        <div class="layui-card" style="background-color: rgba(255,255,255,0.5)">
+                        <div class="layui-card" style="background-color: rgba(255,255,255,0.7)">
                             <div class="layui-card-header">个人信息
                             </div>
                             <div class="layui-card-body">

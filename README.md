@@ -22,7 +22,7 @@
 #### 网页截图
 ![dorm1](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-10-30_22-34-26.png)
 
-![dorm1](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/%606SW%5B1%28VVIZAWR%7BJ%5BZEJERR.png)
+![dorm1](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-10-30_23-36-42.png)
 
 ![dorm1](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-10-30_22-33-37.png)
 

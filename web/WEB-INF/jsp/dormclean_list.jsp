@@ -39,7 +39,7 @@
 
                 <input class="layui-input" type="hidden" name="pageIndex" value="1">
                 <input class="layui-input" type="hidden" name="pageSize" value="3">
-                <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                <button class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon">&#xe615;</i></button>
                 <a class="layui-btn layui-btn-small" style="float:right" href="/findDormClean" title="刷新">
                     <i class="layui-icon">&#x21bb;</i></a>
             </form>

@@ -129,9 +129,7 @@
             </div>
         </div>
 
-
         <%--编辑模态框--%>
-
         <div class="layui-row" id="updteDiv" style="display: none;">
             <div class="layui-col-md10">
                 <form class="layui-form" id="addUpdatForm">
@@ -212,7 +210,6 @@
                 </form>
             </div>
         </div>
-
 
         <%--表格数据--%>
         <table class="layui-table">
@@ -393,11 +390,8 @@
                     // return false;
                 });
             });
-
-
         });
-
-
+        
         /*删除*/
         function member_del(obj, s_id) {
             layer.confirm('确认要删除吗？', function (index) {
@@ -408,7 +402,6 @@
                         setTimeout(function () {
                             window.location.href = '/findStudent';
                         }, 2000);
-
                     } else {
                         layer.msg('删除失败!', {icon: 1, time: 3000});
                         setTimeout(function () {
