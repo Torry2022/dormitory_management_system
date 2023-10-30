@@ -1,5 +1,4 @@
 $(function () {
-
     //登录表单css间距设置
     function editcss() {
         var input1 = document.getElementsByTagName("input")[0];
@@ -7,7 +6,5 @@ $(function () {
         input1.style.paddingLeft = 40;
         input2.style.paddingLeft = 40;
     }
-
     editcss();
-
 });

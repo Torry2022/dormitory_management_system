@@ -17,17 +17,17 @@
     <div class="body">
         <div class="panel">
             <div class="top">
-                <p>账户登录</p>
+                <p>登&nbsp;&nbsp;录</p>
             </div>
 
             <div class="middle">
                 <form action="/login" method="post">
-                    <span class="erro">${msg}</span>
+                    <span class="erro">${msg}</span><br>
                     <span class="s1"></span>
                     <span class="s2"></span>
-                    <input type="text" name="a_username" value="" class="iputs"/>
-                    <input type="password" name="a_password" value="" class="iputs"/>
-                    <input type="submit" value="登录"/>
+                    <input type="text" name="a_username" value="" class="iputs" placeholder="请输入账号"/>
+                    <input type="password" name="a_password" value="" class="iputs" placeholder="请输入密码"/>
+                    <input type="submit" value="登  录"/>
                 </form>
             </div>
         </div>

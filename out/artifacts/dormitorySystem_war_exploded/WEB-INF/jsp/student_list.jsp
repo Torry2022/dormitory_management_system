@@ -30,15 +30,6 @@
 </head>
 
 <body>
-    <div class="x-nav">
-      <span class="layui-breadcrumb">
-        <a href="">首页</a>
-        <a href="/findStudent">学生信息</a>
-      </span>
-        <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="/findStudent"
-           title="刷新">
-            <i class="layui-icon" style="line-height:30px">ဂ</i></a>
-    </div>
     <div class="x-body">
         <div class="layui-row">
             <form class="layui-form layui-col-md12 x-so" action="/findStudent">
@@ -50,6 +41,8 @@
                 <input class="layui-input" type="hidden" name="pageIndex" value="1">
                 <input class="layui-input" type="hidden" name="pageSize" value="3">
                 <button class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon">&#xe615;</i></button>
+                <a class="layui-btn layui-btn-small" style="float:right" href="/findStudent" title="刷新">
+                    <i class="layui-icon">&#x21bb;</i></a>
             </form>
         </div>
         <xblock>

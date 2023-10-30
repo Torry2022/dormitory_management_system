@@ -29,22 +29,15 @@
 </head>
 
 <body>
-    <div class="x-nav">
-      <span class="layui-breadcrumb">
-        <a href="">首页</a>
-        <a href="/findDormitoryStudent">人员信息</a>
 
-      </span>
-        <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
-           href="/findDormitoryStudent" title="刷新">
-            <i class="layui-icon" style="line-height:30px">ဂ</i></a>
-    </div>
     <div class="x-body">
         <div class="layui-row">
             <form class="layui-form layui-col-md12 x-so" action="/findDormitoryStudent">
                 <input class="layui-input" placeholder="请输入宿舍编号" name="s_dormitoryid" id="s_dormitoryid">
 
                 <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                <a class="layui-btn layui-btn-small" style="float:right" href="/findDormitoryStudent" title="刷新">
+                    <i class="layui-icon">&#x21bb;</i></a>
             </form>
         </div>
 

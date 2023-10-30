@@ -10,9 +10,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="modify README.md">
+      <change afterPath="$PROJECT_DIR$/web/images/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/xadmin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/xadmin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_Studentlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/css/font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/css/xadmin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_Studentlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/visitor_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/visitor_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/usersLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/usersLogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/images/timg-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/class_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/class_Studentlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/class_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/class_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/css/font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/css/xadmin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/visitor_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/visitor_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/usersLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/usersLogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/timg-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,38 +249,38 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ji Zhenghao/Desktop/dormitory_management_system/web/WEB-INF/lib&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Ji Zhenghao/Desktop/dormitory_management_system/web/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ji Zhenghao\Desktop\dormitory_management_system\web\images" />
       <recent name="C:\Users\Ji Zhenghao\Desktop\dormitory_management_system\web\WEB-INF\lib" />
       <recent name="E:\IDEA-File\dormitorySystem" />
       <recent name="E:\IDEA-File\dormitorySystem\web\js" />
       <recent name="E:\IDEA-File\dormitorySystem\web\lib\layui" />
-      <recent name="E:\IDEA-File\dormitorySystem\web\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\IDEA-File\dormitorySystem\web\layui_exts" />
@@ -462,6 +499,7 @@
       <workItem from="1698631350490" duration="4315000" />
       <workItem from="1698636040949" duration="303000" />
       <workItem from="1698659697336" duration="759000" />
+      <workItem from="1698669390450" duration="6502000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />

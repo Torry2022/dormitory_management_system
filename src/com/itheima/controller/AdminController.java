@@ -30,6 +30,11 @@ public class AdminController {
      */
     @RequestMapping(value = "/login")
     public String login(Admin admin, Model model, HttpSession session, HttpServletRequest request) throws NoSuchAlgorithmException {
+        //账号或密码为空
+        if(admin.getA_username().isEmpty() || admin.getA_password().isEmpty()) {
+            model.addAttribute("msg", "请输入用户名及密码！");
+            return "login";
+        }
         //通过账号和密码查询用户
         admin.setA_password(MD5Util.MD5EncodeUtf8(admin.getA_password()));
         Admin ad = adminService.findAdmin(admin);
@@ -37,6 +42,7 @@ public class AdminController {
             session.setAttribute("ad", ad);
             return "homepage";
         }
+        //登录失败
         model.addAttribute("msg", "用户名或密码错误，请重新登录！");
         return "login";
     }

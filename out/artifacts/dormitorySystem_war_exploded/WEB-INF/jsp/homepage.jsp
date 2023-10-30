@@ -19,6 +19,7 @@
     <style>
         .o_div {
             background: url("/images/01.jpg") no-repeat;
+            background-size: 100% 100%;
         }
 
         .o_span {
@@ -48,8 +49,9 @@
         <%--</ul>--%>
         <ul class="layui-nav right" lay-filter="">
             <li class="layui-nav-item">
-                <a href="javascript:;"><img src="https://sky-itcast.oss-cn-beijing.aliyuncs.com/13da832f-ef2c-484d-8370-5934a1045a06.png"
-                                            class="layui-nav-img">${sessionScope.ad.a_username}</a>
+                <a href="javascript:;"><img
+                        src="https://sky-itcast.oss-cn-beijing.aliyuncs.com/13da832f-ef2c-484d-8370-5934a1045a06.png"
+                        class="layui-nav-img">${sessionScope.ad.a_username}</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
                     <dd><a onclick="x_admin_show('切换帐号','logout')">切换帐号</a></dd>
                     <dd><a href="/logout">退出</a></dd>
@@ -223,8 +225,10 @@
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show o_div">
-                    <span class="o_span">${sessionScope.ad.a_username}管理员，欢迎来到宿舍管理系统！</span>
-                    <div class="layui-col-md6" style="padding: 30px;left: 60px;background-color: #F2F2F2;">
+                    <br><span class="o_span">${sessionScope.ad.a_username}管理员，欢迎来到宿舍管理系统！</span><hr>
+                    <div class="layui-col-md6"
+                         style="box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+                         top: 40px;left: 100px;background-color: #F2F2F2;">
                         <div class="layui-card">
                             <div class="layui-card-header">个人信息
                             </div>
