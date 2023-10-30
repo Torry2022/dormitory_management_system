@@ -9,23 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="replace the &quot;mysql-connector-java&quot; jar package">
+    <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="fix privileges of admin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dormitory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dormitory.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/login-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/login-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/xadmin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/layfilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/layfilter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/login-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/login-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/xadmin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/layfilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/layfilter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -499,7 +485,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698637447967</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix privileges of admin">
+      <option name="closed" value="true" />
+      <created>1698658352483</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698658352483</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -555,7 +549,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="reformat and modify some codes" />
     <MESSAGE value="replace the &quot;mysql-connector-java&quot; jar package" />
-    <option name="LAST_COMMIT_MESSAGE" value="replace the &quot;mysql-connector-java&quot; jar package" />
+    <MESSAGE value="fix privileges of admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix privileges of admin" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DormitoryManager_master$dormitorySystem.ic" NAME="dormitorySystem Coverage Results" MODIFIED="1698501431280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
