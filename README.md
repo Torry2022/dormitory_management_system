@@ -1,7 +1,6 @@
 ## Dormitory Management System 
-<hr>
 
-![IDE](https://img.shields.io/badge/IDE-IntelliJ%20IDEA-brightgreen.svg) ![Java](https://img.shields.io/badge/Java-17-blue) ![Database](https://img.shields.io/badge/MySQL-8-lightgrey) ![Tomcat](https://img.shields.io/badge/Tomcat-9-orange)
+![IDE](https://img.shields.io/badge/IDE-IntelliJ%20IDEA-brightgreen.svg) ![Java](https://img.shields.io/badge/Java-11-blue) ![Database](https://img.shields.io/badge/MySQL-8-lightgrey) ![Tomcat](https://img.shields.io/badge/Tomcat-9-orange)
 <hr>
 
 - [x] SSM框架🎨
@@ -17,11 +16,13 @@
 #### 注意事项
 - [x] 使用Tomcat 9、MySQL 8;
 - [x] 运行前修改db.properties文件中各参数的值;
-- [x] 运行dormitory.sql中语句后生成的管理员密码均为123.
+- [x] 运行dormitory.sql中的语句后生成的管理员的密码均为123.
 <hr>
 
 #### 网页截图
 ![dorm1](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-10-30_22-34-26.png)
+
+![dorm1](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/%606SW%5B1%28VVIZAWR%7BJ%5BZEJERR.png)
 
 ![dorm1](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-10-30_22-33-37.png)
 
