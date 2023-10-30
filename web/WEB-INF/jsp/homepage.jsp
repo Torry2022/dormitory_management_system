@@ -49,7 +49,7 @@
         <%--</ul>--%>
         <ul class="layui-nav right" lay-filter="">
             <li class="layui-nav-item">
-                <a href="javascript:;"><img
+                <a href="javascript:"><img
                         src="https://sky-itcast.oss-cn-beijing.aliyuncs.com/13da832f-ef2c-484d-8370-5934a1045a06.png"
                         class="layui-nav-img">${sessionScope.ad.a_username}</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
@@ -68,21 +68,19 @@
         <div id="side-nav">
             <ul id="nav">
                 <li>
-                    <a href="javascript:;">
+                    <a href="javascript:">
                         <i class="iconfont">&#xe6b8;</i>
                         <cite>学生管理</cite>
                         <i class="iconfont nav_right">&#xe697;</i>
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a _href="/findStudent">
+                            <a href="/findStudent">
                                 <%--点击在右侧出现动态的Tab--%>
                                 <i class="iconfont">&#xe6a7;</i>
                                 <cite>学生信息</cite>
-
                             </a>
                         </li>
-
                     </ul>
                 </li>
 
@@ -110,7 +108,6 @@
                         </li>
                     </ul>
                 </li>
-
 
                 <li>
                     <a href="javascript:;">
@@ -147,7 +144,6 @@
                             </a>
                         </li>
                     </ul>
-
                 </li>
 
                 <li>
@@ -225,11 +221,12 @@
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show o_div">
-                    <br><span class="o_span">${sessionScope.ad.a_username}管理员，欢迎来到宿舍管理系统！</span><hr>
+                    <br><span class="o_span">${sessionScope.ad.a_username}管理员，欢迎来到宿舍管理系统！</span>
+                    <hr>
                     <div class="layui-col-md6"
                          style="box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
                          top: 40px;left: 100px;background-color: #F2F2F2;">
-                        <div class="layui-card">
+                        <div class="layui-card" style="background-color: rgba(255,255,255,0.5)">
                             <div class="layui-card-header">个人信息
                             </div>
                             <div class="layui-card-body">
