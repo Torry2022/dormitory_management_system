@@ -254,75 +254,81 @@
 
             /*添加弹出框*/
             $("#addStudnetBtn").click(function () {
-                layer.open({
-                    type: 1,
-                    title: "添加管理员",
-                    skin: "myclass",
-                    area: ["50%"],
-                    anim: 2,
-                    content: $("#test").html()
-                });
-                $("#addEmployeeForm")[0].reset();
-                form.on('submit(formDemo)', function (data) {
-                    // layer.msg('aaa',{icon:1,time:3000});
-                    var param = data.field;
-                    // console.log(JSON.stringify(param));
-                    $.ajax({
-                        url: '/addAdmin',
-                        type: "post",
-                        data: JSON.stringify(param),
-                        contentType: "application/json; charset=utf-8",
-                        success: function (da) {
-                            console.log(da);
-                            layer.msg('添加成功', {icon: 1, time: 2000});
-                            setTimeout(function () {
-                                window.location.href = '/findAdmin';
-                            }, 2000);
-
-                        },
-                        error: function () {
-                            layer.msg('添加失败', {icon: 0, time: 2000});
-                            setTimeout(function () {
-                                window.location.href = '/findAdmin';
-                            }, 2000);
-                        }
+                var power = ${sessionScope.ad.a_power};
+                if (power !== 1) {
+                    layer.alert("对不起，您没有权限:(");
+                } else {
+                    layer.open({
+                        type: 1,
+                        title: "添加管理员",
+                        skin: "myclass",
+                        area: ["50%"],
+                        anim: 2,
+                        content: $("#test").html()
                     });
-                    // return false;
-                });
+                    $("#addEmployeeForm")[0].reset();
+                    form.on('submit(formDemo)', function (data) {
+                        // layer.msg('aaa',{icon:1,time:3000});
+                        var param = data.field;
+                        // console.log(JSON.stringify(param));
+                        $.ajax({
+                            url: '/addAdmin',
+                            type: "post",
+                            data: JSON.stringify(param),
+                            contentType: "application/json; charset=utf-8",
+                            success: function (da) {
+                                console.log(da);
+                                layer.msg('添加成功', {icon: 1, time: 2000});
+                                setTimeout(function () {
+                                    window.location.href = '/findAdmin';
+                                }, 2000);
+
+                            },
+                            error: function () {
+                                layer.msg('添加失败', {icon: 0, time: 2000});
+                                setTimeout(function () {
+                                    window.location.href = '/findAdmin';
+                                }, 2000);
+                            }
+                        });
+                        // return false;
+                    });
+                }
             });
         });
 
         /*编辑*/
         $(".updateEdit").click(function () {
             var myid = $(this).parent("td").parent("tr").children(".myid").html();
+            var power = ${sessionScope.ad.a_power};
             //判断
-            var admin_id = ${sessionScope.ad.a_id};
-            if (admin_id !== myid) {
+            if (power != 1) {
                 layer.alert("对不起，您没有权限:(");
             } else {
                 <%--window.location.href = "/findAdminById?a_id=${ai.a_id}";--%>
                 window.location.href = "/findAdminById?a_id=" + myid;
             }
         });
-
+        
         /*删除*/
         function member_del(obj, a_id, a_power) {
             var power = ${sessionScope.ad.a_power};
-            if (power !== 1) {
+            var id = ${sessionScope.ad.a_id};
+            if (power != 1) {
                 layer.alert("对不起，您没有权限:(");
-            }
-            else {
+            } else if (id == a_id) {
+                layer.alert("不能删除自己:(");
+            } else {
                 layer.confirm('确认要删除吗？', function (index) {
                     //发异步删除数据
                     $.get("/deleteAdmin", {"a_id": a_id}, function (data) {
-                        if (data === true) {
+                        if (data == 'true') {
                             layer.msg('删除成功!', {icon: 1, time: 2000});
                             setTimeout(function () {
                                 window.location.href = '/findAdmin';
                             }, 2000);
-
                         } else {
-                            layer.msg('删除失败!', {icon: 1, time: 2000});
+                            layer.msg('删除失败!', {icon: 2, time: 2000});
                             setTimeout(function () {
                                 window.location.href = '/findAdmin';
                             }, 2000);

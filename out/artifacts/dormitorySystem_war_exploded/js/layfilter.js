@@ -8,7 +8,7 @@ layui.define(['jquery', 'layer'], function (exports) {
             //传入了地址，则直接将此地址覆盖
             if (url) {
                 $.getJSON(url, options.where, function (res) {
-                    if (res.code == 0) {
+                    if (res.code === 0) {
                         var data = res.data;
                         flase = true;
                         layfilter.init(options, data);
@@ -43,12 +43,12 @@ layui.define(['jquery', 'layer'], function (exports) {
                 for (var j = 0; j < dataSource[i].data.length; j++) {
                     var item = dataSource[i].data;
                     var className = 'layfilter-item';
-                    if (item[j].checked && item[j].checked == 'true') {
+                    if (item[j].checked && item[j].checked === 'true') {
                         className = "layfilter-item layfilter-item-checked";
                         arr[dataSource[i].name].push({name: item[j].name, value: item[j].value});
                     }
                     //判断是否禁用
-                    if (item[j].disabled && item[j].disabled == 'true') {
+                    if (item[j].disabled && item[j].disabled === 'true') {
                         $ul.append('<li value="' + item[j].value + '" style="width:' + width + 'px;height: 28px;line-height: 28px;" class="' + className + '"><a disabled="disabled" class="layui-disabled">' + item[j].name + '</a></li>');
                     } else {
                         $ul.append('<li value="' + item[j].value + '" style="width:' + width + 'px;height: 28px;line-height: 28px;" class="' + className + '"><a>' + item[j].name + '</a></li>');
@@ -73,16 +73,16 @@ layui.define(['jquery', 'layer'], function (exports) {
                     $(this).parent().removeClass('layfilter-item-checked');
                     var obj = chekedArr[name] || [];
                     for (var i = 0; i < obj.length; i++) {
-                        if (obj[i].value == $(this).parent().attr('value')) {
+                        if (obj[i].value === $(this).parent().attr('value')) {
                             obj.splice(i, 1);
                             break;
                         }
                     }
                     chekedArr[name] = obj;
                 } else {
-                    if (itemType && ('checbox' == itemType || 'radio' == itemType)) {
+                    if (itemType && ('checbox' === itemType || 'radio' === itemType)) {
                         //判断类型
-                        if ('radio' == itemType) {
+                        if ('radio' === itemType) {
                             var objs = $(this).parent().siblings();
                             chekedArr[name] = [];
                             for (var i = 0; i < objs.length; i++) {
@@ -128,7 +128,7 @@ layui.define(['jquery', 'layer'], function (exports) {
             var values = '';
             var names = '';
             for (var i = 0; i < json.length; i++) {
-                if (i != json.length - 1) {
+                if (i !== json.length - 1) {
                     values += json[i].value + ",";
                     names += json[i].name + ",";
                 } else {

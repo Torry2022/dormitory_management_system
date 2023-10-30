@@ -87,9 +87,9 @@ public class AdminController {
      */
     @RequestMapping("/deleteAdmin")
     @ResponseBody
-    public String deleteAdmin(Integer a_id) {
+    public Boolean deleteAdmin(Integer a_id) {
         adminService.deleteAdmin(a_id);
-        return "admin_list";
+        return true;
     }
 
     /**

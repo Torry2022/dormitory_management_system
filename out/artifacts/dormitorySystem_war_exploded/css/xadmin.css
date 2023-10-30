@@ -2,8 +2,8 @@
 @import url(../lib/layui/css/layui.css);
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -92,7 +92,7 @@ xblock {
 }
 
 .layui-form-switch {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .layui-input:focus, .layui-textarea:focus {
@@ -349,7 +349,7 @@ url() 0 0 no-repeat;
     height: 100%;
     width: 100%;
     background: #EFEEF0 url(#) 0 0 no-repeat;
-    margin: 0px;
+    margin: 0;
 }
 
 .page-content .layui-tab-title {
@@ -392,10 +392,10 @@ url() 0 0 no-repeat;
 .page-content .layui-tab-content {
     position: absolute;
     top: 36px;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
     background: #fff url(#) 0 0 no-repeat;
-    padding: 0px;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -467,7 +467,7 @@ table th, table td {
 
 .footer {
     position: fixed;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
     background-color: #222;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -503,7 +503,7 @@ table th, table td {
     }
 
     .page-content {
-        left: 0px;
+        left: 0;
     }
 
     .page-content .layui-tab-content .layui-tab-item {
@@ -519,7 +519,4 @@ table th, table td {
     .layui-input {
         margin-left: 20px;
     }
-
-
 }
-
