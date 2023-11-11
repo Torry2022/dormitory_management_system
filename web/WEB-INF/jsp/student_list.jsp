@@ -83,13 +83,6 @@
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">年龄：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="s_age" class="layui-input" i placeholder="请输入年龄">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
                         <label class="layui-form-label">电话：</label>
                         <div class="layui-input-block">
                             <input type="text" name="s_phone" class="layui-input" placeholder="请输入电话">
@@ -111,9 +104,9 @@
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">寝室编号：</label>
+                        <label class="layui-form-label">宿舍编号：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_dormitoryid" class="layui-input" placeholder="请输入寝室编号">
+                            <input type="text" name="s_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
                         </div>
                     </div>
 
@@ -156,14 +149,6 @@
                             <input type="radio" name="s_sex" id="edit_sex" value="男" title="男" checked="">
                             <input type="radio" name="s_sex" id="edit_sex" value="女" title="女">
                             <%--<input type="text" name="s_sex" class="layui-input" id="s_sex" placeholder="请输入性别">--%>
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">年龄：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="s_age" class="layui-input" id="edit_age" value=""
-                                   placeholder="请输入年龄">
                         </div>
                     </div>
 
@@ -222,11 +207,10 @@
                 <th>学号</th>
                 <th>姓名</th>
                 <th>性别</th>
-                <th>年龄</th>
                 <th>电话</th>
                 <th>班级编号</th>
                 <th>班级名</th>
-                <th>寝室编号</th>
+                <th>宿舍编号</th>
                 <th>操作</th>
             </thead>
             <tbody>
@@ -314,11 +298,10 @@
                             s_studentid: '学号',
                             s_name: '姓名',
                             s_sex: '性别',
-                            s_age: '年龄',
                             s_phone: '电话',
                             s_classid: '班级编号',
                             s_classname: '班级名',
-                            s_dormitoryid: '寝室编号'
+                            s_dormitoryid: '宿舍编号'
                         });
 
                         //意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义

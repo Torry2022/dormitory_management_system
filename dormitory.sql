@@ -22,12 +22,12 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `d_admin`;
 CREATE TABLE `d_admin` (
   `a_id` int(11) NOT NULL AUTO_INCREMENT,
-  `a_username` varchar(20) NOT NULL,
-  `a_password` varchar(50) NOT NULL,
-  `a_name` varchar(20) DEFAULT NULL,
+  `a_username` varchar(10) NOT NULL,
+  `a_password` varchar(20) NOT NULL,
+  `a_name` varchar(10) DEFAULT NULL,
   `a_phone` bigint(20) DEFAULT NULL,
-  `a_power` varchar(20) DEFAULT NULL,
-  `a_describe` varchar(40) DEFAULT NULL,
+  `a_power` int(11) DEFAULT NULL,
+  `a_describe` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`a_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 
@@ -54,8 +54,8 @@ DROP TABLE IF EXISTS `d_class`;
 CREATE TABLE `d_class` (
   `c_id` int(11) NOT NULL AUTO_INCREMENT,
   `c_classid` int(11) NOT NULL,
-  `c_classname` varchar(30) DEFAULT NULL,
-  `c_counsellor` varchar(30) DEFAULT NULL,
+  `c_classname` varchar(10) DEFAULT NULL,
+  `c_counsellor` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`c_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
@@ -79,8 +79,8 @@ INSERT INTO `d_class` VALUES ('10', '153', '金融', '刘培');
 DROP TABLE IF EXISTS `d_dormgrade`;
 CREATE TABLE `d_dormgrade` (
   `g_id` int(11) NOT NULL AUTO_INCREMENT,
-  `d_id` int(11) NOT NULL,
-  `d_dormbuilding` varchar(20) DEFAULT NULL,
+  `d_dormitoryid` int(11) NOT NULL,
+  `d_dormbuilding` varchar(10) DEFAULT NULL,
   `d_grade` int(11) DEFAULT NULL,
   `create_time` datetime DEFAULT NULL,
   `update_time` datetime DEFAULT NULL,
@@ -104,11 +104,11 @@ INSERT INTO `d_dormgrade` VALUES ('7', '213', '27号楼', '8', '2019-05-10 16:40
 DROP TABLE IF EXISTS `d_dormitoryinfo`;
 CREATE TABLE `d_dormitoryinfo` (
   `d_id` int(11) NOT NULL AUTO_INCREMENT,
-  `s_dormitoryid` int(11) NOT NULL,
-  `d_dormbuilding` varchar(20) DEFAULT NULL,
-  `d_bedtotal` varchar(20) DEFAULT NULL,
-  `d_bed` varchar(20) DEFAULT NULL,
-  `a_name` varchar(20) DEFAULT NULL,
+  `d_dormitoryid` int(11) NOT NULL,
+  `d_dormbuilding` varchar(10) DEFAULT NULL,
+  `d_bedtotal` int(11) DEFAULT NULL,
+  `d_bed` int(11) DEFAULT NULL,
+  `a_name` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`d_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 
@@ -136,9 +136,9 @@ INSERT INTO `d_dormitoryinfo` VALUES ('14', '423', '29号楼', '4', '3', '郭浩
 DROP TABLE IF EXISTS `d_dormrepair`;
 CREATE TABLE `d_dormrepair` (
   `r_id` int(11) NOT NULL AUTO_INCREMENT,
-  `d_id` int(11) NOT NULL,
-  `d_dormbuilding` varchar(20) NOT NULL,
-  `r_name` varchar(20) DEFAULT NULL,
+  `d_dormitoryid` int(11) NOT NULL,
+  `d_dormbuilding` varchar(10) NOT NULL,
+  `r_name` varchar(10) DEFAULT NULL,
   `reason` varchar(50) DEFAULT NULL,
   `create_time` datetime DEFAULT NULL,
   `update_time` datetime DEFAULT NULL,
@@ -162,7 +162,7 @@ DROP TABLE IF EXISTS `d_stgrade`;
 CREATE TABLE `d_stgrade` (
   `g_id` int(11) NOT NULL AUTO_INCREMENT,
   `s_studentid` int(11) NOT NULL,
-  `s_name` varchar(20) DEFAULT NULL,
+  `s_name` varchar(10) DEFAULT NULL,
   `s_grade` int(11) DEFAULT NULL,
   `s_classid` int(11) DEFAULT NULL,
   `s_dormitoryid` int(11) DEFAULT NULL,
@@ -192,12 +192,11 @@ DROP TABLE IF EXISTS `d_student`;
 CREATE TABLE `d_student` (
   `s_id` int(11) NOT NULL AUTO_INCREMENT,
   `s_studentid` int(11) NOT NULL,
-  `s_name` varchar(20) DEFAULT NULL,
-  `s_sex` varchar(20) DEFAULT NULL,
-  `s_age` int(11) DEFAULT NULL,
+  `s_name` varchar(10) DEFAULT NULL,
+  `s_sex` varchar(10) DEFAULT NULL,
   `s_phone` bigint(20) DEFAULT NULL,
   `s_classid` int(11) NOT NULL,
-  `s_classname` varchar(20) DEFAULT NULL,
+  `s_classname` varchar(10) DEFAULT NULL,
   `s_dormitoryid` int(11) NOT NULL,
   PRIMARY KEY (`s_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
@@ -205,19 +204,19 @@ CREATE TABLE `d_student` (
 -- ----------------------------
 -- Records of d_student
 -- ----------------------------
-INSERT INTO `d_student` VALUES ('1', '1413032001', '张杰', '男', '22', '138138138', '141', '生物', '301');
-INSERT INTO `d_student` VALUES ('2', '1413032002', '赵凯', '男', '22', '138138138', '141', '生物', '301');
-INSERT INTO `d_student` VALUES ('3', '1413032003', '许文文', '男', '21', '138138138', '141', '生物', '301');
-INSERT INTO `d_student` VALUES ('4', '1413032004', '王浩', '男', '22', '138138138', '141', '生物', '301');
-INSERT INTO `d_student` VALUES ('5', '1413032005', '张伟', '男', '22', '138138138', '141', '土木', '301');
-INSERT INTO `d_student` VALUES ('6', '1413032006', '郭顶', '男', '21', '138138138', '141', '土木', '301');
-INSERT INTO `d_student` VALUES ('7', '1513112411', '曹原', '男', '20', '138138138', '151', '应化', '112');
-INSERT INTO `d_student` VALUES ('8', '1513112412', '赵跃', '男', '21', '138138138', '151', '纺织', '112');
-INSERT INTO `d_student` VALUES ('9', '1513112413', '孙畅', '男', '21', '138138138', '151', '纺织', '112');
-INSERT INTO `d_student` VALUES ('10', '1513122417', '周帆', '男', '21', '138138138', '161', '物流', '213');
-INSERT INTO `d_student` VALUES ('11', '1513122418', '田野', '男', '21', '138138138', '153', '数师', '213');
-INSERT INTO `d_student` VALUES ('12', '1513122419', '张嘉佳', '男', '20', '138138138', '153', '金融', '213');
-INSERT INTO `d_student` VALUES ('13', '1513122420', '陈昊', '男', '21', '138138138', '153', '金融', '213');
+INSERT INTO `d_student` VALUES ('1', '1413032001', '张杰', '男', '138138138', '141', '生物', '301');
+INSERT INTO `d_student` VALUES ('2', '1413032002', '赵凯', '男', '138138138', '141', '生物', '301');
+INSERT INTO `d_student` VALUES ('3', '1413032003', '许文文', '男', '138138138', '141', '生物', '301');
+INSERT INTO `d_student` VALUES ('4', '1413032004', '王浩', '男', '138138138', '141', '生物', '301');
+INSERT INTO `d_student` VALUES ('5', '1413032005', '张伟', '男', '138138138', '141', '土木', '301');
+INSERT INTO `d_student` VALUES ('6', '1413032006', '郭顶', '男', '138138138', '141', '土木', '301');
+INSERT INTO `d_student` VALUES ('7', '1513112411', '曹原', '男', '138138138', '151', '应化', '112');
+INSERT INTO `d_student` VALUES ('8', '1513112412', '赵跃', '男', '138138138', '151', '纺织', '112');
+INSERT INTO `d_student` VALUES ('9', '1513112413', '孙畅', '男', '138138138', '151', '纺织', '112');
+INSERT INTO `d_student` VALUES ('10', '1513122417', '周帆', '男', '138138138', '161', '物流', '213');
+INSERT INTO `d_student` VALUES ('11', '1513122418', '田野', '男', '138138138', '153', '数师', '213');
+INSERT INTO `d_student` VALUES ('12', '1513122419', '张嘉佳', '男', '138138138', '153', '金融', '213');
+INSERT INTO `d_student` VALUES ('13', '1513122420', '陈昊', '男', '138138138', '153', '金融', '213');
 
 -- ----------------------------
 -- Table structure for `d_visitor`
@@ -225,10 +224,10 @@ INSERT INTO `d_student` VALUES ('13', '1513122420', '陈昊', '男', '21', '1381
 DROP TABLE IF EXISTS `d_visitor`;
 CREATE TABLE `d_visitor` (
   `v_id` int(11) NOT NULL AUTO_INCREMENT,
-  `v_name` varchar(20) DEFAULT NULL,
+  `v_name` varchar(10) DEFAULT NULL,
   `v_phone` bigint(20) DEFAULT NULL,
   `v_dormitoryid` int(11) DEFAULT NULL,
-  `v_dormbuilding` varchar(20) DEFAULT NULL,
+  `v_dormbuilding` varchar(10) DEFAULT NULL,
   `create_time` datetime DEFAULT NULL,
   PRIMARY KEY (`v_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;

@@ -67,7 +67,7 @@
 
         <div class="layui-form-item">
             <label for="s_dormitoryid" class="layui-form-label">
-                <span class="">寝室编号</span>
+                <span class="">宿舍编号</span>
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="s_dormitoryid" name="s_dormitoryid"

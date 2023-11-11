@@ -48,16 +48,6 @@
             </div>
 
             <div class="layui-form-item">
-                <label for="s_age" class="layui-form-label">
-                    <span class="f_sp">年龄</span>
-                </label>
-                <div class="layui-input-inline">
-                    <input type="text" id="s_age" name="s_age"
-                           autocomplete="off" value="${sessionScope.s.s_age}" class="layui-input">
-                </div>
-            </div>
-
-            <div class="layui-form-item">
                 <label for="s_phone" class="layui-form-label">
                     <span class="f_sp">电话</span>
                 </label>
@@ -89,7 +79,7 @@
 
             <div class="layui-form-item">
                 <label for="s_dormitoryid" class="layui-form-label">
-                    <span class="">*</span>寝室编号
+                    <span class="">*</span>宿舍编号
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="s_dormitoryid" name="s_dormitoryid"

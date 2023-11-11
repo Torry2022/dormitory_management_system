@@ -26,9 +26,9 @@ public class DormRepairController {
      * pageSize  显示条数
      */
     @RequestMapping(value = "/findDormRepair")
-    public String findDormRepair(Integer d_id, String d_dormbuilding,
+    public String findDormRepair(Integer d_dormitoryid, String d_dormbuilding,
                                  Integer pageIndex, Integer pageSize, Model model) {
-        PageInfo<DormRepair> di = dormRepairService.findPageInfo(d_id, d_dormbuilding,
+        PageInfo<DormRepair> di = dormRepairService.findPageInfo(d_dormitoryid, d_dormbuilding,
                 pageIndex, pageSize);
         model.addAttribute("di", di);
         return "dormrepair_list";

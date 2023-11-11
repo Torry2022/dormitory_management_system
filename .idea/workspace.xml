@@ -9,22 +9,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="modify README.md">
+    <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="fix some mistakes and modify README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/interceptor/Loginlnterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dormitory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dormitory.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormCleanDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormCleanDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormRepairDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormRepairDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormitoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormitoryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormitoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormitoryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Dormitory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Dormitory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_Studentlist.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/interceptor/Loginlnterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itheima/interceptor/Loginlnterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormCleanDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormCleanDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormRepairDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormRepairDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormitoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormitoryDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormitoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormitoryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Dormitory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Dormitory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/DormCleanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/DormCleanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/DormRepairController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/DormRepairController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormCleanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/dao/DormCleanDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormCleanDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/dao/DormCleanDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormRepairDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/dao/DormRepairDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormRepairDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/dao/DormRepairDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/StudentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/dao/StudentDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/po/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/DormClean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/po/DormClean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/DormRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/po/DormRepair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Dormitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/po/Dormitory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/po/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/student_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/student_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,6 +216,9 @@
       <select />
     </treeState>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -225,31 +263,31 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Ji Zhenghao/Desktop/dormitory_management_system/web/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ji Zhenghao/Desktop/dormitory_management_system/web/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ji Zhenghao\Desktop\dormitory_management_system\web\images" />
@@ -475,7 +513,9 @@
       <workItem from="1698631350490" duration="4315000" />
       <workItem from="1698636040949" duration="303000" />
       <workItem from="1698659697336" duration="759000" />
-      <workItem from="1698669390450" duration="10567000" />
+      <workItem from="1698669390450" duration="13314000" />
+      <workItem from="1699323027136" duration="11133000" />
+      <workItem from="1699666426507" duration="4906000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -549,7 +589,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698678430002</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix some mistakes and modify README.md">
+      <option name="closed" value="true" />
+      <created>1698680345380</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698680345380</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -619,7 +667,8 @@
     <MESSAGE value="fix privileges of admin" />
     <MESSAGE value="strengthen login module and modify css" />
     <MESSAGE value="modify README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify README.md" />
+    <MESSAGE value="fix some mistakes and modify README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some mistakes and modify README.md" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DormitoryManager_master$dormitorySystem.ic" NAME="dormitorySystem Coverage Results" MODIFIED="1698501431280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

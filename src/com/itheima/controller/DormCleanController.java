@@ -28,10 +28,10 @@ public class DormCleanController {
      * pageSize  显示条数
      */
     @RequestMapping(value = "/findDormClean")
-    public String findDormClean(Integer d_id, String d_dormbuilding,
+    public String findDormClean(Integer d_dormitoryid, String d_dormbuilding,
                                 Integer pageIndex, Integer pageSize, Model model) {
 
-        PageInfo<DormClean> di = dormCleanService.findPageInfo(d_id, d_dormbuilding,
+        PageInfo<DormClean> di = dormCleanService.findPageInfo(d_dormitoryid, d_dormbuilding,
                 pageIndex, pageSize);
         model.addAttribute("di", di);
         return "dormclean_list";

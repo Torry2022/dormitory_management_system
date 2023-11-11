@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class DormClean {
     private Integer g_id;
-    private Integer d_id;
+    private Integer d_dormitoryid;
     private String d_dormbuilding;
     private Integer d_grade;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
@@ -22,12 +22,12 @@ public class DormClean {
         this.g_id = g_id;
     }
 
-    public Integer getD_id() {
-        return d_id;
+    public Integer getD_dormitoryid() {
+        return d_dormitoryid;
     }
 
-    public void setD_id(Integer d_id) {
-        this.d_id = d_id;
+    public void setD_id(Integer d_dormitoryid) {
+        this.d_dormitoryid = d_dormitoryid;
     }
 
     public String getD_dormbuilding() {

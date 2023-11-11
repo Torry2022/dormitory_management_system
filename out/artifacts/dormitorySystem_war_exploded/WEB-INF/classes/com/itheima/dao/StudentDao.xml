@@ -49,11 +49,10 @@
     </delete>
     <!--添加学生信息-->
     <insert id="addStudent" parameterType="Student" keyProperty="s_id" useGeneratedKeys="true">
-        insert into d_student (s_studentid, s_name, s_sex, s_age, s_phone, s_classid, s_classname, s_dormitoryid)
-        values (#{s_studentid}, #{s_name}, #{s_sex}, #{s_age}, #{s_phone}, #{s_classid}, #{s_classname},
+        insert into d_student (s_studentid, s_name, s_sex, s_phone, s_classid, s_classname, s_dormitoryid)
+        values (#{s_studentid}, #{s_name}, #{s_sex}, #{s_phone}, #{s_classid}, #{s_classname},
                 #{s_dormitoryid})
     </insert>
-
 
     <select id="findStudentById" parameterType="Integer" resultType="Student">
         select *
@@ -72,9 +71,6 @@
             </if>
             <if test="s_sex != null and s_sex != ''">
                 s_sex=#{s_sex},
-            </if>
-            <if test="s_age != null and s_age != 0">
-                s_age=#{s_age},
             </if>
             <if test="s_phone != null and s_phone != 0">
                 s_phone=#{s_phone},

@@ -36,7 +36,7 @@
             <form class="layui-form layui-col-md12 x-so" action="/findStudentClean">
                 <input class="layui-input" placeholder="请输入学号" name="s_studentid" id="s_studentid">
                 <input class="layui-input" placeholder="请输入姓名" name="s_name" id="s_name">
-                <input class="layui-input" placeholder="请输入寝室编号" name="s_dormitoryid" id="s_dormitoryid">
+                <input class="layui-input" placeholder="请输入宿舍编号" name="s_dormitoryid" id="s_dormitoryid">
 
                 <input class="layui-input" type="hidden" name="pageIndex" value="1">
                 <input class="layui-input" type="hidden" name="pageSize" value="3">
@@ -88,9 +88,9 @@
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">寝室编号：</label>
+                        <label class="layui-form-label">宿舍编号：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_dormitoryid" class="layui-input" placeholder="请输入寝室编号">
+                            <input type="text" name="s_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
                         </div>
                     </div>
 
@@ -116,8 +116,8 @@
                 <th>学生卫生</th>
                 <th>班级编号</th>
                 <th>宿舍编号</th>
-                <th>创建日期</th>
-                <th>更新日期</th>
+                <th>创建时间</th>
+                <th>更新时间</th>
                 <th>操作</th>
             </thead>
             <tbody>

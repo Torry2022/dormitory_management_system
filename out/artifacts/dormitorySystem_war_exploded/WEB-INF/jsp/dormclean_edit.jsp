@@ -18,12 +18,12 @@
         <form class="layui-form" id="f_auto" action="/updateDormClean" method="post">
             <input type="hidden" value="${sessionScope.d.g_id}" name="g_id" id="g_id"/>
             <div class="layui-form-item">
-                <label for="d_id" class="layui-form-label">
+                <label for="d_dormitoryid" class="layui-form-label">
                     <span class="">宿舍编号</span>
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="d_id" name="d_id"
-                           autocomplete="off" value="${sessionScope.d.d_id}" class="layui-input">
+                    <input type="text" id="d_dormitoryid" name="d_dormitoryid"
+                           autocomplete="off" value="${sessionScope.d.d_dormitoryid}" class="layui-input">
                 </div>
             </div>
 

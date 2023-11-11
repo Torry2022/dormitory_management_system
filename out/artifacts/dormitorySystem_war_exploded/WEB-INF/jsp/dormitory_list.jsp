@@ -33,7 +33,7 @@
     <div class="x-body">
         <div class="layui-row">
             <form class="layui-form layui-col-  md12 x-so" action="/findDormitory">
-                <input class="layui-input" placeholder="请输入宿舍编号" name="s_dormitoryid" id="s_dormitoryid">
+                <input class="layui-input" placeholder="请输入宿舍编号" name="d_dormitoryid" id="d_dormitoryid">
                 <input class="layui-input" placeholder="请输入宿舍楼" name="d_dormbuilding" id="d_dormbuilding">
                 <input class="layui-input" placeholder="请输入管理员姓名" name="a_name" id="a_name">
 
@@ -122,7 +122,7 @@
                         <%--<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>--%>
                         <%--</td>--%>
                     <td>${di.d_id}</td>
-                    <td>${di.s_dormitoryid}</td>
+                    <td>${di.d_dormitoryid}</td>
                     <td>${di.d_dormbuilding}</td>
                     <td>${di.d_bedtotal}</td>
                     <td>${di.d_bed}</td>
@@ -180,7 +180,7 @@
                             // 1. 如果需要调整顺序，请执行梳理函数
                             var dt = excel.filterExportData(data, [
                                 'd_id'
-                                , 's_dormitoryid'
+                                , 'd_dormitoryid'
                                 , 'd_dormbuilding'
                                 , 'd_bedtotal'
                                 , 'd_bed'
@@ -190,7 +190,7 @@
                             // 2. 数组头部新增表头
                             dt.unshift({
                                 d_id: 'ID',
-                                s_dormitoryid: '宿舍编号',
+                                d_dormitoryid: '宿舍编号',
                                 d_dormbuilding: '宿舍楼',
                                 d_bedtotal: '床位总数',
                                 d_bed: '医用床位',

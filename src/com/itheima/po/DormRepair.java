@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class DormRepair {
     private int r_id;
-    private int d_id;
+    private int d_dormitoryid;
     private String d_dormbuilding;
     private String r_name;
     private String reason;
@@ -23,12 +23,12 @@ public class DormRepair {
         this.r_id = r_id;
     }
 
-    public int getD_id() {
-        return d_id;
+    public int getD_dormitoryid() {
+        return d_dormitoryid;
     }
 
-    public void setD_id(int d_id) {
-        this.d_id = d_id;
+    public void setD_id(int d_dormitoryid) {
+        this.d_dormitoryid = d_dormitoryid;
     }
 
     public String getD_dormbuilding() {

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Dormitory {
     private Integer d_id;
-    private Integer s_dormitoryid;
+    private Integer d_dormitoryid;
     private String d_dormbuilding;
     private String d_bedtotal;
     private String d_bed;
@@ -20,12 +20,12 @@ public class Dormitory {
         this.d_id = d_id;
     }
 
-    public Integer getS_dormitoryid() {
-        return s_dormitoryid;
+    public Integer getD_dormitoryid() {
+        return d_dormitoryid;
     }
 
-    public void setS_dormitoryid(Integer s_dormitoryid) {
-        this.s_dormitoryid = s_dormitoryid;
+    public void setD_dormitoryid(Integer d_dormitoryid) {
+        this.d_dormitoryid = d_dormitoryid;
     }
 
     public String getD_dormbuilding() {

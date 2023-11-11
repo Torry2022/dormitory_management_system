@@ -10,8 +10,8 @@
             <if test="a_name != null and a_name != ''">
                 and a_name like '%${a_name}%'
             </if>
-            <if test="s_dormitoryid != null and s_dormitoryid != 0">
-                and s_dormitoryid like '%${s_dormitoryid}%'
+            <if test="d_dormitoryid != null and d_dormitoryid != 0">
+                and d_dormitoryid like '%${d_dormitoryid}%'
             </if>
             <if test="d_dormbuilding != null and d_dormbuilding != ''">
                 and d_dormbuilding like '%${d_dormbuilding}%'
@@ -22,13 +22,13 @@
     </select>
     <!--查询数据总数-->
     <select id="totalCount" resultType="Integer">
-        select count(s_dormitoryid) from d_dormitoryinfo
+        select count(d_dormitoryid) from d_dormitoryinfo
         <where>
             <if test="a_name != null and a_name != ''">
                 and a_name like '%${a_name}%'
             </if>
-            <if test="s_dormitoryid != null and s_dormitoryid != 0">
-                and s_dormitoryid like '%${s_dormitoryid}%'
+            <if test="d_dormitoryid != null and d_dormitoryid != 0">
+                and d_dormitoryid like '%${d_dormitoryid}%'
             </if>
             <if test="d_dormbuilding != null and d_dormbuilding !=''">
                 and d_dormbuilding like '%${d_dormbuilding}%'
@@ -38,8 +38,8 @@
 
     <!--添加宿舍信息-->
     <insert id="addDormitory" parameterType="Dormitory" keyProperty="d_id" useGeneratedKeys="true">
-        insert into d_dormitoryinfo (s_dormitoryid, d_dormbuilding, d_bedtotal, d_bed, a_name)
-        values (#{s_dormitoryid}, #{d_dormbuilding}, #{d_bedtotal}, #{d_bed}, #{a_name})
+        insert into d_dormitoryinfo (d_dormitoryid, d_dormbuilding, d_bedtotal, d_bed, a_name)
+        values (#{d_dormitoryid}, #{d_dormbuilding}, #{d_bedtotal}, #{d_bed}, #{a_name})
     </insert>
 
     <!--通过id删除宿舍信息-->
@@ -59,8 +59,8 @@
     <update id="updateDormitory" parameterType="Dormitory">
         update d_dormitoryinfo
         <set>
-            <if test="s_dormitoryid != null and s_dormitoryid != 0">
-                s_dormitoryid=#{s_dormitoryid},
+            <if test="d_dormitoryid != null and d_dormitoryid != 0">
+                d_dormitoryid=#{d_dormitoryid},
             </if>
             <if test="d_dormbuilding != null and d_dormbuilding != ''">
                 d_dormbuilding=#{d_dormbuilding},
@@ -81,7 +81,7 @@
     <!--宿舍人员信息查询信息-->
     <resultMap type="com.itheima.po.Dormitory" id="cardAndInfo2">
         <id property="d_id" column="d_id"/>
-        <result property="s_dormitoryid" column="s_dormitoryid"/>
+        <result property="d_dormitoryid" column="d_dormitoryid"/>
         <result property="d_dormbuilding" column="d_dormbuilding"/>
         <result property="d_bedtotal" column="d_bedtotal"/>
         <result property="d_bed" column="d_bed"/>
@@ -103,10 +103,10 @@
         SELECT dormitoryinfos.*, students.*
         FROM d_dormitoryinfo dormitoryinfos
                  join d_student students
-                      on dormitoryinfos.s_dormitoryid = students.s_dormitoryid
+                      on dormitoryinfos.d_dormitoryid = students.s_dormitoryid
         <where>
-            <if test="s_dormitoryid != null and s_dormitoryid != ''">
-                dormitoryinfos.s_dormitoryid = #{s_dormitoryid}
+            <if test="d_dormitoryid != null and d_dormitoryid != ''">
+                dormitoryinfos.d_dormitoryid = #{d_dormitoryid}
             </if>
         </where>
     </select>

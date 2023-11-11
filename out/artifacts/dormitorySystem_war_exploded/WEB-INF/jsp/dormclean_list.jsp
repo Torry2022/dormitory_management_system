@@ -34,7 +34,7 @@
     <div class="x-body">
         <div class="layui-row">
             <form class="layui-form layui-col-md12 x-so" action="/findDormClean">
-                <input class="layui-input" placeholder="请输入宿舍编号" name="d_id" id="d_id">
+                <input class="layui-input" placeholder="请输入宿舍编号" name="d_dormitoryid" id="d_dormitoryid">
                 <input class="layui-input" placeholder="请输入宿舍楼" name="d_dormbuilding" id="d_dormbuilding">
 
                 <input class="layui-input" type="hidden" name="pageIndex" value="1">
@@ -59,7 +59,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">宿舍编号：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="d_id" class="layui-input" placeholder="请输入宿舍编号">
+                            <input type="text" name="d_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
                         </div>
                     </div>
 
@@ -100,8 +100,8 @@
                 <th>宿舍编号</th>
                 <th>宿舍楼</th>
                 <th>宿舍卫生</th>
-                <th>创建日期</th>
-                <th>更新日期</th>
+                <th>创建时间</th>
+                <th>更新时间</th>
                 <th>操作</th>
             </thead>
             <tbody>
@@ -111,7 +111,7 @@
                         <%--<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>--%>
                         <%--</td>--%>
                     <td>${di.g_id}</td>
-                    <td>${di.d_id}</td>
+                    <td>${di.d_dormitoryid}</td>
                     <td>${di.d_dormbuilding}</td>
                     <td>${di.d_grade}</td>
                     <td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${di.create_time}"/></td>
@@ -168,7 +168,7 @@
                             // 1. 如果需要调整顺序，请执行梳理函数
                             var dt = excel.filterExportData(data, [
                                 'g_id'
-                                , 'd_id'
+                                , 'd_dormitoryid'
                                 , 'd_dormbuilding'
                                 , 'd_grade'
                                 , 'create_time'
@@ -178,11 +178,11 @@
                             // 2. 数组头部新增表头
                             dt.unshift({
                                 g_id: 'ID',
-                                d_id: '宿舍编号',
+                                d_dormitoryid: '宿舍编号',
                                 d_dormbuilding: '宿舍楼',
                                 d_grade: '宿舍卫生',
-                                create_time: '创建日期',
-                                update_time: '更新日期'
+                                create_time: '创建时间',
+                                update_time: '更新时间'
                             });
 
                             // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义

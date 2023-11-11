@@ -10,10 +10,10 @@ import java.util.List;
  */
 public interface DormitoryDao {
     //获取总条数
-    Integer totalCount(@Param("a_name") String a_name, @Param("s_dormitoryid") Integer s_dormitoryid, @Param("d_dormbuilding") String d_dormbuilding);
+    Integer totalCount(@Param("a_name") String a_name, @Param("d_dormitoryid") Integer d_dormitoryid, @Param("d_dormbuilding") String d_dormbuilding);
 
     //获取用户列表
-    List<Dormitory> getDormitoryList(@Param("a_name") String a_name, @Param("s_dormitoryid") Integer s_dormitoryid,
+    List<Dormitory> getDormitoryList(@Param("a_name") String a_name, @Param("d_dormitoryid") Integer d_dormitoryid,
                                      @Param("d_dormbuilding") String d_dormbuilding, @Param("currentPage") Integer currentPage, @Param("pageSize") Integer pageSize);
 
     //添加宿舍信息

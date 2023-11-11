@@ -34,7 +34,7 @@
     <div class="x-body">
         <div class="layui-row">
             <form class="layui-form layui-col-md12 x-so" action="/findDormRepair">
-                <input class="layui-input" placeholder="请输入宿舍编号" name="d_id" id="d_id">
+                <input class="layui-input" placeholder="请输入宿舍编号" name="d_dormitoryid" id="d_dormitoryid">
                 <input class="layui-input" placeholder="请输入宿舍楼" name="d_dormbuilding" id="d_dormbuilding">
 
                 <input class="layui-input" type="hidden" name="pageIndex" value="1">
@@ -59,7 +59,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">宿舍编号：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="d_id" class="layui-input" placeholder="请输入宿舍编号">
+                            <input type="text" name="d_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
                         </div>
                     </div>
 
@@ -117,7 +117,7 @@
             <c:forEach items="${di.list}" var="di">
                 <tr>
                     <td>${di.r_id}</td>
-                    <td>${di.d_id}</td>
+                    <td>${di.d_dormitoryid}</td>
                     <td>${di.d_dormbuilding}</td>
                     <td>${di.r_name}</td>
                     <td>${di.reason}</td>
@@ -176,7 +176,7 @@
                             // 1. 如果需要调整顺序，请执行梳理函数
                             var dt = excel.filterExportData(data, [
                                 'r_id'
-                                , 'd_id'
+                                , 'd_dormitoryid'
                                 , 'd_dormbuilding'
                                 , 'r_name'
                                 , 'reason'
@@ -187,7 +187,7 @@
                             // 2. 数组头部新增表头
                             dt.unshift({
                                 r_id: 'ID',
-                                d_id: '宿舍编号',
+                                d_dormitoryid: '宿舍编号',
                                 d_dormbuilding: '宿舍楼',
                                 r_name: '维修人员',
                                 reason: '报修事由',

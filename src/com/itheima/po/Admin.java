@@ -1,7 +1,5 @@
 package com.itheima.po;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 public class Admin {
     private Integer a_id;
     private String a_username;

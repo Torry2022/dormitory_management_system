@@ -33,7 +33,7 @@
     <div class="x-body">
         <div class="layui-row">
             <form class="layui-form layui-col-md12 x-so" action="/findDormitoryStudent">
-                <input class="layui-input" placeholder="请输入宿舍编号" name="s_dormitoryid" id="s_dormitoryid">
+                <input class="layui-input" placeholder="请输入宿舍编号" name="d_dormitoryid" id="d_dormitoryid">
 
                 <button class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon">&#xe615;</i></button>
                 <a class="layui-btn layui-btn-small" style="float:right" href="/findDormitoryStudent" title="刷新">
@@ -49,7 +49,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">宿舍编号：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
+                            <input type="text" name="d_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
                         </div>
                     </div>
 
@@ -109,7 +109,7 @@
 
                 <c:forEach items="${dd}" var="sd">
                     <tr>
-                        <td>${d.s_dormitoryid}</td>
+                        <td>${d.d_dormitoryid}</td>
                         <td>${d.d_dormbuilding}</td>
                         <td>${d.d_bed}</td>
                         <td>${sd.s_name}</td>
