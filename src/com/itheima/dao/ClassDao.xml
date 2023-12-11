@@ -83,7 +83,6 @@
             <result property="s_studentid" column="s_studentid"/>
             <result property="s_name" column="s_name"/>
             <result property="s_sex" column="s_sex"/>
-            <result property="s_age" column="s_age"/>
             <result property="s_phone" column="s_phone"/>
             <result property="s_classid" column="s_classid"/>
             <result property="s_classname" column="s_classname"/>
@@ -101,7 +100,6 @@
                student.s_studentid   as s_studentid,
                student.s_name        as s_name,
                student.s_sex         as s_sex,
-               student.s_age         as s_age,
                student.s_phone       as s_phone,
                student.s_classid     as s_classid,
                student.s_classname   as s_classname,

@@ -50,7 +50,7 @@
         <ul class="layui-nav right" lay-filter="">
             <li class="layui-nav-item">
                 <a href="javascript:"><img
-                        src="https://sky-itcast.oss-cn-beijing.aliyuncs.com/13da832f-ef2c-484d-8370-5934a1045a06.png"
+                        src="https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/ic_avatar.jpg"
                         class="layui-nav-img">${sessionScope.ad.a_username}</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
                     <dd><a onclick="x_admin_show('切换帐号','logout')">切换帐号</a></dd>

@@ -223,7 +223,6 @@
                     <td>${student.s_studentid}</td>
                     <td>${student.s_name}</td>
                     <td>${student.s_sex}</td>
-                    <td>${student.s_age}</td>
                     <td>${student.s_phone}</td>
                     <td>${student.s_classid}</td>
                     <td>${student.s_classname}</td>
@@ -285,7 +284,6 @@
                             , 's_studentid'
                             , 's_name'
                             , 's_sex'
-                            , 's_age'
                             , 's_phone'
                             , 's_classid'
                             , 's_classname'
