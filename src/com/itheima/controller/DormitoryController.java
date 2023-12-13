@@ -28,6 +28,7 @@ public class DormitoryController {
     @RequestMapping(value = "/findDormitory")
     public String findDormitory(String a_name, Integer s_dormitoryid, String d_dormbuilding,
                                 Integer pageIndex, Integer pageSize, Model model) {
+        pageSize = 15;
         PageInfo<Dormitory> di = dormitoryService.findPageInfo(a_name, s_dormitoryid,
                 d_dormbuilding, pageIndex, pageSize);
         model.addAttribute("di", di);
@@ -37,7 +38,7 @@ public class DormitoryController {
     /**
      * 导出Excel
      */
-    @RequestMapping(value = "/exportdormitorylist", method = RequestMethod.POST)
+    @RequestMapping(value = "/exportDormitoryList", method = RequestMethod.POST)
     @ResponseBody
     public List<Dormitory> exportDormitory() {
         return dormitoryService.getAll();
@@ -87,6 +88,6 @@ public class DormitoryController {
     public String findDormitoryStudent(Dormitory dormitory, Model model) {
         List<Dormitory> d = dormitoryService.findDormitoryStudent(dormitory);
         model.addAttribute("ds", d);
-        return "dormitory_Studentlist";
+        return "dormitory_student_list";
     }
 }

@@ -62,6 +62,7 @@ public class AdminController {
     @RequestMapping(value = "/findAdmin")
     public String findAdmin(String a_username, String a_describe, Integer pageIndex,
                             Integer a_id, Integer pageSize, Model model) {
+        pageSize = 15;
         PageInfo<Admin> ai = adminService.findPageInfo(a_username, a_describe,
                 a_id, pageIndex, pageSize);
         model.addAttribute("ai", ai);
@@ -71,7 +72,7 @@ public class AdminController {
     /**
      * 导出Excel
      */
-    @RequestMapping(value = "/exportadminlist", method = RequestMethod.POST)
+    @RequestMapping(value = "/exportAdminList", method = RequestMethod.POST)
     @ResponseBody
     public List<Admin> exportAdmin() {
         return adminService.getAll();

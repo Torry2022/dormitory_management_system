@@ -5,7 +5,7 @@
 
     <!--分页查询-->
     <select id="getDormitoryList" parameterType="Dormitory" resultType="Dormitory">
-        select *from d_dormitoryinfo
+        select * from d_dormitoryinfo
         <where>
             <if test="a_name != null and a_name != ''">
                 and a_name like '%${a_name}%'
@@ -20,6 +20,7 @@
         ORDER BY d_id asc
         limit #{currentPage},#{pageSize}
     </select>
+    
     <!--查询数据总数-->
     <select id="totalCount" resultType="Integer">
         select count(d_dormitoryid) from d_dormitoryinfo

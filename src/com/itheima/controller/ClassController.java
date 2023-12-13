@@ -28,7 +28,7 @@ public class ClassController {
     @RequestMapping(value = "/findClass")
     public String findClass(Integer c_classid, String c_classname, String c_counsellor,
                             Integer pageIndex, Integer pageSize, Model model) {
-
+        pageSize = 15;
         PageInfo<Class> ci = classService.findPageInfo(c_classname, c_counsellor,
                 c_classid, pageIndex, pageSize);
         model.addAttribute("ci", ci);
@@ -39,7 +39,7 @@ public class ClassController {
     /**
      * 导出Excel
      */
-    @RequestMapping(value = "/exportclasslist", method = RequestMethod.POST)
+    @RequestMapping(value = "/exportClassList", method = RequestMethod.POST)
     @ResponseBody
     public List<Class> exportClass() {
         return classService.getAll();
@@ -89,14 +89,6 @@ public class ClassController {
     public String findClassStudent(Class uclass, Model model) {
         List<Class> c = classService.findClassStudent(uclass);
         model.addAttribute("cs", c);
-        return "class_Studentlist";
+        return "class_student_list";
     }
-
-    //采用Ajax来提交表单，并返回JSON数据
-//	@RequestMapping(value = "/findClassStudentlist",method = RequestMethod.POST)
-//	@ResponseBody
-//	public List<Class> findClassStudentlist(@RequestBody Class uclass){
-//		List<Class> c = classService.findClassStudent(uclass);
-//		return c;
-//	}
 }

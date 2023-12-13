@@ -1,19 +1,3 @@
-/*
-Navicat MySQL Data Transfer
-
-Designer              ：Joyrocky
-Source Server         : 本地
-Source Server Version : 50725
-Source Host           : localhost:3306
-Source Database       : dormitory
-
-Target Server Type    : MYSQL
-Target Server Version : 50725
-File Encoding         : 65001
-
-Date: 2019-07-06 18:49:39
-*/
-
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -23,10 +7,10 @@ DROP TABLE IF EXISTS `d_admin`;
 CREATE TABLE `d_admin` (
   `a_id` int(11) NOT NULL AUTO_INCREMENT,
   `a_username` varchar(10) NOT NULL,
-  `a_password` varchar(20) NOT NULL,
-  `a_name` varchar(10) DEFAULT NULL,
-  `a_phone` bigint(20) DEFAULT NULL,
-  `a_power` int(11) DEFAULT NULL,
+  `a_password` varchar(40) NOT NULL,
+  `a_name` varchar(10) NOT NULL,
+  `a_phone` bigint(20) NOT NULL,
+  `a_power` int(11) NOT NULL,
   `a_describe` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`a_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
@@ -34,18 +18,18 @@ CREATE TABLE `d_admin` (
 -- ----------------------------
 -- Records of d_admin
 -- ----------------------------
-INSERT INTO `d_admin` VALUES ('1', 'zx', '202CB962AC59075B964B07152D234B70', '张鑫', '138138138', '1', '高');
-INSERT INTO `d_admin` VALUES ('2', 'zj', '202CB962AC59075B964B07152D234B70', '张杰', '138138138', '2', '低');
-INSERT INTO `d_admin` VALUES ('3', 'zh', '202CB962AC59075B964B07152D234B70', '张欢', '138138138', '1', '高');
-INSERT INTO `d_admin` VALUES ('4', 'zk', '202CB962AC59075B964B07152D234B70', '赵凯', '138138138', '2', '低');
-INSERT INTO `d_admin` VALUES ('5', 'ywj', '202CB962AC59075B964B07152D234B70', '杨雯雯', '138138138', '1', '高');
-INSERT INTO `d_admin` VALUES ('6', 'wh', '202CB962AC59075B964B07152D234B70', '王皓', '138138138', '1', '高');
-INSERT INTO `d_admin` VALUES ('7', 'zw', '202CB962AC59075B964B07152D234B70', '张伟', '138138138', '2', '低');
-INSERT INTO `d_admin` VALUES ('8', 'zs', '202CB962AC59075B964B07152D234B70', '张硕', '138138138', '2', '低');
-INSERT INTO `d_admin` VALUES ('9', 'wf', '202CB962AC59075B964B07152D234B70', '王凡', '138138138', '1', '高');
-INSERT INTO `d_admin` VALUES ('10', 'zn', '202CB962AC59075B964B07152D234B70', '张娜', '138138138', '1', '高');
-INSERT INTO `d_admin` VALUES ('11', 'jzh', '202CB962AC59075B964B07152D234B70', '蒋子华', '138138138', '2', '低');
-INSERT INTO `d_admin` VALUES ('12', 'xl', '202CB962AC59075B964B07152D234B70', '薛磊', '138138138', '2', '低');
+INSERT INTO `d_admin` VALUES ('1', 'zx', '202CB962AC59075B964B07152D234B70', '张鑫', '13813813813', '1', '高');
+INSERT INTO `d_admin` VALUES ('2', 'zj', '202CB962AC59075B964B07152D234B70', '张杰', '13813813813', '2', '低');
+INSERT INTO `d_admin` VALUES ('3', 'zh', '202CB962AC59075B964B07152D234B70', '张欢', '13813813813', '1', '高');
+INSERT INTO `d_admin` VALUES ('4', 'zk', '202CB962AC59075B964B07152D234B70', '赵凯', '13813813813', '2', '低');
+INSERT INTO `d_admin` VALUES ('5', 'ywj', '202CB962AC59075B964B07152D234B70', '杨雯雯', '13813813813', '1', '高');
+INSERT INTO `d_admin` VALUES ('6', 'wh', '202CB962AC59075B964B07152D234B70', '王皓', '13813813813', '1', '高');
+INSERT INTO `d_admin` VALUES ('7', 'zw', '202CB962AC59075B964B07152D234B70', '张伟', '13813813813', '2', '低');
+INSERT INTO `d_admin` VALUES ('8', 'zs', '202CB962AC59075B964B07152D234B70', '张硕', '13813813813', '2', '低');
+INSERT INTO `d_admin` VALUES ('9', 'wf', '202CB962AC59075B964B07152D234B70', '王凡', '13813813813', '1', '高');
+INSERT INTO `d_admin` VALUES ('10', 'zn', '202CB962AC59075B964B07152D234B70', '张娜', '13813813813', '1', '高');
+INSERT INTO `d_admin` VALUES ('11', 'jzh', '202CB962AC59075B964B07152D234B70', '蒋子华', '13813813813', '2', '低');
+INSERT INTO `d_admin` VALUES ('12', 'xl', '202CB962AC59075B964B07152D234B70', '薛磊', '13813813813', '2', '低');
 
 -- ----------------------------
 -- Table structure for `d_class`
@@ -80,10 +64,10 @@ DROP TABLE IF EXISTS `d_dormgrade`;
 CREATE TABLE `d_dormgrade` (
   `g_id` int(11) NOT NULL AUTO_INCREMENT,
   `d_dormitoryid` int(11) NOT NULL,
-  `d_dormbuilding` varchar(10) DEFAULT NULL,
-  `d_grade` int(11) DEFAULT NULL,
-  `create_time` datetime DEFAULT NULL,
-  `update_time` datetime DEFAULT NULL,
+  `d_dormbuilding` varchar(10) NOT NULL,
+  `d_grade` int(11) NOT NULL,
+  `create_time` datetime NOT NULL,
+  `update_time` datetime NOT NULL,
   PRIMARY KEY (`g_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
@@ -105,7 +89,7 @@ DROP TABLE IF EXISTS `d_dormitoryinfo`;
 CREATE TABLE `d_dormitoryinfo` (
   `d_id` int(11) NOT NULL AUTO_INCREMENT,
   `d_dormitoryid` int(11) NOT NULL,
-  `d_dormbuilding` varchar(10) DEFAULT NULL,
+  `d_dormbuilding` varchar(10) NOT NULL,
   `d_bedtotal` int(11) DEFAULT NULL,
   `d_bed` int(11) DEFAULT NULL,
   `a_name` varchar(10) DEFAULT NULL,
@@ -115,8 +99,8 @@ CREATE TABLE `d_dormitoryinfo` (
 -- ----------------------------
 -- Records of d_dormitoryinfo
 -- ----------------------------
-INSERT INTO `d_dormitoryinfo` VALUES ('1', '311', '24号楼', '4', '3', '周荀凯');
-INSERT INTO `d_dormitoryinfo` VALUES ('2', '322', '24号楼', '4', '4', '周荀凯');
+INSERT INTO `d_dormitoryinfo` VALUES ('1', '311', '24号楼', '4', '3', '周凯');
+INSERT INTO `d_dormitoryinfo` VALUES ('2', '322', '24号楼', '4', '4', '周凯');
 INSERT INTO `d_dormitoryinfo` VALUES ('3', '601', '23号楼', '6', '6', '张杰');
 INSERT INTO `d_dormitoryinfo` VALUES ('4', '602', '23号楼', '6', '5', '张杰');
 INSERT INTO `d_dormitoryinfo` VALUES ('5', '111', '22号楼', '4', '4', '杨雯雯');
@@ -126,8 +110,8 @@ INSERT INTO `d_dormitoryinfo` VALUES ('8', '213', '27号楼', '4', '4', '张伟'
 INSERT INTO `d_dormitoryinfo` VALUES ('9', '312', '26号楼', '6', '6', '薛磊');
 INSERT INTO `d_dormitoryinfo` VALUES ('10', '313', '22号楼', '4', '4', '张磊');
 INSERT INTO `d_dormitoryinfo` VALUES ('11', '323', '22号楼', '6', '5', '张磊');
-INSERT INTO `d_dormitoryinfo` VALUES ('12', '301', '24号楼', '6', '6', '周荀凯');
-INSERT INTO `d_dormitoryinfo` VALUES ('13', '302', '24号楼', '6', '6', '周荀凯');
+INSERT INTO `d_dormitoryinfo` VALUES ('12', '301', '24号楼', '6', '6', '周凯');
+INSERT INTO `d_dormitoryinfo` VALUES ('13', '302', '24号楼', '6', '6', '周凯');
 INSERT INTO `d_dormitoryinfo` VALUES ('14', '423', '29号楼', '4', '3', '郭浩然');
 
 -- ----------------------------
@@ -139,9 +123,9 @@ CREATE TABLE `d_dormrepair` (
   `d_dormitoryid` int(11) NOT NULL,
   `d_dormbuilding` varchar(10) NOT NULL,
   `r_name` varchar(10) DEFAULT NULL,
-  `reason` varchar(50) DEFAULT NULL,
-  `create_time` datetime DEFAULT NULL,
-  `update_time` datetime DEFAULT NULL,
+  `reason` varchar(50) NOT NULL,
+  `create_time` datetime NOT NULL,
+  `update_time` datetime NOT NULL,
   PRIMARY KEY (`r_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
@@ -162,12 +146,12 @@ DROP TABLE IF EXISTS `d_stgrade`;
 CREATE TABLE `d_stgrade` (
   `g_id` int(11) NOT NULL AUTO_INCREMENT,
   `s_studentid` int(11) NOT NULL,
-  `s_name` varchar(10) DEFAULT NULL,
-  `s_grade` int(11) DEFAULT NULL,
-  `s_classid` int(11) DEFAULT NULL,
-  `s_dormitoryid` int(11) DEFAULT NULL,
-  `create_time` datetime DEFAULT NULL,
-  `update_time` datetime DEFAULT NULL,
+  `s_name` varchar(10) NOT NULL,
+  `s_grade` int(11) NOT NULL,
+  `s_classid` int(11) NOT NULL,
+  `s_dormitoryid` int(11) NOT NULL,
+  `create_time` datetime NOT NULL,
+  `update_time` datetime NOT NULL,
   PRIMARY KEY (`g_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
@@ -192,11 +176,11 @@ DROP TABLE IF EXISTS `d_student`;
 CREATE TABLE `d_student` (
   `s_id` int(11) NOT NULL AUTO_INCREMENT,
   `s_studentid` int(11) NOT NULL,
-  `s_name` varchar(10) DEFAULT NULL,
+  `s_name` varchar(10) NOT NULL,
   `s_sex` varchar(10) DEFAULT NULL,
   `s_phone` bigint(20) DEFAULT NULL,
   `s_classid` int(11) NOT NULL,
-  `s_classname` varchar(10) DEFAULT NULL,
+  `s_classname` varchar(10) NOT NULL,
   `s_dormitoryid` int(11) NOT NULL,
   PRIMARY KEY (`s_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
@@ -204,19 +188,19 @@ CREATE TABLE `d_student` (
 -- ----------------------------
 -- Records of d_student
 -- ----------------------------
-INSERT INTO `d_student` VALUES ('1', '1413032001', '张杰', '男', '138138138', '141', '生物', '301');
-INSERT INTO `d_student` VALUES ('2', '1413032002', '赵凯', '男', '138138138', '141', '生物', '301');
-INSERT INTO `d_student` VALUES ('3', '1413032003', '许文文', '男', '138138138', '141', '生物', '301');
-INSERT INTO `d_student` VALUES ('4', '1413032004', '王浩', '男', '138138138', '141', '生物', '301');
-INSERT INTO `d_student` VALUES ('5', '1413032005', '张伟', '男', '138138138', '141', '土木', '301');
-INSERT INTO `d_student` VALUES ('6', '1413032006', '郭顶', '男', '138138138', '141', '土木', '301');
-INSERT INTO `d_student` VALUES ('7', '1513112411', '曹原', '男', '138138138', '151', '应化', '112');
-INSERT INTO `d_student` VALUES ('8', '1513112412', '赵跃', '男', '138138138', '151', '纺织', '112');
-INSERT INTO `d_student` VALUES ('9', '1513112413', '孙畅', '男', '138138138', '151', '纺织', '112');
-INSERT INTO `d_student` VALUES ('10', '1513122417', '周帆', '男', '138138138', '161', '物流', '213');
-INSERT INTO `d_student` VALUES ('11', '1513122418', '田野', '男', '138138138', '153', '数师', '213');
-INSERT INTO `d_student` VALUES ('12', '1513122419', '张嘉佳', '男', '138138138', '153', '金融', '213');
-INSERT INTO `d_student` VALUES ('13', '1513122420', '陈昊', '男', '138138138', '153', '金融', '213');
+INSERT INTO `d_student` VALUES ('1', '1413032001', '张杰', '男', '13813813813', '141', '生物', '301');
+INSERT INTO `d_student` VALUES ('2', '1413032002', '赵凯', '男', '13813813813', '141', '生物', '301');
+INSERT INTO `d_student` VALUES ('3', '1413032003', '许文文', '男', '13813813813', '141', '生物', '301');
+INSERT INTO `d_student` VALUES ('4', '1413032004', '王浩', '男', '13813813813', '141', '生物', '301');
+INSERT INTO `d_student` VALUES ('5', '1413032005', '张伟', '男', '13813813813', '141', '土木', '301');
+INSERT INTO `d_student` VALUES ('6', '1413032006', '郭顶', '男', '13813813813', '141', '土木', '301');
+INSERT INTO `d_student` VALUES ('7', '1513112411', '曹原', '男', '13813813813', '151', '应化', '112');
+INSERT INTO `d_student` VALUES ('8', '1513112412', '赵跃', '男', '13813813813', '151', '纺织', '112');
+INSERT INTO `d_student` VALUES ('9', '1513112413', '孙畅', '男', '13813813813', '151', '纺织', '112');
+INSERT INTO `d_student` VALUES ('10', '1513122417', '周帆', '男', '13813813813', '161', '物流', '213');
+INSERT INTO `d_student` VALUES ('11', '1513122418', '田野', '男', '13813813813', '153', '数师', '213');
+INSERT INTO `d_student` VALUES ('12', '1513122419', '张嘉佳', '男', '13813813813', '153', '金融', '213');
+INSERT INTO `d_student` VALUES ('13', '1513122420', '陈昊', '男', '13813813813', '153', '金融', '213');
 
 -- ----------------------------
 -- Table structure for `d_visitor`
@@ -224,23 +208,23 @@ INSERT INTO `d_student` VALUES ('13', '1513122420', '陈昊', '男', '138138138'
 DROP TABLE IF EXISTS `d_visitor`;
 CREATE TABLE `d_visitor` (
   `v_id` int(11) NOT NULL AUTO_INCREMENT,
-  `v_name` varchar(10) DEFAULT NULL,
-  `v_phone` bigint(20) DEFAULT NULL,
-  `v_dormitoryid` int(11) DEFAULT NULL,
-  `v_dormbuilding` varchar(10) DEFAULT NULL,
-  `create_time` datetime DEFAULT NULL,
+  `v_name` varchar(10) NOT NULL,
+  `v_phone` bigint(20) NOT NULL,
+  `v_dormitoryid` int(11) NOT NULL,
+  `v_dormbuilding` varchar(10) NOT NULL,
+  `create_time` datetime NOT NULL,
   PRIMARY KEY (`v_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of d_visitor
 -- ----------------------------
-INSERT INTO `d_visitor` VALUES ('1', '郑杰', '138138138', '301', '24号楼', '2019-05-14 13:26:13');
-INSERT INTO `d_visitor` VALUES ('2', '李博', '138138138', '322', '24号楼', '2019-05-12 19:36:23');
-INSERT INTO `d_visitor` VALUES ('3', '张盈盈', '138138138', '601', '23号楼', '2019-05-13 19:37:11');
-INSERT INTO `d_visitor` VALUES ('4', '王涛', '138138138', '111', '22号楼', '2019-05-15 19:37:46');
-INSERT INTO `d_visitor` VALUES ('5', '胡浩', '138138138', '222', '27号楼', '2019-05-16 19:38:27');
-INSERT INTO `d_visitor` VALUES ('6', '陈昊', '138138138', '213', '27号楼', '2019-05-18 19:39:03');
-INSERT INTO `d_visitor` VALUES ('7', '刘军', '138138138', '213', '27号楼', '2019-05-20 19:39:42');
-INSERT INTO `d_visitor` VALUES ('8', '黄智', '138138138', '312', '26号楼', '2019-05-22 19:46:38');
-INSERT INTO `d_visitor` VALUES ('9', '郑杰', '123123123', '311', '24号楼', '2019-05-16 16:59:06');
+INSERT INTO `d_visitor` VALUES ('1', '郑杰', '13813813813', '301', '24号楼', '2019-05-14 13:26:13');
+INSERT INTO `d_visitor` VALUES ('2', '李博', '13813813813', '322', '24号楼', '2019-05-12 19:36:23');
+INSERT INTO `d_visitor` VALUES ('3', '张盈盈', '13813813813', '601', '23号楼', '2019-05-13 19:37:11');
+INSERT INTO `d_visitor` VALUES ('4', '王涛', '13813813813', '111', '22号楼', '2019-05-15 19:37:46');
+INSERT INTO `d_visitor` VALUES ('5', '胡浩', '13813813813', '222', '27号楼', '2019-05-16 19:38:27');
+INSERT INTO `d_visitor` VALUES ('6', '陈昊', '13813813813', '213', '27号楼', '2019-05-18 19:39:03');
+INSERT INTO `d_visitor` VALUES ('7', '刘军', '13813813813', '213', '27号楼', '2019-05-20 19:39:42');
+INSERT INTO `d_visitor` VALUES ('8', '黄智', '13813813813', '312', '26号楼', '2019-05-22 19:46:38');
+INSERT INTO `d_visitor` VALUES ('9', '郑杰', '13813813813', '311', '24号楼', '2019-05-16 16:59:06');

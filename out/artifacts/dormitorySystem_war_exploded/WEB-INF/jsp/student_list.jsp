@@ -1,5 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" import="com.itheima.po.Student" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <html>
 <head>
@@ -7,14 +7,12 @@
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
-          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
-    <%--<meta http-equiv="Cache-Control" content="no-siteapp" />--%>
+          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8"/>
 
     <link rel="icon" href="/images/favicon.ico" sizes="32x32"/>
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/xadmin.css">
     <script type="text/javascript" src="./js/jquery-1.3.2.min.js"></script>
-    <script src="lib/layui/layui.js"></script>
     <script type="text/javascript" src="./js/xadmin.js"></script>
     <script src="/layui_exts/excel.js"></script>
 
@@ -38,15 +36,13 @@
                 <input class="layui-input" placeholder="请输入班级编号" name="s_classid" id="s_classid">
                 <input class="layui-input" placeholder="请输入班级名" name="s_classname" id="s_classname">
 
-                <input class="layui-input" type="hidden" name="pageIndex" value="1">
-                <input class="layui-input" type="hidden" name="pageSize" value="3">
                 <button class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon">&#xe615;</i></button>
                 <a class="layui-btn layui-btn-small" style="float:right" href="/findStudent" title="刷新">
                     <i class="layui-icon">&#x21bb;</i></a>
             </form>
         </div>
         <xblock>
-            <button id="addStudnetBtn" class="layui-btn layui-btn-normal"><i class="layui-icon">&#xe654;</i>添加
+            <button id="addStudentBtn" class="layui-btn layui-btn-normal"><i class="layui-icon">&#xe654;</i>添加
             </button>
             <button class="layui-btn layui-btn-warm" lay-filter="toolbarDemo" lay-submit=""><i class="layui-icon">&#xe67c;</i>导出
             </button>
@@ -54,140 +50,69 @@
         </xblock>
 
         <%--添加模态框--%>
-        <div class="layui-row" id="test" style="display: none;">
+        <div class="layui-row" id="addStudent" style="display: none;">
             <div class="layui-col-md10">
-                <form class="layui-form" id="addEmployeeForm">
+                <form class="layui-form" id="addStudentForm">
                     <div class="layui-form-item">
-                        <label class="layui-form-label">学号：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>学号：</label>
                         <div class="layui-input-block">
-                            <input type="text" lay-verify="required" name="s_studentid" class="layui-input"
-                                   placeholder="请输入学号">
+                            <input type="text" name="s_studentid" lay-verify="required|number" lay-reqtext="学号不能为空" class="layui-input"
+                                   autocomplete="off" placeholder="请输入学号">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">姓名：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>姓名：</label>
                         <div class="layui-input-block">
-                            <input type="text" lay-verify="required" name="s_name" class="layui-input"
-                                   placeholder="请输入姓名">
+                            <input type="text" name="s_name" lay-verify="required" lay-reqtext="姓名不能为空" class="layui-input"
+                                   autocomplete="off" placeholder="请输入姓名">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">性别</label>
+                        <label class="layui-form-label">性别：</label>
                         <div class="layui-input-block">
-                            <input type="radio" name="s_sex" value="男" title="男" checked="">
+                            <input type="radio" name="s_sex" value="男" title="男">
                             <input type="radio" name="s_sex" value="女" title="女">
-                            <%--<input type="text" name="s_sex" class="layui-input" id="s_sex" placeholder="请输入性别">--%>
                         </div>
                     </div>
 
                     <div class="layui-form-item">
                         <label class="layui-form-label">电话：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_phone" class="layui-input" placeholder="请输入电话">
+                            <input type="text" name="s_phone" class="layui-input" lay-verify="phone"
+                                   autocomplete="new-pwd" placeholder="请输入电话">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">班级编号：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>班级编号：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_classid" class="layui-input" placeholder="请输入班级编号">
+                            <input type="text" name="s_classid" lay-verify="required|number" lay-reqtext="班级编号不能为空" class="layui-input"
+                                   autocomplete="off" placeholder="请输入班级编号">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">班级名：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>班级名：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_classname" class="layui-input" placeholder="请输入班级名">
+                            <input type="text" name="s_classname" lay-verify="required" lay-reqtext="班级名不能为空" class="layui-input"
+                                   autocomplete="off" placeholder="请输入班级名">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">宿舍编号：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>宿舍编号：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
+                            <input type="text" name="s_dormitoryid" lay-verify="required|number" lay-reqtext="宿舍编号不能为空" class="layui-input"
+                                   autocomplete="off" placeholder="请输入宿舍编号">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <button type="button" class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">
+                            <button type="button" class="layui-btn layui-btn-normal" lay-submit lay-filter="addForm">
                                 提交
-                            </button>
-                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <%--编辑模态框--%>
-        <div class="layui-row" id="updteDiv" style="display: none;">
-            <div class="layui-col-md10">
-                <form class="layui-form" id="addUpdatForm">
-                    <input value="${sessionScope.sid}" type="text" name="s_id" id="edit_id"/>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">学号：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="s_studentid" id="edit_studentid" value="" class="layui-input"
-                                   placeholder="请输入学号">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">姓名：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="s_name" id="edit_names" value="" class="layui-input"
-                                   placeholder="请输入姓名">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">性别</label>
-                        <div class="layui-input-block">
-                            <input type="radio" name="s_sex" id="edit_sex" value="男" title="男" checked="">
-                            <input type="radio" name="s_sex" id="edit_sex" value="女" title="女">
-                            <%--<input type="text" name="s_sex" class="layui-input" id="s_sex" placeholder="请输入性别">--%>
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">电话：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="s_phone" id="edit_phone" value="" class="layui-input"
-                                   placeholder="请输入电话">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">班级编号：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="s_classid" id="edit_classids" value="" class="layui-input"
-                                   placeholder="请输入班级编号">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">班级名：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="s_classname" id="edit_classname" value="" class="layui-input"
-                                   placeholder="请输入班级名">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">宿舍编号：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="s_dormitoryid" id="edit_dormitoryids" value="" class="layui-input"
-                                   placeholder="请输入宿舍编号">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <div class="layui-input-block">
-                            <button type="button" class="layui-btn layui-btn-normal" lay-submit lay-filter="updateForm">
-                                更新
                             </button>
                             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                         </div>
@@ -199,37 +124,31 @@
         <%--表格数据--%>
         <table class="layui-table">
             <thead>
-            <tr>
-                <%--<th>--%>
-                <%--<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>--%>
-                <%--</th>--%>
-                <th>ID</th>
-                <th>学号</th>
-                <th>姓名</th>
-                <th>性别</th>
-                <th>电话</th>
-                <th>班级编号</th>
-                <th>班级名</th>
-                <th>宿舍编号</th>
-                <th>操作</th>
+                <tr>
+                    <th>ID</th>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>电话</th>
+                    <th>班级编号</th>
+                    <th>班级名</th>
+                    <th>宿舍编号</th>
+                    <th>操作</th>
+                </tr>
             </thead>
             <tbody>
             <c:forEach items="${pi.list}" var="student">
                 <tr>
-                        <%--<td>--%>
-                        <%--<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>--%>
-                        <%--</td>--%>
                     <td>${student.s_id}</td>
                     <td>${student.s_studentid}</td>
                     <td>${student.s_name}</td>
                     <td>${student.s_sex}</td>
-                    <td>${student.s_age}</td>
                     <td>${student.s_phone}</td>
                     <td>${student.s_classid}</td>
                     <td>${student.s_classname}</td>
                     <td>${student.s_dormitoryid}</td>
                     <td>
-                        <a title="编辑" id="updateEdit" href="/findStudentById?s_id=${student.s_id}">
+                        <a title="编辑" href="/findStudentById?s_id=${student.s_id}">
                             <i class="layui-icon">&#xe642;</i>
                         </a>
                         <a title="删除" onclick="member_del(this,'${student.s_id}')" href="javascript:;">
@@ -241,17 +160,17 @@
             </tbody>
         </table>
 
-        <div class="">
+        <div>
             <input type="hidden" id="totalPageCount" value="${pi.pageTotalCount}"/>
-            <c:import url="pageBtn.jsp">
+            <c:import url="page_btn.jsp">
                 <c:param name="totalCount" value="${pi.totalCount}"/>
                 <c:param name="currentPageNo" value="${pi.pageIndex}"/>
                 <c:param name="totalPageCount" value="${pi.pageTotalCount}"/>
             </c:import>
         </div>
     </div>
-    <script>
 
+    <script>        
         layui.config({
             base: 'layui_exts/',
         }).extend({
@@ -270,26 +189,24 @@
             });
 
             form.on('submit(toolbarDemo)', function () {
-
                 $.ajax({
-                    url: '/exportstudentlist',
+                    url: '/exportStudentList',
                     type: 'post',
                     dataType: 'json',
                     contentType: "application/json; charset=utf-8",
                     success: function (data) {
                         console.log(data);
 
-                        // 1. 如果需要调整顺序，请执行梳理函数
+                        // 1. 如果需要调整顺序，请自行梳理函数
                         var dt = excel.filterExportData(data, [
-                            's_id'
-                            , 's_studentid'
-                            , 's_name'
-                            , 's_sex'
-                            , 's_age'
-                            , 's_phone'
-                            , 's_classid'
-                            , 's_classname'
-                            , 's_dormitoryid'
+                            's_id',
+                            's_studentid',
+                            's_name',
+                            's_sex',
+                            's_phone',
+                            's_classid',
+                            's_classname',
+                            's_dormitoryid'
                         ]);
 
                         // 2. 数组头部新增表头
@@ -311,7 +228,8 @@
                             'F': 90
                         }, 60);
 
-                        var timestart = Date.now();
+                        var timeStart = Date.now();
+
                         // 3. 执行导出函数，系统会弹出弹框
                         excel.exportExcel({
                             sheet1: dt
@@ -320,15 +238,13 @@
                                 '!cols': colConf
                             }
                         });
-                        var timeend = Date.now();
+                        var timeEnd = Date.now();
 
-                        var spent = (timeend - timestart) / 1000;
+                        var spent = (timeEnd - timeStart) / 1000;
                         layer.alert('导出耗时 ' + spent + ' s');
-                        //setTimeout(function () {window.location.href='/findAdmin';},2000);
                     },
 
                     error: function () {
-                        //console.log(data);
                         setTimeout(function () {
                             window.location.href = '/findStudent';
                         }, 2000);
@@ -336,62 +252,63 @@
                 });
             });
 
-            /*添加弹出框*/
-            $("#addStudnetBtn").click(function () {
+            /*点击添加按钮*/
+            $("#addStudentBtn").click(function () {
                 layer.open({
                     type: 1,
                     title: "添加学生",
-                    skin: "myclass",
-                    area: ["50%"],
+                    area: ["30%"],
+                    shadeClose: true,
+                    shade: 0.4,
                     anim: 2,
-                    content: $("#test").html()
+                    content: $("#addStudent").html()
                 });
-                $("#addEmployeeForm")[0].reset();
-                form.on('submit(formDemo)', function (data) {
-                    // layer.msg('aaa',{icon:1,time:3000});
+                $("#addStudentForm")[0].reset();
+                form.on('submit(addForm)', function (data) {
                     var param = data.field;
-                    // console.log(JSON.stringify(param));
                     $.ajax({
                         url: '/addStudent',
                         type: "post",
                         data: JSON.stringify(param),
                         contentType: "application/json; charset=utf-8",
                         success: function () {
-                            layer.msg('添加成功', {icon: 1, time: 3000});
+                            layer.msg('添加成功', {icon: 1, time: 2000});
                             setTimeout(function () {
                                 window.location.href = '/findStudent';
                             }, 2000);
-
                         },
                         error: function () {
-                            layer.msg('添加失败', {icon: 0, time: 3000});
+                            layer.msg('添加失败', {icon: 0, time: 2000});
                             setTimeout(function () {
                                 window.location.href = '/findStudent';
                             }, 2000);
                         }
                     });
-                    // return false;
                 });
             });
         });
         
         /*删除*/
         function member_del(obj, s_id) {
-            layer.confirm('确认要删除吗？', function (index) {
-                //发异步删除数据
-                $.get("/deleteStudent", {"s_id": s_id}, function (data) {
-                    if (data === true) {
-                        layer.msg('删除成功!', {icon: 1, time: 2000});
+            layer.confirm('确认要删除吗？', function () {
+                $.ajax({
+                    url: '/deleteStudent',
+                    type: "get",
+                    data: {"s_id": s_id},
+                    contentType: "application/json; charset=utf-8",
+                    success: function () {
+                        layer.msg('删除成功', {icon: 1, time: 1000});
                         setTimeout(function () {
                             window.location.href = '/findStudent';
                         }, 2000);
-                    } else {
-                        layer.msg('删除失败!', {icon: 1, time: 3000});
+                    },
+                    error: function () {
+                        layer.msg('删除失败', {icon: 0, time: 1000});
                         setTimeout(function () {
                             window.location.href = '/findStudent';
                         }, 2000);
                     }
-                });
+                })
             });
         }
     </script>

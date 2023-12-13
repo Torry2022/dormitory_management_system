@@ -9,17 +9,502 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="some changes to database files">
+    <list default="true" id="c950e1df-adaf-4f90-9202-51a6e8067305" name="Default" comment="make extensive modifications">
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/class_student_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/lib/layui/font/iconfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dormitory.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dormitory.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/resource.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/classes/springmvc-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/jsp/homepage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/jsp/student_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/jsp/wwwa.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/ant-1.9.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/ant-launcher-1.9.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/asm-5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/aspectjweaver-1.8.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/cglib-3.2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-dbcp2-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-fileupload-1.3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-io-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-lang3-3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/commons-pool2-2.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/jackson-annotations-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/jackson-core-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/jackson-databind-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/javassist-3.21.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/log4j-api-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/log4j-core-2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/mybatis-3.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/mybatis-spring-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.40-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/ognl-3.1.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/slf4j-api-1.7.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/slf4j-log4j12-1.7.22.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-aop-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-aspects-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-beans-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-context-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-core-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-expression-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-jdbc-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-tx-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-web-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/spring-webmvc-4.3.6.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/css/font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/css/xadmin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/fonts/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/fonts/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/fonts/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/fonts/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/js/xadmin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/js/xcity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/LogisticsSystem_war_exploded/lib/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/META-INF/dormitorySystem.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/ClassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/ClassController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/DormitoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/DormitoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/ClassDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/ClassDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormitoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/DormitoryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/StudentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/dao/StudentDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Dormitory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Dormitory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/com/itheima/po/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/admin_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_Studentlist.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/class_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormitory_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/dormrepair_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/lib/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/pageBtn.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/student_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/studentclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/visitor_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/jsp/visitor_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/WEB-INF/lib/springmvc-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/pg_btn.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/pg_btn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/usersLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/usersLogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/css/xadmin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/layui_exts/excel.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/layui_exts/excel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/layui.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/layui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/font/iconfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/colorpicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/rate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/layui.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dormitorySystem_war_exploded/lib/layui/layui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/resource.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LogisticsSystem/springmvc-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/ClassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/ClassController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/DormitoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/DormitoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/ClassDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/ClassDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormitoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/DormitoryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/StudentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/dao/StudentDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Dormitory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Dormitory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/com/itheima/po/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dormitorySystem/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dormitorySystem/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/ClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/ClassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/DormCleanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/DormCleanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/DormRepairController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/DormRepairController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/DormitoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/DormitoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/StudentCleanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/StudentCleanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/controller/VisitorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/controller/VisitorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/ClassDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/dao/ClassDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/dao/DormitoryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/dao/StudentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/dao/StudentDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/po/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Dormitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/po/Dormitory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/po/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/itheima/po/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itheima/po/Visitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/admin_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/class_Studentlist.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/class_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/class_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/class_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/class_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_Studentlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_student_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormitory_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/dormrepair_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/lib/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/pageBtn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/page_btn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/student_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/student_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/student_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/studentclean_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/visitor_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/visitor_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/lib/springmvc-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/pg_btn.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/pg_btn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/usersLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/usersLogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/xadmin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/layui_exts/excel.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/layui_exts/excel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/css/layui.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/layui/css/layui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/font/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/layui/font/iconfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/layui/font/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/font/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/layui/font/iconfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/font/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/layui/font/iconfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/colorpicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/rate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/layui/layui.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/layui/layui.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -66,11 +551,11 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Jsp File" />
         <option value="Interface" />
         <option value="custom" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -171,7 +656,7 @@
     </treeState>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -224,7 +709,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ji Zhenghao/Desktop/dormitory_management_system/web/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ji Zhenghao/Desktop/dormitory_management_system/web/lib&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -244,11 +729,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ji Zhenghao\Desktop\dormitory_management_system\web\lib" />
+      <recent name="C:\Users\Ji Zhenghao\Desktop\dormitory_management_system\web\WEB-INF\jsp" />
       <recent name="C:\Users\Ji Zhenghao\Desktop\dormitory_management_system\web\images" />
       <recent name="C:\Users\Ji Zhenghao\Desktop\dormitory_management_system\web\WEB-INF\lib" />
       <recent name="E:\IDEA-File\dormitorySystem" />
-      <recent name="E:\IDEA-File\dormitorySystem\web\js" />
-      <recent name="E:\IDEA-File\dormitorySystem\web\lib\layui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\IDEA-File\dormitorySystem\web\layui_exts" />
@@ -471,7 +956,10 @@
       <workItem from="1699323027136" duration="11133000" />
       <workItem from="1699666426507" duration="5171000" />
       <workItem from="1700791657182" duration="14000" />
-      <workItem from="1702260351099" duration="1101000" />
+      <workItem from="1702260351099" duration="19064000" />
+      <workItem from="1702304146451" duration="53296000" />
+      <workItem from="1702460824943" duration="2042000" />
+      <workItem from="1702475717521" duration="1447000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -569,7 +1057,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699709914074</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="delete s_age field in student table">
+      <option name="closed" value="true" />
+      <created>1702261556406</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702261556406</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -641,7 +1137,8 @@
     <MESSAGE value="modify README.md" />
     <MESSAGE value="fix some mistakes and modify README.md" />
     <MESSAGE value="some changes to database files" />
-    <option name="LAST_COMMIT_MESSAGE" value="some changes to database files" />
+    <MESSAGE value="delete s_age field in student table" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete s_age field in student table" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DormitoryManager_master$dormitorySystem.ic" NAME="dormitorySystem Coverage Results" MODIFIED="1698501431280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

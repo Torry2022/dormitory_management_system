@@ -7,7 +7,7 @@ import java.util.Date;
 public class Visitor {
     private Integer v_id;
     private String v_name;
-    private Integer v_phone;
+    private Long v_phone;
     private Integer v_dormitoryid;
     private String v_dormbuilding;
 
@@ -30,11 +30,11 @@ public class Visitor {
         this.v_name = v_name;
     }
 
-    public Integer getV_phone() {
+    public Long getV_phone() {
         return v_phone;
     }
 
-    public void setV_phone(Integer v_phone) {
+    public void setV_phone(Long v_phone) {
         this.v_phone = v_phone;
     }
 

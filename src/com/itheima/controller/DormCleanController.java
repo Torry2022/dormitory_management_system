@@ -18,7 +18,6 @@ import java.util.List;
 
 @Controller
 public class DormCleanController {
-    //依赖注入
     @Autowired
     private DormCleanService dormCleanService;
 
@@ -30,7 +29,7 @@ public class DormCleanController {
     @RequestMapping(value = "/findDormClean")
     public String findDormClean(Integer d_dormitoryid, String d_dormbuilding,
                                 Integer pageIndex, Integer pageSize, Model model) {
-
+        pageSize = 15;
         PageInfo<DormClean> di = dormCleanService.findPageInfo(d_dormitoryid, d_dormbuilding,
                 pageIndex, pageSize);
         model.addAttribute("di", di);

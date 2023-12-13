@@ -1,5 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" import="com.itheima.po.Visitor" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <html>
@@ -8,14 +8,12 @@
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
-          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
-    <%--<meta http-equiv="Cache-Control" content="no-siteapp" />--%>
+          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8"/>
 
     <link rel="icon" href="/images/favicon.ico" sizes="32x32"/>
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/xadmin.css">
     <script type="text/javascript" src="./js/jquery-1.3.2.min.js"></script>
-    <script src="lib/layui/layui.js"></script>
     <script type="text/javascript" src="./js/xadmin.js"></script>
     <script src="/layui_exts/excel.js"></script>
 
@@ -45,7 +43,7 @@
             </form>
         </div>
         <xblock>
-            <button id="addStudnetBtn" class="layui-btn layui-btn-normal"><i class="layui-icon">&#xe654;</i>添加
+            <button id="addVisitorBtn" class="layui-btn layui-btn-normal"><i class="layui-icon">&#xe654;</i>添加
             </button>
             <button class="layui-btn layui-btn-warm" lay-filter="toolbarDemo" lay-submit=""><i class="layui-icon">&#xe67c;</i>导出
             </button>
@@ -53,42 +51,45 @@
         </xblock>
 
         <%--添加模态框--%>
-        <div class="layui-row" id="test" style="display: none;">
+        <div class="layui-row" id="addVisitor" style="display: none;">
             <div class="layui-col-md10">
-                <form class="layui-form" id="addEmployeeForm">
-
+                <form class="layui-form" id="addVisitorForm">
                     <div class="layui-form-item">
-                        <label class="layui-form-label">访客姓名：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>访客姓名：</label>
                         <div class="layui-input-block">
-                            <input type="text" lay-verify="required" name="v_name" class="layui-input"
-                                   placeholder="请输入姓名">
+                            <input type="text" lay-verify="required" lay-reqtext="访客姓名不能为空" name="v_name"
+                                   autocomplete="off" class="layui-input" placeholder="请输入姓名">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">访客电话：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>访客电话：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="v_phone" class="layui-input" placeholder="请输入电话">
+                            <input type="text" lay-verify="required|phone" lay-reqtext="访客电话不能为空" name="v_phone"
+                                   autocomplete="new-pwd" class="layui-input" placeholder="请输入电话">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">访问宿舍编号：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>访问宿舍编号：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="v_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
+                            <input type="text" lay-verify="required|number" lay-reqtext="访问宿舍编号不能为空"
+                                   autocomplete="off" name="v_dormitoryid" class="layui-input"
+                                   placeholder="请输入宿舍编号">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">访问宿舍楼：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>访问宿舍楼：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="v_dormbuilding" class="layui-input" placeholder="请输入宿舍楼">
+                            <input type="text" lay-verify="required" lay-reqtext="访问宿舍楼不能为空" autocomplete="off"
+                                   name="v_dormbuilding" class="layui-input" placeholder="请输入宿舍楼">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <button type="button" class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">
+                            <button type="button" class="layui-btn layui-btn-normal" lay-submit lay-filter="addForm">
                                 提交
                             </button>
                             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
@@ -102,14 +103,8 @@
         <table class="layui-table">
             <thead>
             <tr>
-                <%--<th>--%>
-                <%--<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>--%>
-                <%--</th>--%>
                 <th>ID</th>
-                <%--<th>学号</th>--%>
                 <th>访客姓名</th>
-                <%--<th>性别</th>--%>
-                <%--<th>年龄</th>--%>
                 <th>访客电话</th>
                 <th>访问宿舍编号</th>
                 <th>访问宿舍楼</th>
@@ -129,9 +124,9 @@
             </tbody>
         </table>
 
-        <div class="">
+        <div>
             <input type="hidden" id="totalPageCount" value="${pi.pageTotalCount}"/>
-            <c:import url="pageBtn.jsp">
+            <c:import url="page_btn.jsp">
                 <c:param name="totalCount" value="${pi.totalCount}"/>
                 <c:param name="currentPageNo" value="${pi.pageIndex}"/>
                 <c:param name="totalPageCount" value="${pi.pageTotalCount}"/>
@@ -139,7 +134,6 @@
         </div>
     </div>
     <script>
-
         layui.config({
             base: 'layui_exts/',
         }).extend({
@@ -158,23 +152,22 @@
             });
 
             form.on('submit(toolbarDemo)', function () {
-
                 $.ajax({
-                    url: '/exportvisitorlist',
+                    url: '/exportVisitorList',
                     type: 'post',
                     dataType: 'json',
                     contentType: "application/json; charset=utf-8",
                     success: function (data) {
                         console.log(data);
 
-                        // 1. 如果需要调整顺序，请执行梳理函数
+                        // 1. 如果需要调整顺序，请自行梳理函数
                         var dt = excel.filterExportData(data, [
-                            'v_id'
-                            , 'v_name'
-                            , 'v_phone'
-                            , 'v_dormitoryid'
-                            , 'v_dormbuilding'
-                            , 'create_time'
+                            'v_id',
+                            'v_name',
+                            'v_phone',
+                            'v_dormitoryid',
+                            'v_dormbuilding',
+                            'create_time'
                         ]);
 
                         // 2. 数组头部新增表头
@@ -196,7 +189,7 @@
                             'F': 160
                         }, 60);
 
-                        var timestart = Date.now();
+                        var timeStart = Date.now();
                         // 3. 执行导出函数，系统会弹出弹框
                         excel.exportExcel({
                             sheet1: dt
@@ -205,15 +198,13 @@
                                 '!cols': colConf
                             }
                         });
-                        var timeend = Date.now();
+                        var timeEnd = Date.now();
 
-                        var spent = (timeend - timestart) / 1000;
+                        var spent = (timeEnd - timeStart) / 1000;
                         layer.alert('导出耗时 ' + spent + ' s');
-                        //setTimeout(function () {window.location.href='/findAdmin';},2000);
                     },
 
                     error: function () {
-                        //console.log(data);
                         setTimeout(function () {
                             window.location.href = '/findVisitor';
                         }, 2000);
@@ -222,40 +213,37 @@
             });
 
             /*添加弹出框*/
-            $("#addStudnetBtn").click(function () {
+            $("#addVisitorBtn").click(function () {
                 layer.open({
                     type: 1,
                     title: "添加访客",
-                    skin: "myclass",
-                    area: ["50%"],
+                    shadeClose: true,
+                    shade: 0.4,
+                    area: ["30%"],
                     anim: 2,
-                    content: $("#test").html()
+                    content: $("#addVisitor").html()
                 });
-                $("#addEmployeeForm")[0].reset();
-                form.on('submit(formDemo)', function (data) {
-                    // layer.msg('aaa',{icon:1,time:3000});
+                $("#addVisitorForm")[0].reset();
+                form.on('submit(addForm)', function (data) {
                     var param = data.field;
-                    // console.log(JSON.stringify(param));
                     $.ajax({
                         url: '/addVisitor',
                         type: "post",
                         data: JSON.stringify(param),
                         contentType: "application/json; charset=utf-8",
                         success: function () {
-                            layer.msg('添加成功', {icon: 1, time: 3000});
+                            layer.msg('添加成功', {icon: 1, time: 2000});
                             setTimeout(function () {
                                 window.location.href = '/findVisitor';
                             }, 2000);
-
                         },
                         error: function () {
-                            layer.msg('添加失败', {icon: 0, time: 3000});
+                            layer.msg('添加失败', {icon: 0, time: 2000});
                             setTimeout(function () {
                                 window.location.href = '/findVisitor';
                             }, 2000);
                         }
                     });
-                    // return false;
                 });
             });
         });

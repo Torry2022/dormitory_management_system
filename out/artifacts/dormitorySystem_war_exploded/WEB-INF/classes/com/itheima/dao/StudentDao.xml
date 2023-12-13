@@ -75,6 +75,9 @@
             <if test="s_phone != null and s_phone != 0">
                 s_phone=#{s_phone},
             </if>
+            <if test="s_phone == null">
+                s_phone=null,
+            </if>
             <if test="s_classid != null and s_classid != 0">
                 s_classid=#{s_classid},
             </if>

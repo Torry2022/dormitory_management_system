@@ -1,5 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" import="com.itheima.po.Admin" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <html>
 <head>
@@ -7,14 +7,12 @@
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
-          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
-    <%--<meta http-equiv="Cache-Control" content="no-siteapp" />--%>
+          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8"/>
 
     <link rel="icon" href="/images/favicon.ico" sizes="32x32"/>
     <link rel="stylesheet" href="/css/font.css">
     <link rel="stylesheet" href="/css/xadmin.css">
     <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
-    <script src="/lib/layui/layui.js"></script>
     <script type="text/javascript" src="/js/xadmin.js"></script>
     <script src="/layui_exts/excel.js"></script>
 
@@ -46,7 +44,7 @@
         </div>
 
         <xblock>
-            <button id="addStudnetBtn" class="layui-btn layui-btn-normal"><i class="layui-icon">&#xe654;</i>添加
+            <button id="addAdminBtn" class="layui-btn layui-btn-normal"><i class="layui-icon">&#xe654;</i>添加
             </button>
             <button class="layui-btn layui-btn-warm" lay-filter="toolbarDemo" lay-submit=""><i class="layui-icon">&#xe67c;</i>导出
             </button>
@@ -57,38 +55,26 @@
         <table class="layui-table">
             <thead>
             <tr>
-                <%--<th>--%>
-                <%--<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>--%>
-                <%--</th>--%>
                 <th>ID</th>
                 <th>用户名</th>
-                <%--<th>密码</th>--%>
                 <th>姓名</th>
                 <th>电话</th>
-                <%--<th>级别</th>--%>
                 <th>级别描述</th>
                 <th>操作</th>
             </thead>
             <tbody>
             <c:forEach items="${ai.list}" var="ai">
                 <tr>
-                        <%--<td>--%>
-                        <%--<div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>--%>
-                        <%--</td>--%>
-                        <%--<td>${class.c_id}</td>--%>
                     <td class="myid">${ai.a_id}</td>
                     <td>${ai.a_username}</td>
-                        <%--<td>${ai.a_password}</td>--%>
                     <td>${ai.a_name}</td>
                     <td>${ai.a_phone}</td>
-                        <%--<td>${ai.a_power}</td>--%>
                     <td>${ai.a_describe}</td>
                     <td class="td-manage">
-                            <%--href="/findAdminById?a_id=${ai.a_id}"--%>
                         <a title="编辑" class="updateEdit" href="#">
                             <i class="layui-icon">&#xe642;</i>
                         </a>
-                        <a title="删除" onclick="member_del(this,'${ai.a_id}','${ai.a_power}')" href="javascript:;">
+                        <a title="删除" onclick="member_del(this,'${ai.a_id}')" href="javascript:;">
                             <i class="layui-icon">&#xe640;</i>
                         </a>
                     </td>
@@ -98,56 +84,60 @@
         </table>
 
         <%--添加模态框--%>
-        <div class="layui-row" id="test" style="display: none;">
+        <div class="layui-row" id="addAdmin" style="display: none;">
             <div class="layui-col-md10">
-                <form class="layui-form" id="addEmployeeForm">
+                <form class="layui-form" id="addAdminForm">
                     <div class="layui-form-item">
-                        <label class="layui-form-label">用户名：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>用户名：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="a_username" class="layui-input" placeholder="请输入用户名">
+                            <input type="text" lay-verify="required" lay-reqtext="用户名不能为空" name="a_username"
+                                   class="layui-input" autocomplete="off" placeholder="请输入用户名">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">密码：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>密码：</label>
                         <div class="layui-input-block">
-                            <input type="password" lay-verify="required" name="a_password" class="layui-input"
-                                   placeholder="请输入密码">
+                            <input type="password" lay-verify="required" lay-reqtext="密码不能为空" name="a_password"
+                                   autocomplete="off" class="layui-input" placeholder="请输入密码">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">姓名：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>姓名：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="a_name" class="layui-input" placeholder="请输入姓名">
+                            <input type="text" lay-verify="required" lay-reqtext="姓名不能为空" name="a_name"
+                                   class="layui-input" autocomplete="off" placeholder="请输入姓名">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">电话：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>电话：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="a_phone" class="layui-input" placeholder="请输入电话">
+                            <input type="text" lay-verify="required|phone" lay-reqtext="电话不能为空" name="a_phone"
+                                   class="layui-input" autocomplete="new-pwd" placeholder="请输入电话">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
-                        <label class="layui-form-label">级别：</label>
+                        <label class="layui-form-label"><i class="necessary">* </i>级别：</label>
                         <div class="layui-input-block">
-                            <input type="text" lay-verify="required" name="a_power" class="layui-input"
-                                   placeholder="请输入级别1-2">
+                            <input type="text" lay-verify="required|number" lay-reqtext="级别不能为空" name="a_power"
+                                   autocomplete="off" class="layui-input" placeholder="请输入级别1-2">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
                         <label class="layui-form-label">级别描述：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="a_describe" class="layui-input" placeholder="请输入级别描述">
+                            <input type="text" name="a_describe" class="layui-input" autocomplete="off"
+                                   placeholder="请输入级别描述">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <button type="button" class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">
+                            <button type="button" class="layui-btn layui-btn-normal" lay-submit lay-filter="addForm">
                                 提交
                             </button>
                             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
@@ -157,9 +147,9 @@
             </div>
         </div>
 
-        <div class="">
+        <div>
             <input type="hidden" id="totalPageCount" value="${ai.pageTotalCount}"/>
-            <c:import url="pageBtn.jsp">
+            <c:import url="page_btn.jsp">
                 <c:param name="totalCount" value="${ai.totalCount}"/>
                 <c:param name="currentPageNo" value="${ai.pageIndex}"/>
                 <c:param name="totalPageCount" value="${ai.pageTotalCount}"/>
@@ -167,7 +157,6 @@
         </div>
     </div>
     <script>
-
         layui.config({
             base: 'layui_exts/',
         }).extend({
@@ -187,22 +176,21 @@
             form.render();
 
             form.on('submit(toolbarDemo)', function () {
-
                 $.ajax({
-                    url: '/exportadminlist',
+                    url: '/exportAdminList',
                     type: 'post',
                     dataType: 'json',
                     contentType: "application/json; charset=utf-8",
                     success: function (data) {
                         console.log(data);
 
-                        // 1. 如果需要调整顺序，请执行梳理函数
+                        // 1. 如果需要调整顺序，请自行梳理函数
                         var dt = excel.filterExportData(data, [
-                            'a_id'
-                            , 'a_username'
-                            , 'a_name'
-                            , 'a_phone'
-                            , 'a_describe'
+                            'a_id',
+                            'a_username',
+                            'a_name',
+                            'a_phone',
+                            'a_describe'
                         ]);
 
                         // 2. 数组头部新增表头
@@ -220,7 +208,7 @@
                             'D': 90
                         }, 60);
 
-                        var timestart = Date.now();
+                        var timeStart = Date.now();
                         // 3. 执行导出函数，系统会弹出弹框
                         excel.exportExcel({
                             sheet1: dt
@@ -229,15 +217,13 @@
                                 '!cols': colConf
                             }
                         });
-                        var timeend = Date.now();
+                        var timeEnd = Date.now();
 
-                        var spent = (timeend - timestart) / 1000;
+                        var spent = (timeEnd - timeStart) / 1000;
                         layer.alert('导出耗时 ' + spent + ' s');
-                        //setTimeout(function () {window.location.href='/findAdmin';},2000);
                     },
 
                     error: function () {
-                        //console.log(data);
                         setTimeout(function () {
                             window.location.href = '/findAdmin';
                         }, 2000);
@@ -246,24 +232,23 @@
             });
 
             /*添加弹出框*/
-            $("#addStudnetBtn").click(function () {
+            $("#addAdminBtn").click(function () {
                 var power = ${sessionScope.ad.a_power};
-                if (power !== 1) {
+                if (power != 1) {
                     layer.alert("对不起，您没有权限:(");
                 } else {
                     layer.open({
                         type: 1,
                         title: "添加管理员",
-                        skin: "myclass",
-                        area: ["50%"],
+                        area: ["30%"],
+                        shadeClose: true,
+                        shade: 0.4,
                         anim: 2,
-                        content: $("#test").html()
+                        content: $("#addAdmin").html()
                     });
-                    $("#addEmployeeForm")[0].reset();
-                    form.on('submit(formDemo)', function (data) {
-                        // layer.msg('aaa',{icon:1,time:3000});
+                    $("#addAdminForm")[0].reset();
+                    form.on('submit(addForm)', function (data) {
                         var param = data.field;
-                        // console.log(JSON.stringify(param));
                         $.ajax({
                             url: '/addAdmin',
                             type: "post",
@@ -275,7 +260,6 @@
                                 setTimeout(function () {
                                     window.location.href = '/findAdmin';
                                 }, 2000);
-
                             },
                             error: function () {
                                 layer.msg('添加失败', {icon: 0, time: 2000});
@@ -284,7 +268,6 @@
                                 }, 2000);
                             }
                         });
-                        // return false;
                     });
                 }
             });
@@ -298,30 +281,34 @@
             if (power != 1) {
                 layer.alert("对不起，您没有权限:(");
             } else {
-                <%--window.location.href = "/findAdminById?a_id=${ai.a_id}";--%>
                 window.location.href = "/findAdminById?a_id=" + myid;
             }
         });
 
         /*删除*/
-        function member_del(obj, a_id, a_power) {
-            var power = ${sessionScope.ad.a_power};
+        function member_del(obj, a_id) {
+            var power =
+            ${sessionScope.ad.a_power}
             var id = ${sessionScope.ad.a_id};
             if (power != 1) {
                 layer.alert("对不起，您没有权限:(");
             } else if (id == a_id) {
                 layer.alert("不能删除自己:(");
             } else {
-                layer.confirm('确认要删除吗？', function (index) {
-                    //发异步删除数据
-                    $.get("/deleteAdmin", {"a_id": a_id}, function (data) {
-                        if (data == 'true') {
-                            layer.msg('删除成功!', {icon: 1, time: 2000});
+                layer.confirm('确认要删除吗？', function () {
+                    $.ajax({
+                        url: '/deleteAdmin',
+                        type: "get",
+                        data: {"a_id": a_id},
+                        contentType: "application/json; charset=utf-8",
+                        success: function () {
+                            layer.msg('删除成功', {icon: 1, time: 1000});
                             setTimeout(function () {
                                 window.location.href = '/findAdmin';
                             }, 2000);
-                        } else {
-                            layer.msg('删除失败!', {icon: 2, time: 2000});
+                        },
+                        error: function () {
+                            layer.msg('删除失败', {icon: 0, time: 1000});
                             setTimeout(function () {
                                 window.location.href = '/findAdmin';
                             }, 2000);

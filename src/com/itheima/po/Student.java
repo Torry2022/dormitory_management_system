@@ -5,7 +5,7 @@ public class Student {
     private Integer s_studentid;
     private String s_name;
     private String s_sex;
-    private Integer s_phone;
+    private Long s_phone;
     private Integer s_classid;
     private String s_classname;
     private Integer s_dormitoryid;
@@ -42,11 +42,11 @@ public class Student {
         this.s_sex = s_sex;
     }
 
-    public Integer getS_phone() {
+    public Long getS_phone() {
         return s_phone;
     }
 
-    public void setS_phone(Integer s_phone) {
+    public void setS_phone(Long s_phone) {
         this.s_phone = s_phone;
     }
 

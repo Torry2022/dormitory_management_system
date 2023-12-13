@@ -5,7 +5,7 @@ public class Admin {
     private String a_username;
     private String a_password;
     private String a_name;
-    private Integer a_phone;
+    private Long a_phone;
     private Integer a_power;
     private String a_describe;
     
@@ -41,11 +41,11 @@ public class Admin {
         this.a_name = a_name;
     }
 
-    public Integer getA_phone() {
+    public Long getA_phone() {
         return a_phone;
     }
 
-    public void setA_phone(Integer a_phone) {
+    public void setA_phone(Long a_phone) {
         this.a_phone = a_phone;
     }
 

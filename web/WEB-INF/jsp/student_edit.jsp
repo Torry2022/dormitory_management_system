@@ -1,5 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 <head>
     <title>修改信息</title>
@@ -13,82 +14,86 @@
 </head>
 
 <body>
-
     <div class="x-body">
         <form class="layui-form" action="/updateStudent" method="post" id="f_auto" accept-charset="UTF-8">
             <input type="hidden" value="${sessionScope.s.s_id}" name="s_id" id="s_id"/>
             <div class="layui-form-item">
                 <label for="s_studentid" class="layui-form-label">
-                    <span class="f_sp">学号</span>
+                    <span><i class="necessary">* </i>学号：</span>
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="s_studentid" name="s_studentid"
-                           autocomplete="off" value="${sessionScope.s.s_studentid}" class="layui-input">
+                    <input type="text" id="s_studentid" name="s_studentid" lay-verify="required|number"
+                           lay-reqtext="学号不能为空" autocomplete="off" value="${sessionScope.s.s_studentid}"
+                           class="layui-input" placeholder="请输入学号">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label for="s_name" class="layui-form-label">
-                    <span class="f_sp">姓名</span>
+                    <span><i class="necessary">* </i>姓名：</span>
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="s_name" name="s_name"
-                           autocomplete="off" value="${sessionScope.s.s_name}" class="layui-input">
+                    <input type="text" id="s_name" name="s_name" lay-verify="required" lay-reqtext="姓名不能为空"
+                           autocomplete="off" value="${sessionScope.s.s_name}" class="layui-input"
+                           placeholder="请输入姓名">
                 </div>
             </div>
 
             <div class="layui-form-item">
-                <label for="s_sex" class="layui-form-label">
-                    <span class="f_sp">性别</span>
+                <label class="layui-form-label">
+                    <span>性别：</span>
                 </label>
-                <div class="layui-input-inline" id="s_sex">
-                    <input type="radio" name="s_sex" id="s_male" value="男" title="男" checked="">
-                    <input type="radio" name="s_sex" id="s_female" value="女" title="女">
+                <div class="layui-input-inline">
+                    <input type="radio" name="s_sex" value="男" title="男" <c:if test="${sessionScope.s.s_sex == '男'}">checked="checked"</c:if>>
+                    <input type="radio" name="s_sex" value="女" title="女" <c:if test="${sessionScope.s.s_sex == '女'}">checked="checked"</c:if>>
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label for="s_phone" class="layui-form-label">
-                    <span class="f_sp">电话</span>
+                    <span>电话：</span>
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="s_phone" name="s_phone"
-                           autocomplete="off" value="${sessionScope.s.s_phone}" class="layui-input">
+                    <input type="text" id="s_phone" name="s_phone" lay-verify="phone" autocomplete="new-pwd"
+                           value="${sessionScope.s.s_phone}" class="layui-input" placeholder="请输入电话">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label for="s_classid" class="layui-form-label">
-                    <span class="">*</span>班级编号
+                    <span><i class="necessary">* </i>班级编号：</span>
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="s_classid" name="s_classid"
-                           autocomplete="off" value="${sessionScope.s.s_classid}" class="layui-input">
+                    <input type="text" id="s_classid" name="s_classid" lay-verify="required|number"
+                           lay-reqtext="班级编号不能为空" autocomplete="off" value="${sessionScope.s.s_classid}"
+                           class="layui-input" placeholder="请输入班级编号">
                 </div>
             </div>
 
             <div class="layui-form-item">
-                <label for="s_classid" class="layui-form-label">
-                    <span class="">*</span>班级名
+                <label for="s_classname" class="layui-form-label">
+                    <span><i class="necessary">* </i>班级名：</span>
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="s_classname" name="s_classname"
-                           autocomplete="off" value="${sessionScope.s.s_classname}" class="layui-input">
+                    <input type="text" id="s_classname" name="s_classname" lay-verify="required"
+                           lay-reqtext="班级名不能为空" autocomplete="off" value="${sessionScope.s.s_classname}"
+                           class="layui-input" placeholder="请输入班级名">
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label for="s_dormitoryid" class="layui-form-label">
-                    <span class="">*</span>宿舍编号
+                    <span><i class="necessary">* </i>宿舍编号：</span>
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="s_dormitoryid" name="s_dormitoryid"
-                           autocomplete="off" value="${sessionScope.s.s_dormitoryid}" class="layui-input">
+                    <input type="text" id="s_dormitoryid" name="s_dormitoryid" lay-verify="required|number"
+                           lay-reqtext="宿舍编号不能为空" autocomplete="off" value="${sessionScope.s.s_dormitoryid}"
+                           class="layui-input" placeholder="请输入宿舍编号">
                 </div>
             </div>
 
             <div class="layui-form-item" id="btn_xg">
-                <button class="layui-btn" id="btn_on" lay-filter="updateForm" lay-submit="">
+                <button class="layui-btn" id="btn_on" lay-submit>
                     修改
                 </button>
             </div>
@@ -96,31 +101,6 @@
     </div>
 
     <script>
-        // layui.use(['form','layer','laydate'], function(){
-        //     var form = layui.form,
-        //         $ = layui.jquery,
-        //         laydate = layui.laydate;
-        //     form.on('submit(updateForm)', function(obj,s_id) {
-        //
-        //         $.ajax({
-        //             url: '/updateStudent',
-        //             type: "post",
-        //             data:{"s_id":s_id},
-        //             success:function(data){
-        //                 layer.msg('修改成功', {icon: 1, time: 3000});
-        //                 setTimeout(function () {window.location.href='/findStudent';},2000);
-        //
-        //             },
-        //             error:function(){
-        //                 console.log($("#s_id").val());
-        //                 layer.msg('修改失败',{icon:0,time:3000});
-        //                 setTimeout(function () {window.location.href='/findStudent';},2000);
-        //             }
-        //         });
-        //     })
-        //
-        // });
-
     </script>
 </body>
 </html>

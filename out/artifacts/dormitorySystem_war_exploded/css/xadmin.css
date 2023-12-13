@@ -60,7 +60,7 @@ xblock {
 
 .x-so input.layui-input {
     width: 150px;
-    padding-left: 25px;
+    padding-left: 14px;
 }
 
 .x-so .layui-form-label {
@@ -102,7 +102,6 @@ xblock {
 .page {
     margin-top: 20px;
     text-align: center;
-
 }
 
 .page a {
@@ -112,7 +111,6 @@ xblock {
     padding: 10px;
     min-width: 15px;
     border: 1px solid #E2E2E2;
-
 }
 
 .page span {
@@ -141,7 +139,6 @@ xblock {
     background: #009688 url(#) 0 0 no-repeat;
     color: #fff;
     border: 1px solid #009688;
-
 }
 
 /*登录样式*/
@@ -165,7 +162,6 @@ xblock {
 .container .right {
     background-color: rgba(0, 0, 0, 0);
     float: right;
-
 }
 
 .container .left_open {
@@ -193,7 +189,6 @@ xblock {
 .container .left {
     background-color: rgba(0, 0, 0, 0);
     float: left;
-
 }
 
 .container .layui-nav-item {
@@ -201,7 +196,7 @@ xblock {
 }
 
 .container .layui-nav-more {
-    top: 20px;
+    /*top: 1px;*/
 }
 
 .container .layui-nav-child {
@@ -235,8 +230,6 @@ xblock {
     overflow: auto;
     overflow-x: hidden;
     border-right: 1px solid #e5e5e5;
-
-    /*width: 0px;*/
 }
 
 .left-nav #nav li {
@@ -465,6 +458,10 @@ table th, table td {
     word-break: break-all;
 }
 
+.necessary {
+    color: red;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
@@ -473,7 +470,6 @@ table th, table td {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     line-height: 41px;
     color: #fff;
-    /*padding-left: 10px;*/
 }
 
 .footer .copyright {

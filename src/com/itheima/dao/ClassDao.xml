@@ -20,6 +20,7 @@
         ORDER BY c_id asc
         limit #{currentPage}, #{pageSize}
     </select>
+    
     <!--查询数据总数-->
     <select id="totalCount" resultType="Integer">
         select count(c_id) from d_class
@@ -42,6 +43,7 @@
         from d_class
         where c_id = #{c_id}
     </delete>
+    
     <!--添加班级信息-->
     <insert id="addClass" parameterType="Class" keyProperty="c_id" useGeneratedKeys="true">
         insert into d_class (c_classid, c_classname, c_counsellor)

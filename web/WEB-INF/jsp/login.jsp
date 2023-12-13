@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+
 <html>
 <head>
     <link rel="stylesheet" href="/css/usersLogin.css">
@@ -9,9 +10,7 @@
     <title>前台首页</title>
 </head>
 <body>
-
     <div class="header">
-
     </div>
 
     <div class="body">
@@ -25,8 +24,8 @@
                     <span class="erro">${msg}</span><br>
                     <span class="s1"></span>
                     <span class="s2"></span>
-                    <input type="text" name="a_username" value="" class="iputs" placeholder="请输入账号"/>
-                    <input type="password" name="a_password" value="" class="iputs" placeholder="请输入密码"/>
+                    <input type="text" name="a_username" class="inputs" placeholder="请输入账号"/>
+                    <input type="password" name="a_password" class="inputs" placeholder="请输入密码"/>
                     <input type="submit" value="登  录"/>
                 </form>
             </div>

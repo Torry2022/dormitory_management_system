@@ -1,6 +1,5 @@
 package com.itheima.controller;
 
-
 import com.itheima.po.PageInfo;
 import com.itheima.po.Student;
 import com.itheima.service.StudentService;
@@ -28,6 +27,7 @@ public class StudentController {
     @RequestMapping(value = "/findStudent")
     public String findStudent(String s_name, Integer s_studentid, Integer s_classid, String s_classname,
                               Integer pageIndex, Integer pageSize, Model model) {
+        pageSize = 15;
         PageInfo<Student> pi = studentService.findPageInfo(s_name, s_studentid, s_classid,
                 s_classname, pageIndex, pageSize);
         model.addAttribute("pi", pi);
@@ -38,7 +38,7 @@ public class StudentController {
     /**
      * 导出Excel
      */
-    @RequestMapping(value = "/exportstudentlist", method = RequestMethod.POST)
+    @RequestMapping(value = "/exportStudentList", method = RequestMethod.POST)
     @ResponseBody
     public List<Student> exportStudent() {
         return studentService.getAll();
@@ -50,7 +50,7 @@ public class StudentController {
     @RequestMapping("/deleteStudent")
     @ResponseBody
     public String deleteStudent(Integer s_id) {
-        int s = studentService.deleteStudent(s_id);
+        studentService.deleteStudent(s_id);
         return "student_list";
     }
 

@@ -28,6 +28,7 @@ public class DormRepairController {
     @RequestMapping(value = "/findDormRepair")
     public String findDormRepair(Integer d_dormitoryid, String d_dormbuilding,
                                  Integer pageIndex, Integer pageSize, Model model) {
+        pageSize = 15;
         PageInfo<DormRepair> di = dormRepairService.findPageInfo(d_dormitoryid, d_dormbuilding,
                 pageIndex, pageSize);
         model.addAttribute("di", di);
@@ -37,9 +38,9 @@ public class DormRepairController {
     /**
      * 导出Excel
      */
-    @RequestMapping(value = "/exportdormrepairlist", method = RequestMethod.POST)
+    @RequestMapping(value = "/exportDormRepairList", method = RequestMethod.POST)
     @ResponseBody
-    public List<DormRepair> exportDormrepair() {
+    public List<DormRepair> exportDormRepair() {
         return dormRepairService.getAll();
     }
 

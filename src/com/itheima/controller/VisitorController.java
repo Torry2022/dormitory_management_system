@@ -26,6 +26,7 @@ public class VisitorController {
     @RequestMapping(value = "/findVisitor")
     public String findVisitor(String v_name, Integer v_phone, Integer pageIndex,
                               Integer pageSize, Model model) {
+        pageSize = 15;
         PageInfo<Visitor> pi = visitorService.findPageInfo(v_name, v_phone,
                 pageIndex, pageSize);
         model.addAttribute("pi", pi);
@@ -36,7 +37,7 @@ public class VisitorController {
     /**
      * 导出Excel
      */
-    @RequestMapping(value = "/exportvisitorlist", method = RequestMethod.POST)
+    @RequestMapping(value = "/exportVisitorList", method = RequestMethod.POST)
     @ResponseBody
     public List<Visitor> exportVisitor() {
         return visitorService.getAll();

@@ -7,8 +7,8 @@ public class Dormitory {
     private Integer d_id;
     private Integer d_dormitoryid;
     private String d_dormbuilding;
-    private String d_bedtotal;
-    private String d_bed;
+    private Integer d_bedtotal;
+    private Integer d_bed;
     private String a_name;
     private List<Student> students;
 
@@ -36,19 +36,19 @@ public class Dormitory {
         this.d_dormbuilding = d_dormbuilding;
     }
 
-    public String getD_bedtotal() {
+    public Integer getD_bedtotal() {
         return d_bedtotal;
     }
 
-    public void setD_bedtotal(String d_bedtotal) {
+    public void setD_bedtotal(Integer d_bedtotal) {
         this.d_bedtotal = d_bedtotal;
     }
 
-    public String getD_bed() {
+    public Integer getD_bed() {
         return d_bed;
     }
 
-    public void setD_bed(String d_bed) {
+    public void setD_bed(Integer d_bed) {
         this.d_bed = d_bed;
     }
 
