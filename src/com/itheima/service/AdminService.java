@@ -29,4 +29,6 @@ public interface AdminService {
     void updateAdmin(Admin admin);
 
     Admin findAdminById(Integer a_id);
+
+    Admin findAdminByIdAndPwd(Integer a_id, String a_password);
 }

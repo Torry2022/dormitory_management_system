@@ -202,7 +202,7 @@
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show o_div">
-                    <br><span class="o_span">${sessionScope.ad.a_username}管理员，欢迎来到宿舍管理系统！</span>
+                    <br><span class="o_span">${sessionScope.ad.a_name}管理员，欢迎来到宿舍管理系统！</span>
                     <hr>
                     <div class="layui-col-md6"
                          style="box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;

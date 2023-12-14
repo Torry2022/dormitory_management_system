@@ -105,18 +105,30 @@ public class AdminController {
      */
     @RequestMapping(value = "/updateAdmin", method = RequestMethod.POST)
     public String updateAdmin(Admin admin) throws NoSuchAlgorithmException {
-        admin.setA_password(MD5Util.MD5EncodeUtf8(admin.getA_password()));
+        if (isModifiedPwd(admin.getA_id(), admin.getA_password())) {
+            admin.setA_password(MD5Util.MD5EncodeUtf8(admin.getA_password()));
+        } else {
+            admin.setA_password(admin.getA_password());
+        }
         adminService.updateAdmin(admin);
         return "redirect:/findAdmin";
     }
 
     /**
-     * 根据管理员Id搜索;将请求数据a_id写入参数a_id
+     * 根据管理员id搜索;将请求数据a_id写入参数a_id
      */
     @RequestMapping("/findAdminById")
     public String findAdminById(Integer a_id, HttpSession session) {
         Admin a = adminService.findAdminById(a_id);
         session.setAttribute("a", a);
         return "admin_edit";
+    }
+
+    /**
+     * 根据管理员id和密码搜索,以此判断密码是否被修改
+     */
+    private Boolean isModifiedPwd(Integer a_id, String a_password) {
+        Admin a = adminService.findAdminByIdAndPwd(a_id, a_password);
+        return a == null;
     }
 }

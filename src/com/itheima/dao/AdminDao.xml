@@ -7,10 +7,10 @@
     <select id="findAdmin" parameterType="Admin" resultType="Admin">
         select * from d_admin
         where
-        <if test="a_username!=null and a_username!='' ">
+        <if test="a_username != null and a_username != '' ">
             a_username = #{a_username}
         </if>
-        <if test="a_password!=null and a_password!='' ">
+        <if test="a_password != null and a_password != '' ">
             and a_password = #{a_password}
         </if>
     </select>
@@ -19,13 +19,13 @@
     <select id="getAdminList" parameterType="Admin" resultType="Admin">
         select * from d_admin
         <where>
-            <if test="a_username!=null and a_username!='' ">
+            <if test="a_username != null and a_username != '' ">
                 and a_username like '%${a_username}%'
             </if>
-            <if test="a_describe!=null and a_describe!=''">
+            <if test="a_describe != null and a_describe != ''">
                 and a_describe like '%${a_describe}%'
             </if>
-            <if test="a_id!=null and a_id!=0">
+            <if test="a_id != null and a_id != 0">
                 and a_id like '%${a_id}%'
             </if>
         </where>
@@ -37,13 +37,13 @@
     <select id="totalCount" resultType="Integer">
         select count(a_id) from d_admin
         <where>
-            <if test="a_username!=null and a_username!='' ">
+            <if test="a_username != null and a_username != '' ">
                 and a_username like '%${a_username}%'
             </if>
-            <if test="a_describe!=null and a_describe!=''">
+            <if test="a_describe != null and a_describe != ''">
                 and a_describe like '%${a_describe}%'
             </if>
-            <if test="a_id!=null and a_id!=0">
+            <if test="a_id != null and a_id != 0">
                 and a_id like '%${a_id}%'
             </if>
         </where>
@@ -68,6 +68,12 @@
         where a_id = #{a_id}
     </select>
 
+    <select id="findAdminByIdAndPwd" resultType="Admin">
+        select *
+        from d_admin
+        where a_id = #{a_id} and a_password = #{a_password}
+    </select>
+
     <select id="getAll" resultType="Admin">
         select *
         from d_admin;
@@ -77,22 +83,22 @@
     <update id="updateAdmin" parameterType="Admin">
         update d_admin
         <set>
-            <if test="a_username!=null and a_username !=''">
+            <if test="a_username != null and a_username != ''">
                 a_username=#{a_username},
             </if>
-            <if test="a_password !=null and a_password !=''">
+            <if test="a_password != null and a_password != ''">
                 a_password=#{a_password},
             </if>
-            <if test="a_name !=null and a_name !=''">
+            <if test="a_name != null and a_name != ''">
                 a_name=#{a_name},
             </if>
-            <if test="a_phone !=null and a_phone !=0">
+            <if test="a_phone != null and a_phone != 0">
                 a_phone=#{a_phone},
             </if>
-            <if test="a_power !=null and a_power !=''">
+            <if test="a_power != null and a_power != ''">
                 a_power=#{a_power},
             </if>
-            <if test="a_describe!=null and a_describe!=''">
+            <if test="a_describe != null and a_describe != ''">
                 a_describe=#{a_describe},
             </if>
         </set>

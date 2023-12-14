@@ -31,5 +31,7 @@ public interface AdminDao {
 
     Admin findAdminById(Integer a_id);
 
+    Admin findAdminByIdAndPwd(@Param("a_id") Integer a_id, @Param("a_password") String a_password);
+
     List<Admin> getAll();
 }

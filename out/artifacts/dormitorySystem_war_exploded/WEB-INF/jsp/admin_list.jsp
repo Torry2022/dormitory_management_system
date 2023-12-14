@@ -287,8 +287,7 @@
 
         /*删除*/
         function member_del(obj, a_id) {
-            var power =
-            ${sessionScope.ad.a_power}
+            var power = ${sessionScope.ad.a_power}
             var id = ${sessionScope.ad.a_id};
             if (power != 1) {
                 layer.alert("对不起，您没有权限:(");

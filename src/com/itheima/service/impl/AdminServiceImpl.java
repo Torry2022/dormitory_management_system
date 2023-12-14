@@ -70,4 +70,9 @@ public class AdminServiceImpl implements AdminService {
     public Admin findAdminById(Integer a_id) {
         return adminDao.findAdminById(a_id);
     }
+
+    @Override
+    public Admin findAdminByIdAndPwd(Integer a_id, String a_password) {
+        return adminDao.findAdminByIdAndPwd(a_id, a_password);
+    }
 }
