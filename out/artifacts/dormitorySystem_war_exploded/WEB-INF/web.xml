@@ -50,4 +50,8 @@
 		<!--/:拦截所有请求（除了jsp）-->
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	<!--login.jsp为设置为默认首页的页面-->
+	<welcome-file-list>
+		<welcome-file>/WEB-INF/jsp/login.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>

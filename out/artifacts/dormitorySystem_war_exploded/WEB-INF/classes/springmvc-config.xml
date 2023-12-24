@@ -27,4 +27,16 @@
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+
+    <!-- interceptor拦截器 -->
+    <mvc:interceptors>
+        <!-- 多个拦截器，顺序执行 -->
+        <mvc:interceptor>
+            <!-- /**表示所有url包括子url路径 -->
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/login"/>
+            <bean class="com.itheima.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

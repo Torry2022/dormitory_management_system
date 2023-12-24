@@ -30,8 +30,9 @@ public class AdminController {
      */
     @RequestMapping(value = "/login")
     public String login(Admin admin, Model model, HttpSession session, HttpServletRequest request) throws NoSuchAlgorithmException {
+        if (admin.getA_username() == null) return "login";
         //账号或密码为空
-        if(admin.getA_username().isEmpty() || admin.getA_password().isEmpty()) {
+        if (admin.getA_username().isEmpty() || admin.getA_password().isEmpty()) {
             model.addAttribute("msg", "请输入用户名及密码！");
             return "login";
         }
@@ -100,7 +101,7 @@ public class AdminController {
     }
 
     /**
-	 * 修改管理员信息
+     * 修改管理员信息
      * 将提交数据(a_id,a_username...)写入Admin对象
      */
     @RequestMapping(value = "/updateAdmin", method = RequestMethod.POST)
