@@ -176,7 +176,7 @@
                 form.on('submit(toolbarDemo)', function () {
 
                     $.ajax({
-                        url: '/exportstudentcleanlist',
+                        url: '/exportStudentCleanList',
                         type: 'post',
                         dataType: 'json',
                         contentType: "application/json; charset=utf-8",

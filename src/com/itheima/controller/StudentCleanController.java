@@ -35,9 +35,9 @@ public class StudentCleanController {
     /**
      * 导出Excel
      */
-    @RequestMapping(value = "/exportstudentcleanlist", method = RequestMethod.POST)
+    @RequestMapping(value = "/exportStudentCleanList", method = RequestMethod.POST)
     @ResponseBody
-    public List<StudentClean> exportStudentclean() {
+    public List<StudentClean> exportStudentClean() {
         return studentCleanService.getAll();
     }
 
