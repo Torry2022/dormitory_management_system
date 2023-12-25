@@ -2,10 +2,10 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="/css/usersLogin.css">
+    <link rel="stylesheet" href="/css/users_login.css">
     <link rel="icon" href="/images/favicon.ico" sizes="32x32"/>
     <script src="/js/jquery-1.3.2.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="/js/login.js"></script>
 
     <title>前台首页</title>
 </head>
