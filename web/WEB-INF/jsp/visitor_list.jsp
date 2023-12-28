@@ -219,7 +219,7 @@
                     title: "添加访客",
                     shadeClose: true,
                     shade: 0.4,
-                    area: ["30%"],
+                    area: ["55%"],
                     anim: 2,
                     content: $("#addVisitor").html()
                 });

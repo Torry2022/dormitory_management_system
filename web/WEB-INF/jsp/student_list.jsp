@@ -257,7 +257,7 @@
                 layer.open({
                     type: 1,
                     title: "添加学生",
-                    area: ["30%"],
+                    area: ["55%"],
                     shadeClose: true,
                     shade: 0.4,
                     anim: 2,

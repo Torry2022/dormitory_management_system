@@ -211,7 +211,7 @@
                     layer.open({
                         type: 1,
                         title: "添加宿舍卫生评分",
-                        area: ["30%"],
+                        area: ["55%"],
                         shadeClose: true,
                         shade: 0.4,
                         anim: 2,

@@ -18,8 +18,8 @@
 
     <style>
         .o_div {
-            background: url("/images/01.jpg") no-repeat;
-            background-size: 100% 100%;
+            background: url("/images/01.jpg") repeat-y;
+            background-size: 100% auto;
         }
 
         .o_span {

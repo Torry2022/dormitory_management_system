@@ -205,7 +205,7 @@
                         title: "添加班级",
                         shadeClose: true,
                         shade: 0.4,
-                        area: ["30%"],
+                        area: ["55%"],
                         anim: 2,
                         content: $("#addClass").html()
                     });
