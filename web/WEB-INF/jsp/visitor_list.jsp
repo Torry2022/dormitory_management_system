@@ -180,7 +180,6 @@
                             create_time: '访问时间'
                         });
 
-                        // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                         var colConf = excel.makeColConfig({
                             'B': 80,
                             'C': 90,

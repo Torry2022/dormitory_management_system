@@ -32,8 +32,8 @@
     <div class="x-body">
         <div class="layui-row">
             <form class="layui-form layui-col-md12 x-so" action="/findDormRepair">
-                <input class="layui-input" placeholder="请输入宿舍编号" name="d_dormitoryid" id="d_dormitoryid">
                 <input class="layui-input" placeholder="请输入宿舍楼" name="d_dormbuilding" id="d_dormbuilding">
+                <input class="layui-input" placeholder="请输入宿舍编号" name="d_dormitoryid" id="d_dormitoryid">
 
                 <button class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon">&#xe615;</i></button>
                 <a class="layui-btn layui-btn-small" style="float:right" href="/findDormRepair" title="刷新">
@@ -53,18 +53,18 @@
             <div class="layui-col-md10">
                 <form class="layui-form" id="addDormRepairForm">
                     <div class="layui-form-item">
-                        <label class="layui-form-label"><i class="necessary">* </i>宿舍编号：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="d_dormitoryid" class="layui-input" lay-verify="required|number"
-                                   lay-reqtext="宿舍编号不能为空" autocomplete="off" placeholder="请输入宿舍编号">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
                         <label class="layui-form-label"><i class="necessary">* </i>宿舍楼：</label>
                         <div class="layui-input-block">
                             <input type="text" name="d_dormbuilding" class="layui-input" lay-verify="required"
                                    lay-reqtext="宿舍楼不能为空" autocomplete="off" placeholder="请输入宿舍楼">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i class="necessary">* </i>宿舍编号：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="d_dormitoryid" class="layui-input" lay-verify="required|number"
+                                   lay-reqtext="宿舍编号不能为空" autocomplete="off" placeholder="请输入宿舍编号">
                         </div>
                     </div>
 
@@ -80,7 +80,8 @@
                         <label class="layui-form-label"><i class="necessary">* </i>报修事由：</label>
                         <div class="layui-input-block">
                             <textarea name="reason" class="layui-input" autocomplete="off"
-                                   lay-verify="required" lay-reqtext="报修事由不能为空" placeholder="请输入报修事由"></textarea>
+                                      lay-verify="required" lay-reqtext="报修事由不能为空"
+                                      placeholder="请输入报修事由"></textarea>
                         </div>
                     </div>
 
@@ -101,8 +102,8 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th>宿舍编号</th>
                 <th>宿舍楼</th>
+                <th>宿舍编号</th>
                 <th>维修人员</th>
                 <th>报修事由</th>
                 <th>报修时间</th>
@@ -113,17 +114,18 @@
             <c:forEach items="${di.list}" var="di">
                 <tr>
                     <td>${di.r_id}</td>
-                    <td>${di.d_dormitoryid}</td>
                     <td>${di.d_dormbuilding}</td>
+                    <td>${di.d_dormitoryid}</td>
                     <td>${di.r_name}</td>
                     <td>${di.reason}</td>
                     <td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${di.create_time}"/></td>
                     <td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${di.update_time}"/></td>
                     <td>
-                        <a title="编辑" id="updateEdit" href="/findDormRepairById?r_id=${di.r_id}">
+                        <a title="编辑" onclick="member_edit(this,'${di.r_id}',${di.d_dormitoryid})"
+                           href="javascript:;">
                             <i class="layui-icon">&#xe642;</i>
                         </a>
-                        <a title="删除" onclick="member_del(this,'${di.r_id}')" href="javascript:;">
+                        <a title="删除" onclick="member_del(this,'${di.r_id}',${di.d_dormitoryid})" href="javascript:;">
                             <i class="layui-icon">&#xe640;</i>
                         </a>
                     </td>
@@ -139,6 +141,7 @@
                 <c:param name="totalPageCount" value="${di.pageTotalCount}"/>
             </c:import>
         </div>
+
         <script>
             layui.config({
                 base: 'layui_exts/',
@@ -169,8 +172,8 @@
                             // 1. 如果需要调整顺序，请自行梳理函数
                             var dt = excel.filterExportData(data, [
                                 'r_id',
-                                'd_dormitoryid',
                                 'd_dormbuilding',
+                                'd_dormitoryid',
                                 'r_name',
                                 'reason',
                                 'create_time',
@@ -180,15 +183,14 @@
                             // 2. 数组头部新增表头
                             dt.unshift({
                                 r_id: 'ID',
-                                d_dormitoryid: '宿舍编号',
                                 d_dormbuilding: '宿舍楼',
+                                d_dormitoryid: '宿舍编号',
                                 r_name: '维修人员',
                                 reason: '报修事由',
                                 create_time: '报修时间',
                                 update_time: '更新时间'
                             });
 
-                            // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                             var colConf = excel.makeColConfig({
                                 'F': 160,
                                 'G': 160
@@ -220,72 +222,150 @@
 
                 /*添加弹出框*/
                 $("#addDormRepairBtn").click(function () {
-                    layer.open({
-                        type: 1,
-                        title: "添加维修登记",
-                        area: ["55%"],
-                        shadeClose: true,
-                        shade: 0.4,
-                        anim: 2,
-                        content: $("#addDormRepair").html()
-                    });
-                    $("#addDormRepairForm")[0].reset();
-                    form.on('submit(addForm)', function (data) {
-                        var param = data.field;
+                    //如果用户为学生
+                    if (!${empty sessionScope.s.s_id}) {
+                        layer.open({
+                            type: 1,
+                            title: "添加维修登记",
+                            area: ["55%"],
+                            shadeClose: true,
+                            shade: 0.4,
+                            anim: 2,
+                            content: $("#addDormRepair").html()
+                        });
+                        form.on('submit(addForm)', function (data) {
+                            let param = data.field;
+                            //当前用户的宿舍编号
+                            let myDormId = ${sessionScope.s.s_dormitoryid};
+                            //当前用户的宿舍楼，加上这句代码按钮就全部失效
+                            //let myBuilding = ${sessionScope.s.s_dormbuilding};
+                            
+                            if (data.s_dormitoryid != myDormId) {
+                                layer.alert("请正确输入自己宿舍所在宿舍楼及编号！");
+                            } else {
+                                $.ajax({
+                                    url: '/addDormRepair',
+                                    type: "post",
+                                    data: JSON.stringify(param),
+                                    contentType: "application/json; charset=utf-8",
+                                    success: function () {
+                                        layer.msg('添加成功', {icon: 1, time: 2000});
+                                        setTimeout(function () {
+                                            window.location.href = '/findDormRepair';
+                                        }, 2000);
+                                    },
+                                    error: function () {
+                                        layer.msg('添加失败', {icon: 0, time: 2000});
+                                        setTimeout(function () {
+                                            window.location.href = '/findDormRepair';
+                                        }, 2000);
+                                    }
+                                });
+                            }
+                        });
+                    } else {
+                        layer.open({
+                            type: 1,
+                            title: "添加维修登记",
+                            area: ["55%"],
+                            shadeClose: true,
+                            shade: 0.4,
+                            anim: 2,
+                            content: $("#addDormRepair").html()
+                        });
+                        $("#addDormRepairForm")[0].reset();
+                        form.on('submit(addForm)', function (data) {
+                            var param = data.field;
+
+                            $.ajax({
+                                url: '/addDormRepair',
+                                type: "post",
+                                data: JSON.stringify(param),
+                                contentType: "application/json; charset=utf-8",
+                                success: function () {
+                                    layer.msg('添加成功', {icon: 1, time: 2000});
+                                    setTimeout(function () {
+                                        window.location.href = '/findDormRepair';
+                                    }, 2000);
+                                },
+                                error: function () {
+                                    layer.msg('添加失败', {icon: 0, time: 2000});
+                                    setTimeout(function () {
+                                        window.location.href = '/findDormRepair';
+                                    }, 2000);
+                                }
+                            });
+                        });
+                    }
+                })
+            });
+
+            /*编辑*/
+            function member_edit(obj, r_id, d_dormitoryid) {
+                if (!${empty sessionScope.s.s_id}) {
+                    let myDormId = ${sessionScope.s.s_dormitoryid};
+                    //写法不正常，但不这么写Layui按钮就无效
+                    if (myDormId != d_dormitoryid) {
+                        layer.alert("您只能修改自己宿舍的维修信息:(");
+                    } else {
+                        window.location.href = '/findDormRepairById?r_id=' + r_id;
+                    }
+                } else {
+                    window.location.href = '/findDormRepairById?r_id=' + r_id;
+                }
+            }
+
+            /*删除*/
+            function member_del(obj, r_id, d_dormitoryid) {
+                if (!${empty sessionScope.s.s_id}) {
+                    let myDormId = ${sessionScope.s.s_dormitoryid};
+                    if (myDormId != d_dormitoryid) {
+                        layer.alert("您只能删除自己宿舍的维修信息:(");
+                    } else {
+                        //可能是Layui存在bug，不得不这么写，否则按钮全部失效
+                        layer.confirm('确认要删除吗？', function () {
+                            $.ajax({
+                                url: '/deleteDormRepair',
+                                type: "get",
+                                data: {"r_id": r_id},
+                                contentType: "application/json; charset=utf-8",
+                                success: function () {
+                                    layer.msg('删除成功', {icon: 1, time: 1000});
+                                    setTimeout(function () {
+                                        window.location.href = '/findDormRepair';
+                                    }, 2000);
+                                },
+                                error: function () {
+                                    layer.msg('删除失败', {icon: 0, time: 1000});
+                                    setTimeout(function () {
+                                        window.location.href = '/findDormRepair';
+                                    }, 2000);
+                                }
+                            })
+                        });
+                    }
+                } else {
+                    layer.confirm('确认要删除吗？', function () {
                         $.ajax({
-                            url: '/addDormRepair',
-                            type: "post",
-                            data: JSON.stringify(param),
+                            url: '/deleteDormRepair',
+                            type: "get",
+                            data: {"r_id": r_id},
                             contentType: "application/json; charset=utf-8",
                             success: function () {
-                                layer.msg('添加成功', {icon: 1, time: 2000});
+                                layer.msg('删除成功', {icon: 1, time: 1000});
                                 setTimeout(function () {
                                     window.location.href = '/findDormRepair';
                                 }, 2000);
                             },
                             error: function () {
-                                layer.msg('添加失败', {icon: 0, time: 2000});
+                                layer.msg('删除失败', {icon: 0, time: 1000});
                                 setTimeout(function () {
                                     window.location.href = '/findDormRepair';
                                 }, 2000);
                             }
-                        });
+                        })
                     });
-                });
-            });
-
-            /*删除*/
-            function member_del(obj, r_id) {
-                layer.confirm('确认要删除吗？', function () {
-                    $.ajax({
-                        url: '/deleteDormRepair',
-                        type: "get",
-                        data: {"r_id": r_id},
-                        contentType: "application/json; charset=utf-8",
-                        success: function () {
-                            layer.msg('删除成功', {icon: 1, time: 1000});
-                            setTimeout(function () {
-                                window.location.href = '/findDormRepair';
-                            }, 2000);
-                        },
-                        error: function () {
-                            layer.msg('删除失败', {icon: 0, time: 1000});
-                            setTimeout(function () {
-                                window.location.href = '/findDormRepair';
-                            }, 2000);
-                        }
-                    })
-                });
-            }
-
-            /*批量删除*/
-            function delAll(obj, s_id) {
-                var data = tableCheck.getData();
-                layer.confirm('确认要删除吗？' + data, function (s_id) {
-                    //捉到所有被选中的，发异步进行删除
-                    layer.msg('删除成功', {icon: 1});
-                    $(".layui-form-checked").not('.header').parents('tr').remove();
-                });
+                }
             }
         </script>
 </body>

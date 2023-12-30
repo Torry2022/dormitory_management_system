@@ -18,26 +18,21 @@ public class StudentCleanServiceImpl implements StudentCleanService {
 
     //分页查询
     @Override
-    public PageInfo<StudentClean> findPageInfo(Integer s_studentid, String s_name, Integer s_dormitoryid, Integer pageIndex, Integer pageSize) {
-        PageInfo<StudentClean> pi = new PageInfo<StudentClean>();
+    public PageInfo<StudentClean> findPageInfo(Integer s_studentid, Integer pageIndex, Integer pageSize) {
+        PageInfo<StudentClean> pi = new PageInfo<>();
         pi.setPageIndex(pageIndex);
         pi.setPageSize(pageSize);
         //获取总条数
-        Integer totalCount = studentCleanDao.totalCount(s_studentid, s_name, s_dormitoryid);
+        Integer totalCount = studentCleanDao.totalCount(s_studentid);
         if (totalCount > 0) {
             pi.setTotalCount(totalCount);
             //每一页显示宿舍信息数
             //currentPage = (pageIndex-1)*pageSize  当前页码数减1*最大条数=开始行数
-            List<StudentClean> studentCleanList = studentCleanDao.getStudentCleanList(s_studentid, s_name, s_dormitoryid,
+            List<StudentClean> studentCleanList = studentCleanDao.getStudentCleanList(s_studentid,
                     (pi.getPageIndex() - 1) * pi.getPageSize(), pi.getPageSize());
             pi.setList(studentCleanList);
         }
         return pi;
-    }
-
-    @Override
-    public List<StudentClean> getAll() {
-        return studentCleanDao.getAll();
     }
 
     //添加宿舍卫生信息
@@ -61,6 +56,11 @@ public class StudentCleanServiceImpl implements StudentCleanService {
     @Override
     public StudentClean findStudentCleanById(Integer g_id) {
         return studentCleanDao.findStudentCleanById(g_id);
+    }
+
+    @Override
+    public List<StudentClean> getAll() {
+        return studentCleanDao.getAll();
     }
 }
 

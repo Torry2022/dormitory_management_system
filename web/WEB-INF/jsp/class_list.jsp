@@ -105,7 +105,7 @@
                     <td>${ci.c_classname}</td>
                     <td>${ci.c_counsellor}</td>
                     <td>
-                        <a title="编辑" id="updateEdit" href="/findClassById?c_id=${ci.c_id}">
+                        <a title="编辑" onclick="member_edit(this,'${ci.c_id}')" href="javascript:;">
                             <i class="layui-icon">&#xe642;</i>
                         </a>
                         <a title="删除" onclick="member_del(this,'${ci.c_id}')" href="javascript:;">
@@ -125,6 +125,7 @@
                 <c:param name="totalPageCount" value="${ci.pageTotalCount}"/>
             </c:import>
         </div>
+
         <script>
             layui.config({
                 base: 'layui_exts/',
@@ -167,15 +168,14 @@
                                 c_classname: '班级名',
                                 c_counsellor: '辅导员'
                             });
-
-                            // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
+                            
                             var colConf = excel.makeColConfig({
                                 'C': 90,
                                 'D': 80
                             }, 60);
 
                             var timeStart = Date.now();
-                            
+
                             // 3. 执行导出函数，系统会弹出弹框
                             excel.exportExcel({
                                 sheet1: dt
@@ -200,62 +200,79 @@
 
                 /*添加弹出框*/
                 $("#addClassBtn").click(function () {
-                    layer.open({
-                        type: 1,
-                        title: "添加班级",
-                        shadeClose: true,
-                        shade: 0.4,
-                        area: ["55%"],
-                        anim: 2,
-                        content: $("#addClass").html()
-                    });
-                    $("#addClassForm")[0].reset();
-                    form.on('submit(addForm)', function (data) {
-                        var param = data.field;
+                    if (!${empty sessionScope.s.s_id}) {
+                        layer.alert("对不起，您没有权限:(");
+                    } else {
+                        layer.open({
+                            type: 1,
+                            title: "添加班级",
+                            shadeClose: true,
+                            shade: 0.4,
+                            area: ["55%"],
+                            anim: 2,
+                            content: $("#addClass").html()
+                        });
+                        $("#addClassForm")[0].reset();
+                        form.on('submit(addForm)', function (data) {
+                            var param = data.field;
+                            $.ajax({
+                                url: '/addClass',
+                                type: "post",
+                                data: JSON.stringify(param),
+                                contentType: "application/json; charset=utf-8",
+                                success: function () {
+                                    layer.msg('添加成功', {icon: 1, time: 2000});
+                                    setTimeout(function () {
+                                        window.location.href = '/findClass';
+                                    }, 2000);
+                                },
+                                error: function () {
+                                    layer.msg('添加失败', {icon: 0, time: 2000});
+                                    setTimeout(function () {
+                                        window.location.href = '/findClass';
+                                    }, 2000);
+                                }
+                            });
+                        });
+                    }
+                });
+            });
+
+            /*编辑*/
+            function member_edit(obj, c_id) {
+                if (!${empty sessionScope.s.s_id}) {
+                    layer.alert("对不起，您没有权限:(");
+                } else {
+                    window.location.href = '/findClassById?c_id=' + c_id;
+                }
+            }
+
+            /*删除*/
+            function member_del(obj, c_id) {
+                if (!${empty sessionScope.s.s_id}) {
+                    layer.alert("对不起，您没有权限:(");
+                } else {
+                    layer.confirm('确认要删除吗？', function () {
                         $.ajax({
-                            url: '/addClass',
-                            type: "post",
-                            data: JSON.stringify(param),
+                            url: '/deleteClass',
+                            type: "get",
+                            data: {"c_id": c_id},
                             contentType: "application/json; charset=utf-8",
                             success: function () {
-                                layer.msg('添加成功', {icon: 1, time: 2000});
+                                layer.msg('删除成功', {icon: 1, time: 1000});
                                 setTimeout(function () {
                                     window.location.href = '/findClass';
                                 }, 2000);
                             },
                             error: function () {
-                                layer.msg('添加失败', {icon: 0, time: 2000});
+                                layer.msg('删除失败', {icon: 0, time: 1000});
                                 setTimeout(function () {
                                     window.location.href = '/findClass';
                                 }, 2000);
                             }
-                        });
+                        })
                     });
-                });
-            });
-
-            /*删除*/
-            function member_del(obj, c_id) {
-                layer.confirm('确认要删除吗？', function () {
-                    $.ajax({
-                        url: '/deleteClass',
-                        type: "get",
-                        data: {"c_id": c_id},
-                        contentType: "application/json; charset=utf-8",
-                        success: function () {
-                            layer.msg('删除成功', {icon: 1, time: 1000});
-                            setTimeout(function () {
-                                window.location.href = '/findClass';
-                            }, 2000);
-                        },
-                        error: function () {
-                            layer.msg('删除失败', {icon: 0, time: 1000});
-                            setTimeout(function () {
-                                window.location.href = '/findClass';
-                            }, 2000);
-                        }
-                    })
-                });
+                }
             }
         </script>
 </body>

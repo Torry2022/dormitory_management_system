@@ -25,9 +25,9 @@ public class StudentCleanController {
      * pageSize  显示条数
      */
     @RequestMapping(value = "/findStudentClean")
-    public String findDormClean(Integer s_studentid, String s_name, Integer s_dormitoryid, Integer pageIndex, Integer pageSize, Model model) {
+    public String findDormClean(Integer s_studentid, Integer pageIndex, Integer pageSize, Model model) {
         pageSize = 15;
-        PageInfo<StudentClean> di = studentCleanService.findPageInfo(s_studentid, s_name, s_dormitoryid, pageIndex, pageSize);
+        PageInfo<StudentClean> di = studentCleanService.findPageInfo(s_studentid, pageIndex, pageSize);
         model.addAttribute("di", di);
         return "studentclean_list";
     }

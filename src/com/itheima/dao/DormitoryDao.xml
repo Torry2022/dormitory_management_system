@@ -105,6 +105,9 @@
                  join d_student students
                       on dormitoryinfos.d_dormitoryid = students.s_dormitoryid
         <where>
+            <if test="d_dormbuilding != null and d_dormbuilding != ''">
+                dormitoryinfos.d_dormbuilding like '%${d_dormbuilding}%'
+            </if>
             <if test="d_dormitoryid != null and d_dormitoryid != ''">
                 dormitoryinfos.d_dormitoryid = #{d_dormitoryid}
             </if>

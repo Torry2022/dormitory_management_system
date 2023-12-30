@@ -19,7 +19,7 @@ public class DormCleanServiceImpl implements DormCleanService {
     //分页查询
     @Override
     public PageInfo<DormClean> findPageInfo(Integer d_id, String d_dormbuilding, Integer pageIndex, Integer pageSize) {
-        PageInfo<DormClean> pi = new PageInfo<DormClean>();
+        PageInfo<DormClean> pi = new PageInfo<>();
         pi.setPageIndex(pageIndex);
         pi.setPageSize(pageSize);
         //获取总条数

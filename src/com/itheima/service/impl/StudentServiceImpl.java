@@ -20,11 +20,16 @@ public class StudentServiceImpl implements StudentService {
 	@Autowired
 	private StudentDao studentDao;
 
+	@Override
+	public Student findStudent(Student student) {
+		return studentDao.findStudent(student);
+	}
+
 	//分页查询
 	@Override
 	public PageInfo<Student> findPageInfo(String s_name, Integer s_studentid,Integer s_classid,
 										  String s_classname, Integer pageIndex, Integer pageSize) {
-		PageInfo<Student> pi = new PageInfo<Student>();
+		PageInfo<Student> pi = new PageInfo<>();
 		pi.setPageIndex(pageIndex);
 		pi.setPageSize(pageSize);
 		//获取总条数
@@ -47,9 +52,9 @@ public class StudentServiceImpl implements StudentService {
 
 	//通过id删除学生信息
 	@Override
-	public int deleteStudent(Integer s_id) {
-		return studentDao.deleteStudent(s_id);
-	}
+	public void deleteStudent(Integer s_id) {
+        studentDao.deleteStudent(s_id);
+    }
 	
     //添加学生信息
 	@Override

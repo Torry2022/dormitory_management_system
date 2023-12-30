@@ -8,7 +8,9 @@ public class Student {
     private Long s_phone;
     private Integer s_classid;
     private String s_classname;
+    private String s_dormbuilding;
     private Integer s_dormitoryid;
+    private String s_password;
 
     public Integer getS_id() {
         return s_id;
@@ -66,11 +68,27 @@ public class Student {
         this.s_classname = s_classname;
     }
 
+    public String getS_dormbuilding() {
+        return s_dormbuilding;
+    }
+
+    public void setS_dormbuilding(String s_dormbuilding) {
+        this.s_dormbuilding = s_dormbuilding;
+    }
+
     public Integer getS_dormitoryid() {
         return s_dormitoryid;
     }
 
     public void setS_dormitoryid(Integer s_dormitoryid) {
         this.s_dormitoryid = s_dormitoryid;
+    }
+
+    public String getS_password() {
+        return s_password;
+    }
+
+    public void setS_password(String s_password) {
+        this.s_password = s_password;
     }
 }

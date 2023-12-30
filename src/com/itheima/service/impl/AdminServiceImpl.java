@@ -32,7 +32,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public PageInfo<Admin> findPageInfo(String a_username, String a_describe, Integer a_id, Integer pageIndex, Integer pageSize) {
-        PageInfo<Admin> pi = new PageInfo<Admin>();
+        PageInfo<Admin> pi = new PageInfo<>();
         pi.setPageIndex(pageIndex);
         pi.setPageSize(pageSize);
         //获取总条数

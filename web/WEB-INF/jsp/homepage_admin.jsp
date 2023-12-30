@@ -41,7 +41,7 @@
             <li class="layui-nav-item">
                 <a href="javascript:"><img
                         src="https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/ic_avatar.jpg"
-                        class="layui-nav-img">${sessionScope.ad.a_username}</a>
+                        class="layui-nav-img">${sessionScope.ad.a_name}</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
                     <dd><a onclick="x_admin_show('切换帐号','logout')">切换帐号</a></dd>
                     <dd><a href="/logout">退出</a></dd>

@@ -23,7 +23,7 @@ public class ClassServiceImpl implements ClassService {
     //分页查询
     @Override
     public PageInfo<Class> findPageInfo(String c_classname, String c_counsellor, Integer c_classid, Integer pageIndex, Integer pageSize) {
-        PageInfo<Class> pi = new PageInfo<Class>();
+        PageInfo<Class> pi = new PageInfo<>();
         pi.setPageIndex(pageIndex);
         pi.setPageSize(pageSize);
         //获取总条数

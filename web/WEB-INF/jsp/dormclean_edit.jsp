@@ -18,17 +18,6 @@
         <form class="layui-form" id="f_auto" action="/updateDormClean" method="post">
             <input type="hidden" value="${sessionScope.d.g_id}" name="g_id" id="g_id"/>
             <div class="layui-form-item">
-                <label for="d_dormitoryid" class="layui-form-label">
-                    <span><i class="necessary">* </i>宿舍编号</span>
-                </label>
-                <div class="layui-input-inline">
-                    <input type="text" id="d_dormitoryid" name="d_dormitoryid" lay-verify="required|number"
-                           lay-reqtext="宿舍编号不能为空" autocomplete="off" value="${sessionScope.d.d_dormitoryid}"
-                           class="layui-input" placeholder="请输入宿舍编号">
-                </div>
-            </div>
-
-            <div class="layui-form-item">
                 <label for="d_dormbuilding" class="layui-form-label">
                     <span><i class="necessary">* </i>宿舍楼</span>
                 </label>
@@ -36,6 +25,17 @@
                     <input type="text" id="d_dormbuilding" name="d_dormbuilding" lay-verify="required"
                            lay-reqtext="宿舍楼不能为空" autocomplete="off" value="${sessionScope.d.d_dormbuilding}"
                            class="layui-input" placeholder="请输入宿舍楼">
+                </div>
+            </div>
+            
+            <div class="layui-form-item">
+                <label for="d_dormitoryid" class="layui-form-label">
+                    <span><i class="necessary">* </i>宿舍编号</span>
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="d_dormitoryid" name="d_dormitoryid" lay-verify="required|number"
+                           lay-reqtext="宿舍编号不能为空" autocomplete="off" value="${sessionScope.d.d_dormitoryid}"
+                           class="layui-input" placeholder="请输入宿舍编号">
                 </div>
             </div>
 
@@ -52,7 +52,7 @@
             <input type="hidden" value="${sessionScope.d.update_time}" name="update_time" id="update_time"/>
 
             <div class="layui-form-item" id="btn_xg">
-                <button class="layui-btn" id="btn_on" lay-submit="" lay-filter="updateClass">
+                <button class="layui-btn" id="btn_on">
                     修改
                 </button>
             </div>

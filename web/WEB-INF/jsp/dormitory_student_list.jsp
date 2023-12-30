@@ -31,6 +31,7 @@
     <div class="x-body">
         <div class="layui-row">
             <form class="layui-form layui-col-md12 x-so" action="/findDormitoryStudent">
+                <input class="layui-input" placeholder="请输入宿舍楼" name="d_dormbuilding" id="d_dormbuilding">
                 <input class="layui-input" placeholder="请输入宿舍编号" name="d_dormitoryid" id="d_dormitoryid">
 
                 <button class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon">&#xe615;</i></button>
@@ -38,57 +39,13 @@
                     <i class="layui-icon">&#x21bb;</i></a>
             </form>
         </div>
-        
-        <%--添加模态框--%>
-        <div class="layui-row" id="test" style="display: none;">
-            <div class="layui-col-md10">
-                <form class="layui-form" id="addEmployeeForm">
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">宿舍编号：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="d_dormitoryid" class="layui-input" placeholder="请输入宿舍编号">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">床位总数：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="d_bedtotal" class="layui-input" placeholder="请输入床位总数">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">已用床位：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="d_bed" class="layui-input" placeholder="请输入已用床位">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">管理员：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="a_name" class="layui-input" placeholder="请输入管理员姓名">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <div class="layui-input-block">
-                            <button type="button" class="layui-btn layui-btn-normal" lay-submit lay-filter="formDemo">
-                                提交
-                            </button>
-                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
 
         <%--表格数据--%>
         <table class="layui-table">
             <thead>
             <tr>
-                <th>宿舍编号</th>
                 <th>宿舍楼</th>
+                <th>宿舍编号</th>
                 <th>已用床位</th>
                 <th>学生姓名</th>
                 <th>电话</th>
@@ -100,8 +57,8 @@
                 <c:set value="${d.students}" var="dd"/>
                 <c:forEach items="${dd}" var="sd">
                     <tr>
-                        <td>${d.d_dormitoryid}</td>
                         <td>${d.d_dormbuilding}</td>
+                        <td>${d.d_dormitoryid}</td>
                         <td>${d.d_bed}</td>
                         <td>${sd.s_name}</td>
                         <td>${sd.s_phone}</td>

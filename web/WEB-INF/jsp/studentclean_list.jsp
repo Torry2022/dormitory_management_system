@@ -33,8 +33,6 @@
         <div class="layui-row">
             <form class="layui-form layui-col-md12 x-so" action="/findStudentClean">
                 <input class="layui-input" placeholder="请输入学号" name="s_studentid" id="s_studentid">
-                <input class="layui-input" placeholder="请输入姓名" name="s_name" id="s_name">
-                <input class="layui-input" placeholder="请输入宿舍编号" name="s_dormitoryid" id="s_dormitoryid">
 
                 <input class="layui-input" type="hidden" name="pageIndex" value="1">
                 <input class="layui-input" type="hidden" name="pageSize" value="3">
@@ -63,37 +61,12 @@
                                    placeholder="请输入学号">
                         </div>
                     </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label"><i class="necessary">* </i>姓名：</label>
-                        <div class="layui-input-block">
-                            <input type="text" lay-verify="required" name="s_name" class="layui-input"
-                                   lay-verify="required" lay-reqtext="姓名不能为空" autocomplete="off"
-                                   placeholder="请输入姓名">
-                        </div>
-                    </div>
-
+                    
                     <div class="layui-form-item">
                         <label class="layui-form-label"><i class="necessary">* </i>卫生评分：</label>
                         <div class="layui-input-block">
                             <input type="text" name="s_grade" class="layui-input" lay-verify="required|number"
                                    lay-reqtext="卫生评分不能为空" autocomplete="off" placeholder="请输入卫生评分">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label"><i class="necessary">* </i>班级编号：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="s_classid" class="layui-input" lay-verify="required|number"
-                                   lay-reqtext="班级编号不能为空" autocomplete="off" placeholder="请输入班级编号">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
-                        <label class="layui-form-label"><i class="necessary">* </i>宿舍编号：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="s_dormitoryid" class="layui-input" lay-verify="required|number"
-                                   lay-reqtext="宿舍编号不能为空" autocomplete="off" placeholder="请输入宿舍编号">
                         </div>
                     </div>
 
@@ -118,6 +91,7 @@
                 <th>姓名</th>
                 <th>学生卫生</th>
                 <th>班级编号</th>
+                <th>宿舍楼</th>
                 <th>宿舍编号</th>
                 <th>创建时间</th>
                 <th>更新时间</th>
@@ -128,14 +102,15 @@
                 <tr>
                     <td>${di.g_id}</td>
                     <td>${di.s_studentid}</td>
-                    <td>${di.s_name}</td>
+                    <td>${di.student.s_name}</td>
                     <td>${di.s_grade}</td>
-                    <td>${di.s_classid}</td>
-                    <td>${di.s_dormitoryid}</td>
+                    <td>${di.student.s_classid}</td>
+                    <td>${di.student.s_dormbuilding}</td>
+                    <td>${di.student.s_dormitoryid}</td>
                     <td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${di.create_time}"/></td>
                     <td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${di.update_time}"/></td>
                     <td>
-                        <a title="编辑" id="updateEdit" href="/findStudentCleanById?g_id=${di.g_id}">
+                        <a title="编辑" onclick="member_edit(this, '${di.g_id}')" href="javascript:;">
                             <i class="layui-icon">&#xe642;</i>
                         </a>
                         <a title="删除" onclick="member_del(this,'${di.g_id}')" href="javascript:;">
@@ -155,6 +130,7 @@
                 <c:param name="totalPageCount" value="${di.pageTotalCount}"/>
             </c:import>
         </div>
+        
         <script>
             layui.config({
                 base: 'layui_exts/',
@@ -187,10 +163,7 @@
                             var dt = excel.filterExportData(data, [
                                 'g_id',
                                 's_studentid',
-                                's_name',
                                 's_grade',
-                                's_classid',
-                                's_dormitoryid',
                                 'create_time',
                                 'update_time'
                             ]);
@@ -199,19 +172,16 @@
                             dt.unshift({
                                 g_id: 'ID',
                                 s_studentid: '学号',
-                                s_name: '姓名',
                                 s_grade: '学生卫生',
-                                s_classid: '班级编号',
-                                s_dormitoryid: '宿舍编号',
                                 create_time: '创建日期',
                                 update_time: '更新日期'
                             });
-
-                            // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
+                            
                             var colConf = excel.makeColConfig({
+                                'A': 40,
                                 'B': 90,
-                                'G': 160,
-                                'H': 160
+                                'D': 120,
+                                'E': 120
                             }, 60);
 
                             var timeStart = Date.now();
@@ -239,6 +209,9 @@
 
                 /*添加弹出框*/
                 $("#addStudentCleanBtn").click(function () {
+                    if (!${empty sessionScope.s.s_id}) {
+                        layer.alert("对不起，您没有权限:(");
+                    } else {
                     layer.open({
                         type: 1,
                         title: "添加学生卫生评分",
@@ -270,41 +243,45 @@
                             }
                         });
                     });
+                    }
                 });
             });
 
-            /*删除*/
-            function member_del(obj, g_id) {
-                layer.confirm('确认要删除吗？', function () {
-                    $.ajax({
-                        url: '/deleteStudentClean',
-                        type: "get",
-                        data: {"g_id": g_id},
-                        contentType: "application/json; charset=utf-8",
-                        success: function () {
-                            layer.msg('删除成功', {icon: 1, time: 1000});
-                            setTimeout(function () {
-                                window.location.href = '/findStudentClean';
-                            }, 2000);
-                        },
-                        error: function () {
-                            layer.msg('删除失败', {icon: 0, time: 1000});
-                            setTimeout(function () {
-                                window.location.href = '/findStudentClean';
-                            }, 2000);
-                        }
-                    })
-                });
+            /*编辑*/
+            function member_edit(obj, g_id) {
+                if (!${empty sessionScope.s.s_id}) {
+                    layer.alert("对不起，您没有权限:(");
+                } else {
+                    window.location.href = '/findStudentCleanById?g_id=' + g_id;
+                }
             }
 
-            /*批量删除*/
-            function delAll(obj, s_id) {
-                var data = tableCheck.getData();
-                layer.confirm('确认要删除吗？' + data, function (s_id) {
-                    //捉到所有被选中的，发异步进行删除
-                    layer.msg('删除成功', {icon: 1});
-                    $(".layui-form-checked").not('.header').parents('tr').remove();
-                });
+            /*删除*/
+            function member_del(obj, g_id) {
+                if (!${empty sessionScope.s.s_id}) {
+                    layer.alert("对不起，您没有权限:(");
+                } else {
+                    layer.confirm('确认要删除吗？', function () {
+                        $.ajax({
+                            url: '/deleteStudentClean',
+                            type: "get",
+                            data: {"g_id": g_id},
+                            contentType: "application/json; charset=utf-8",
+                            success: function () {
+                                layer.msg('删除成功', {icon: 1, time: 1000});
+                                setTimeout(function () {
+                                    window.location.href = '/findStudentClean';
+                                }, 2000);
+                            },
+                            error: function () {
+                                layer.msg('删除失败', {icon: 0, time: 1000});
+                                setTimeout(function () {
+                                    window.location.href = '/findStudentClean';
+                                }, 2000);
+                            }
+                        })
+                    });
+                }
             }
         </script>
 </body>

@@ -24,8 +24,17 @@
                     <span class="erro">${msg}</span><br>
                     <span class="s1"></span>
                     <span class="s2"></span>
-                    <input type="text" name="a_username" class="inputs" placeholder="请输入账号"/>
-                    <input type="password" name="a_password" class="inputs" placeholder="请输入密码"/>
+                    <span class="s3"></span>
+                    <input type="text" name="username" class="inputs" placeholder="请输入用户名/学号"/>
+                    <input type="password" name="password" class="inputs" placeholder="请输入密码"/>
+                    <div class="select">
+
+                        <select name="role">
+                            <option value="身份">请选择登录身份</option>
+                            <option value="管理员">管理员</option>
+                            <option value="学生">学生</option>
+                        </select>
+                    </div>
                     <input type="submit" value="登  录"/>
                 </form>
             </div>

@@ -71,7 +71,7 @@
                     <td>${ai.a_phone}</td>
                     <td>${ai.a_describe}</td>
                     <td class="td-manage">
-                        <a title="编辑" class="updateEdit" href="#">
+                        <a title="编辑" href="#">
                             <i class="layui-icon">&#xe642;</i>
                         </a>
                         <a title="删除" onclick="member_del(this,'${ai.a_id}')" href="javascript:;">
@@ -156,6 +156,7 @@
             </c:import>
         </div>
     </div>
+    
     <script>
         layui.config({
             base: 'layui_exts/',
@@ -202,7 +203,6 @@
                             a_describe: '级别描述'
                         });
 
-                        // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                         var colConf = excel.makeColConfig({
                             'A': 40,
                             'D': 90
@@ -275,8 +275,8 @@
 
         /*编辑*/
         $(".updateEdit").click(function () {
-            var myid = $(this).parent("td").parent("tr").children(".myid").html();
-            var power = ${sessionScope.ad.a_power};
+            let myid = $(this).parent("td").parent("tr").children(".myid").html();
+            let power = ${sessionScope.ad.a_power};
             //判断
             if (power != 1) {
                 layer.alert("对不起，您没有权限:(");
@@ -287,8 +287,8 @@
 
         /*删除*/
         function member_del(obj, a_id) {
-            var power = ${sessionScope.ad.a_power}
-            var id = ${sessionScope.ad.a_id};
+            let power = ${sessionScope.ad.a_power};
+            let id = ${sessionScope.ad.a_id};
             if (power != 1) {
                 layer.alert("对不起，您没有权限:(");
             } else if (id == a_id) {

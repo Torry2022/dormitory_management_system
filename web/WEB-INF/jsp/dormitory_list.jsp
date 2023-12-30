@@ -31,8 +31,8 @@
     <div class="x-body">
         <div class="layui-row">
             <form class="layui-form layui-col-  md12 x-so" action="/findDormitory">
-                <input class="layui-input" placeholder="请输入宿舍编号" name="d_dormitoryid" id="d_dormitoryid">
                 <input class="layui-input" placeholder="请输入宿舍楼" name="d_dormbuilding" id="d_dormbuilding">
+                <input class="layui-input" placeholder="请输入宿舍编号" name="d_dormitoryid" id="d_dormitoryid">
                 <input class="layui-input" placeholder="请输入管理员姓名" name="a_name" id="a_name">
 
                 <input class="layui-input" type="hidden" name="pageIndex" value="1">
@@ -55,18 +55,18 @@
             <div class="layui-col-md10">
                 <form class="layui-form" id="addDormForm">
                     <div class="layui-form-item">
-                        <label class="layui-form-label"><i class="necessary">* </i>宿舍编号：</label>
-                        <div class="layui-input-block">
-                            <input type="text" name="d_dormitoryid" class="layui-input" lay-verify="required|number"
-                                   autocomplete="off" lay-reqtext="宿舍编号不能为空" placeholder="请输入宿舍编号">
-                        </div>
-                    </div>
-
-                    <div class="layui-form-item">
                         <label class="layui-form-label"><i class="necessary">* </i>宿舍楼：</label>
                         <div class="layui-input-block">
                             <input type="text" name="d_dormbuilding" class="layui-input" lay-verify="required"
                                    autocomplete="off" lay-reqtext="宿舍楼不能为空" placeholder="请输入宿舍楼">
+                        </div>
+                    </div>
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i class="necessary">* </i>宿舍编号：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="d_dormitoryid" class="layui-input" lay-verify="required|number"
+                                   autocomplete="off" lay-reqtext="宿舍编号不能为空" placeholder="请输入宿舍编号">
                         </div>
                     </div>
 
@@ -111,8 +111,8 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th>宿舍编号</th>
                 <th>宿舍楼</th>
+                <th>宿舍编号</th>
                 <th>床位总数</th>
                 <th>已用床位</th>
                 <th>管理员</th>
@@ -122,13 +122,13 @@
             <c:forEach items="${di.list}" var="di">
                 <tr>
                     <td>${di.d_id}</td>
-                    <td>${di.d_dormitoryid}</td>
                     <td>${di.d_dormbuilding}</td>
+                    <td>${di.d_dormitoryid}</td>
                     <td>${di.d_bedtotal}</td>
                     <td>${di.d_bed}</td>
                     <td>${di.a_name}</td>
                     <td>
-                        <a title="编辑" id="updateEdit" href="/findDormitoryById?d_id=${di.d_id}">
+                        <a title="编辑" onclick="member_edit(this,'${di.d_id}')" href="javascript:;">
                             <i class="layui-icon">&#xe642;</i>
                         </a>
                         <a title="删除" onclick="member_del(this,'${di.d_id}')" href="javascript:;">
@@ -148,6 +148,7 @@
                 <c:param name="totalPageCount" value="${di.pageTotalCount}"/>
             </c:import>
         </div>
+
         <script>
             layui.config({
                 base: 'layui_exts/',
@@ -178,8 +179,8 @@
                             // 1. 如果需要调整顺序，请自行梳理函数
                             var dt = excel.filterExportData(data, [
                                 'd_id',
-                                'd_dormitoryid',
                                 'd_dormbuilding',
+                                'd_dormitoryid',
                                 'd_bedtotal',
                                 'd_bed',
                                 'a_name'
@@ -188,14 +189,13 @@
                             // 2. 数组头部新增表头
                             dt.unshift({
                                 d_id: 'ID',
-                                d_dormitoryid: '宿舍编号',
                                 d_dormbuilding: '宿舍楼',
+                                d_dormitoryid: '宿舍编号',
                                 d_bedtotal: '床位总数',
                                 d_bed: '医用床位',
                                 a_name: '管理员'
                             });
 
-                            // 意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                             var colConf = excel.makeColConfig({
                                 'C': 90,
                                 'F': 80
@@ -226,62 +226,79 @@
 
                 /*添加弹出框*/
                 $("#addDormBtn").click(function () {
-                    layer.open({
-                        type: 1,
-                        title: "添加宿舍",
-                        area: ["55%"],
-                        shadeClose: true,
-                        shade: 0.4,
-                        anim: 2,
-                        content: $("#addDorm").html()
-                    });
-                    $("#addDormForm")[0].reset();
-                    form.on('submit(addForm)', function (data) {
-                        var param = data.field;
+                    if (!${empty sessionScope.s.s_id}) {
+                        layer.alert("对不起，您没有权限:(");
+                    } else {
+                        layer.open({
+                            type: 1,
+                            title: "添加宿舍",
+                            area: ["55%"],
+                            shadeClose: true,
+                            shade: 0.4,
+                            anim: 2,
+                            content: $("#addDorm").html()
+                        });
+                        $("#addDormForm")[0].reset();
+                        form.on('submit(addForm)', function (data) {
+                            var param = data.field;
+                            $.ajax({
+                                url: '/addDormitory',
+                                type: "post",
+                                data: JSON.stringify(param),
+                                contentType: "application/json; charset=utf-8",
+                                success: function () {
+                                    layer.msg('添加成功', {icon: 1, time: 2000});
+                                    setTimeout(function () {
+                                        window.location.href = '/findDormitory';
+                                    }, 2000);
+                                },
+                                error: function () {
+                                    layer.msg('添加失败', {icon: 0, time: 2000});
+                                    setTimeout(function () {
+                                        window.location.href = '/findDormitory';
+                                    }, 2000);
+                                }
+                            });
+                        });
+                    }
+                });
+            });
+
+            /*编辑*/
+            function member_edit(obj, d_id) {
+                if (!${empty sessionScope.s.s_id}) {
+                    layer.alert("对不起，您没有权限:(");
+                } else {
+                    window.location.href = '/findDormitoryById?d_id=' + d_id;
+                }
+            }
+
+            /*删除*/
+            function member_del(obj, d_id) {
+                if (!${empty sessionScope.s.s_id}) {
+                    layer.alert("对不起，您没有权限:(");
+                } else {
+                    layer.confirm('确认要删除吗？', function () {
                         $.ajax({
-                            url: '/addDormitory',
-                            type: "post",
-                            data: JSON.stringify(param),
+                            url: '/deleteDormitory',
+                            type: "get",
+                            data: {"d_id": d_id},
                             contentType: "application/json; charset=utf-8",
                             success: function () {
-                                layer.msg('添加成功', {icon: 1, time: 2000});
+                                layer.msg('删除成功', {icon: 1, time: 1000});
                                 setTimeout(function () {
                                     window.location.href = '/findDormitory';
                                 }, 2000);
                             },
                             error: function () {
-                                layer.msg('添加失败', {icon: 0, time: 2000});
+                                layer.msg('删除失败', {icon: 0, time: 1000});
                                 setTimeout(function () {
                                     window.location.href = '/findDormitory';
                                 }, 2000);
                             }
-                        });
+                        })
                     });
-                });
-            });
-
-            /*删除*/
-            function member_del(obj, d_id) {
-                layer.confirm('确认要删除吗？', function () {
-                    $.ajax({
-                        url: '/deleteDormitory',
-                        type: "get",
-                        data: {"d_id": d_id},
-                        contentType: "application/json; charset=utf-8",
-                        success: function () {
-                            layer.msg('删除成功', {icon: 1, time: 1000});
-                            setTimeout(function () {
-                                window.location.href = '/findDormitory';
-                            }, 2000);
-                        },
-                        error: function () {
-                            layer.msg('删除失败', {icon: 0, time: 1000});
-                            setTimeout(function () {
-                                window.location.href = '/findDormitory';
-                            }, 2000);
-                        }
-                    })
-                });
+                }
             }
         </script>
 </body>

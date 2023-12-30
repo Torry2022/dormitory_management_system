@@ -3,21 +3,42 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.itheima.dao.StudentCleanDao">
 
+    <!--学生卫生信息查询信息-->
+    <resultMap type="com.itheima.po.StudentClean" id="cardAndInfo">
+        <id property="g_id" column="g_id"/>
+        <result property="s_studentid" column="s_studentid"/>
+        <result property="s_grade" column="s_grade"/>
+        <result property="create_time" column="create_time"/>
+        <result property="update_time" column="update_time"/>
+        <association property="student" javaType="com.itheima.po.Student">
+            <id property="s_id" column="s_id"/>
+            <result property="s_name" column="s_name"/>
+            <result property="s_classid" column="s_classid"/>
+            <result property="s_dormbuilding" column="s_dormbuilding"/>
+            <result property="s_dormitoryid" column="s_dormitoryid"/>
+        </association>
+    </resultMap>
+
     <!--分页查询-->
-    <select id="getStudentCleanList" parameterType="StudentClean" resultType="StudentClean">
-        select * from d_stgrade
+    <select id="getStudentCleanList" parameterType="StudentClean" resultMap="cardAndInfo">
+        SELECT stgrade.g_id as g_id,
+        stgrade.s_studentid as s_studentid,
+        student.s_name as s_name,
+        stgrade.s_grade as s_grade,
+        student.s_classid as s_classid,
+        student.s_dormbuilding as s_dormbuilding,
+        student.s_dormitoryid as s_dormitoryid,
+        stgrade.create_time as create_time,
+        stgrade.update_time as update_time
+        FROM d_stgrade stgrade
+        join d_student student
+        on stgrade.s_studentid = student.s_studentid
         <where>
-            <if test="s_studentid != null and s_studentid != 0">
-                and s_studentid like '%${s_studentid}%'
-            </if>
-            <if test="s_name != null and s_name != ''">
-                and s_name like '%${s_name}%'
-            </if>
-            <if test="s_dormitoryid != null and s_dormitoryid != 0">
-                and s_dormitoryid like '%${s_dormitoryid}%'
+            <if test="s_studentid != null and s_studentid != ''">
+                and stgrade.s_studentid like '%${s_studentid}%'
             </if>
         </where>
-        ORDER BY g_id asc
+        ORDER BY g_id
         limit #{currentPage},#{pageSize}
     </select>
 
@@ -26,21 +47,15 @@
         select count(g_id) from d_stgrade
         <where>
             <if test="s_studentid != null and s_studentid != 0">
-                and s_studentid like '%${s_studentid}%'
-            </if>
-            <if test="s_name != null and s_name != ''">
-                and s_name like '%${s_name}%'
-            </if>
-            <if test="s_dormitoryid != null and s_dormitoryid != 0">
-                and s_dormitoryid like '%${s_dormitoryid}%'
+                s_studentid like '%${s_studentid}%'
             </if>
         </where>
     </select>
 
     <!--添加宿舍卫生信息-->
     <insert id="addStudentClean" parameterType="StudentClean" keyProperty="g_id" useGeneratedKeys="true">
-        insert into d_stgrade (s_studentid, s_name, s_grade, s_classid, s_dormitoryid, create_time, update_time)
-        values (#{s_studentid}, #{s_name}, #{s_grade}, #{s_classid}, #{s_dormitoryid}, now(), now())
+        insert into d_stgrade (s_studentid, s_grade, create_time, update_time)
+        values (#{s_studentid}, #{s_grade}, now(), now())
     </insert>
 
     <!--通过id删除宿舍卫生信息-->
@@ -50,15 +65,24 @@
         where g_id = #{g_id}
     </delete>
 
-    <select id="findStudentCleanById" parameterType="Integer" resultType="StudentClean">
-        select *
-        from d_stgrade
-        where g_id = #{g_id}
-    </select>
-
-    <select id="getAll" resultType="StudentClean">
-        select *
-        from d_stgrade;
+    <select id="findStudentCleanById" parameterType="Integer" resultMap="cardAndInfo">
+        SELECT stgrade.g_id as g_id,
+        stgrade.s_studentid as s_studentid,
+        student.s_name as s_name,
+        stgrade.s_grade as s_grade,
+        student.s_classid as s_classid,
+        student.s_dormbuilding as s_dormbuilding,
+        student.s_dormitoryid as s_dormitoryid,
+        stgrade.create_time as create_time,
+        stgrade.update_time as update_time
+        FROM d_stgrade stgrade
+        join d_student student
+        on stgrade.s_studentid = student.s_studentid
+        <where>
+            <if test="g_id != null and g_id != 0">
+                and stgrade.g_id = ${g_id}
+            </if>
+        </where>
     </select>
 
     <!--修改宿舍卫生信息-->
@@ -68,34 +92,29 @@
             <if test="s_studentid != null and s_studentid != 0">
                 s_studentid=#{s_studentid},
             </if>
-            <if test="s_name != null and s_name != ''">
-                s_name=#{s_name},
-            </if>
             <if test="s_grade != null and s_grade != 0">
                 s_grade=#{s_grade},
             </if>
-            <if test="s_classid != null and s_classid != 0">
-                s_classid=#{s_classid},
-            </if>
-            <if test="s_dormitoryid != null and s_dormitoryid != 0">
-                s_dormitoryid=#{s_dormitoryid},
-            </if>
-            <if test="update_time !=  null">
+            <if test="update_time != null">
                 update_time = now(),
             </if>
         </set>
         where g_id = #{g_id}
     </update>
 
-    <!--宿舍卫生信息查询信息-->
-    <resultMap type="com.itheima.po.StudentClean" id="cardAndInfo2">
-        <id property="g_id" column="g_id"/>
-        <result property="s_studentid" column="s_studentid"/>
-        <result property="s_name" column="s_name"/>
-        <result property="s_grade" column="s_grade"/>
-        <result property="s_classid" column="s_classid"/>
-        <result property="s_dormitoryid" column="s_dormitoryid"/>
-    </resultMap>
-
-
+    <select id="getAll" resultMap="cardAndInfo">
+        SELECT stgrade.g_id           as g_id,
+               stgrade.s_studentid    as s_studentid,
+               student.s_name         as s_name,
+               stgrade.s_grade        as s_grade,
+               student.s_classid      as s_classid,
+               student.s_dormbuilding as s_dormbuilding,
+               student.s_dormitoryid  as s_dormitoryid,
+               stgrade.create_time    as create_time,
+               stgrade.update_time    as update_time
+        FROM d_stgrade stgrade
+                 join d_student student
+                      on stgrade.s_studentid = student.s_studentid
+        ORDER BY g_id
+    </select>
 </mapper>

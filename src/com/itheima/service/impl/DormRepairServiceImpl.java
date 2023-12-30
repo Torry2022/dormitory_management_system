@@ -19,7 +19,7 @@ public class DormRepairServiceImpl implements DormRepairService {
     //分页查询
     @Override
     public PageInfo<DormRepair> findPageInfo(Integer d_id, String d_dormbuilding, Integer pageIndex, Integer pageSize) {
-        PageInfo<DormRepair> pi = new PageInfo<DormRepair>();
+        PageInfo<DormRepair> pi = new PageInfo<>();
         pi.setPageIndex(pageIndex);
         pi.setPageSize(pageSize);
         //获取总条数

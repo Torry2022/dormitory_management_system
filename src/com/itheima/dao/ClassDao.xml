@@ -55,6 +55,7 @@
         from d_class
         where c_id = #{c_id}
     </select>
+    
     <!--修改班级信息-->
     <update id="updateClass" parameterType="Class">
         update d_class
@@ -88,6 +89,7 @@
             <result property="s_phone" column="s_phone"/>
             <result property="s_classid" column="s_classid"/>
             <result property="s_classname" column="s_classname"/>
+            <result property="s_dormbuilding" column="s_dormbuilding"/>
             <result property="s_dormitoryid" column="s_dormitoryid"/>
         </collection>
     </resultMap>
@@ -105,6 +107,7 @@
                student.s_phone       as s_phone,
                student.s_classid     as s_classid,
                student.s_classname   as s_classname,
+               student.s_dormbuilding as s_dormbuilding,
                student.s_dormitoryid as s_dormitoryid
         FROM d_class uclass
                  join d_student student

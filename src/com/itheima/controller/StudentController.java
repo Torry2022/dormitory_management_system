@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -59,8 +61,8 @@ public class StudentController {
      */
     @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
     @ResponseBody
-    public String addStudent(@RequestBody Student student) {
-        studentService.addStudent(student);
+    public String addStudent(@RequestBody Student stu) {
+        studentService.addStudent(stu);
         return "student_list";
     }
 
@@ -76,7 +78,7 @@ public class StudentController {
     @RequestMapping("/findStudentById")
     public String findStudentById(Integer s_id, HttpSession session) {
         Student s = studentService.findStudentById(s_id);
-        session.setAttribute("s", s);
+        session.setAttribute("stu", s);
         return "student_edit";
     }
 }

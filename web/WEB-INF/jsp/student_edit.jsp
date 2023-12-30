@@ -16,14 +16,14 @@
 <body>
     <div class="x-body">
         <form class="layui-form" action="/updateStudent" method="post" id="f_auto" accept-charset="UTF-8">
-            <input type="hidden" value="${sessionScope.s.s_id}" name="s_id" id="s_id"/>
+            <input type="hidden" value="${sessionScope.stu.s_id}" name="s_id" id="s_id"/>
             <div class="layui-form-item">
                 <label for="s_studentid" class="layui-form-label">
                     <span><i class="necessary">* </i>学号：</span>
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="s_studentid" name="s_studentid" lay-verify="required|number"
-                           lay-reqtext="学号不能为空" autocomplete="off" value="${sessionScope.s.s_studentid}"
+                           lay-reqtext="学号不能为空" autocomplete="off" value="${sessionScope.stu.s_studentid}"
                            class="layui-input" placeholder="请输入学号">
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="s_name" name="s_name" lay-verify="required" lay-reqtext="姓名不能为空"
-                           autocomplete="off" value="${sessionScope.s.s_name}" class="layui-input"
+                           autocomplete="off" value="${sessionScope.stu.s_name}" class="layui-input"
                            placeholder="请输入姓名">
                 </div>
             </div>
@@ -44,8 +44,8 @@
                     <span>性别：</span>
                 </label>
                 <div class="layui-input-inline">
-                    <input type="radio" name="s_sex" value="男" title="男" <c:if test="${sessionScope.s.s_sex == '男'}">checked="checked"</c:if>>
-                    <input type="radio" name="s_sex" value="女" title="女" <c:if test="${sessionScope.s.s_sex == '女'}">checked="checked"</c:if>>
+                    <input type="radio" name="s_sex" value="男" title="男" <c:if test="${sessionScope.stu.s_sex == '男'}">checked="checked"</c:if>>
+                    <input type="radio" name="s_sex" value="女" title="女" <c:if test="${sessionScope.stu.s_sex == '女'}">checked="checked"</c:if>>
                 </div>
             </div>
 
@@ -55,7 +55,7 @@
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="s_phone" name="s_phone" lay-verify="phone" autocomplete="new-pwd"
-                           value="${sessionScope.s.s_phone}" class="layui-input" placeholder="请输入电话">
+                           value="${sessionScope.stu.s_phone}" class="layui-input" placeholder="请输入电话">
                 </div>
             </div>
 
@@ -65,7 +65,7 @@
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="s_classid" name="s_classid" lay-verify="required|number"
-                           lay-reqtext="班级编号不能为空" autocomplete="off" value="${sessionScope.s.s_classid}"
+                           lay-reqtext="班级编号不能为空" autocomplete="off" value="${sessionScope.stu.s_classid}"
                            class="layui-input" placeholder="请输入班级编号">
                 </div>
             </div>
@@ -76,8 +76,19 @@
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="s_classname" name="s_classname" lay-verify="required"
-                           lay-reqtext="班级名不能为空" autocomplete="off" value="${sessionScope.s.s_classname}"
+                           lay-reqtext="班级名不能为空" autocomplete="off" value="${sessionScope.stu.s_classname}"
                            class="layui-input" placeholder="请输入班级名">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="s_dormitoryid" class="layui-form-label">
+                    <span><i class="necessary">* </i>宿舍楼：</span>
+                </label>
+                <div class="layui-input-inline">
+                    <input type="text" id="s_dormbuilding" name="s_dormbuilding" lay-verify="required"
+                           lay-reqtext="宿舍楼不能为空" autocomplete="off" value="${sessionScope.stu.s_dormbuilding}"
+                           class="layui-input" placeholder="请输入宿舍楼">
                 </div>
             </div>
 
@@ -87,7 +98,7 @@
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="s_dormitoryid" name="s_dormitoryid" lay-verify="required|number"
-                           lay-reqtext="宿舍编号不能为空" autocomplete="off" value="${sessionScope.s.s_dormitoryid}"
+                           lay-reqtext="宿舍编号不能为空" autocomplete="off" value="${sessionScope.stu.s_dormitoryid}"
                            class="layui-input" placeholder="请输入宿舍编号">
                 </div>
             </div>

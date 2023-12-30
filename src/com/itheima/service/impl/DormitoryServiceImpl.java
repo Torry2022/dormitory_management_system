@@ -23,7 +23,7 @@ public class DormitoryServiceImpl implements DormitoryService {
     //分页查询
     @Override
     public PageInfo<Dormitory> findPageInfo(String a_name, Integer s_dormitoryid, String d_dormbuilding, Integer pageIndex, Integer pageSize) {
-        PageInfo<Dormitory> pi = new PageInfo<Dormitory>();
+        PageInfo<Dormitory> pi = new PageInfo<>();
         pi.setPageIndex(pageIndex);
         pi.setPageSize(pageSize);
         //获取总条数

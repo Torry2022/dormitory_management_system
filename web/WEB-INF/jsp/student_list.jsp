@@ -56,7 +56,8 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label"><i class="necessary">* </i>学号：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_studentid" lay-verify="required|number" lay-reqtext="学号不能为空" class="layui-input"
+                            <input type="text" name="s_studentid" lay-verify="required|number"
+                                   lay-reqtext="学号不能为空" class="layui-input"
                                    autocomplete="off" placeholder="请输入学号">
                         </div>
                     </div>
@@ -64,7 +65,8 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label"><i class="necessary">* </i>姓名：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_name" lay-verify="required" lay-reqtext="姓名不能为空" class="layui-input"
+                            <input type="text" name="s_name" lay-verify="required" lay-reqtext="姓名不能为空"
+                                   class="layui-input"
                                    autocomplete="off" placeholder="请输入姓名">
                         </div>
                     </div>
@@ -88,7 +90,8 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label"><i class="necessary">* </i>班级编号：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_classid" lay-verify="required|number" lay-reqtext="班级编号不能为空" class="layui-input"
+                            <input type="text" name="s_classid" lay-verify="required|number"
+                                   lay-reqtext="班级编号不能为空" class="layui-input"
                                    autocomplete="off" placeholder="请输入班级编号">
                         </div>
                     </div>
@@ -96,15 +99,26 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label"><i class="necessary">* </i>班级名：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_classname" lay-verify="required" lay-reqtext="班级名不能为空" class="layui-input"
+                            <input type="text" name="s_classname" lay-verify="required" lay-reqtext="班级名不能为空"
+                                   class="layui-input"
                                    autocomplete="off" placeholder="请输入班级名">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><i class="necessary">* </i>宿舍楼：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="s_dormbuilding" lay-verify="required"
+                                   lay-reqtext="宿舍楼不能为空" class="layui-input"
+                                   autocomplete="off" placeholder="请输入宿舍楼">
                         </div>
                     </div>
 
                     <div class="layui-form-item">
                         <label class="layui-form-label"><i class="necessary">* </i>宿舍编号：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="s_dormitoryid" lay-verify="required|number" lay-reqtext="宿舍编号不能为空" class="layui-input"
+                            <input type="text" name="s_dormitoryid" lay-verify="required|number"
+                                   lay-reqtext="宿舍编号不能为空" class="layui-input"
                                    autocomplete="off" placeholder="请输入宿舍编号">
                         </div>
                     </div>
@@ -124,17 +138,18 @@
         <%--表格数据--%>
         <table class="layui-table">
             <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>学号</th>
-                    <th>姓名</th>
-                    <th>性别</th>
-                    <th>电话</th>
-                    <th>班级编号</th>
-                    <th>班级名</th>
-                    <th>宿舍编号</th>
-                    <th>操作</th>
-                </tr>
+            <tr>
+                <th>ID</th>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>电话</th>
+                <th>班级编号</th>
+                <th>班级名</th>
+                <th>宿舍楼</th>
+                <th>宿舍编号</th>
+                <th>操作</th>
+            </tr>
             </thead>
             <tbody>
             <c:forEach items="${pi.list}" var="student">
@@ -146,9 +161,10 @@
                     <td>${student.s_phone}</td>
                     <td>${student.s_classid}</td>
                     <td>${student.s_classname}</td>
+                    <td>${student.s_dormbuilding}</td>
                     <td>${student.s_dormitoryid}</td>
                     <td>
-                        <a title="编辑" href="/findStudentById?s_id=${student.s_id}">
+                        <a title="编辑" onclick="member_edit(this,'${student.s_id}')" href="javascript:;">
                             <i class="layui-icon">&#xe642;</i>
                         </a>
                         <a title="删除" onclick="member_del(this,'${student.s_id}')" href="javascript:;">
@@ -170,7 +186,7 @@
         </div>
     </div>
 
-    <script>        
+    <script>
         layui.config({
             base: 'layui_exts/',
         }).extend({
@@ -206,6 +222,7 @@
                             's_phone',
                             's_classid',
                             's_classname',
+                            's_dormbuilding',
                             's_dormitoryid'
                         ]);
 
@@ -218,10 +235,10 @@
                             s_phone: '电话',
                             s_classid: '班级编号',
                             s_classname: '班级名',
+                            s_dormbuilding: '宿舍楼',
                             s_dormitoryid: '宿舍编号'
                         });
 
-                        //意思是：A列40px，B列60px(默认)，C列120px，D、E、F等均未定义
                         var colConf = excel.makeColConfig({
                             'B': 90,
                             'C': 80,
@@ -254,62 +271,79 @@
 
             /*点击添加按钮*/
             $("#addStudentBtn").click(function () {
-                layer.open({
-                    type: 1,
-                    title: "添加学生",
-                    area: ["55%"],
-                    shadeClose: true,
-                    shade: 0.4,
-                    anim: 2,
-                    content: $("#addStudent").html()
-                });
-                $("#addStudentForm")[0].reset();
-                form.on('submit(addForm)', function (data) {
-                    var param = data.field;
+                if (!${empty sessionScope.s.s_id}) {
+                    layer.alert("对不起，您没有权限:(");
+                } else {
+                    layer.open({
+                        type: 1,
+                        title: "添加学生",
+                        area: ["55%"],
+                        shadeClose: true,
+                        shade: 0.4,
+                        anim: 2,
+                        content: $("#addStudent").html()
+                    });
+                    $("#addStudentForm")[0].reset();
+                    form.on('submit(addForm)', function (data) {
+                        var param = data.field;
+                        $.ajax({
+                            url: '/addStudent',
+                            type: "post",
+                            data: JSON.stringify(param),
+                            contentType: "application/json; charset=utf-8",
+                            success: function () {
+                                layer.msg('添加成功', {icon: 1, time: 2000});
+                                setTimeout(function () {
+                                    window.location.href = '/findStudent';
+                                }, 2000);
+                            },
+                            error: function () {
+                                layer.msg('添加失败', {icon: 0, time: 2000});
+                                setTimeout(function () {
+                                    window.location.href = '/findStudent';
+                                }, 2000);
+                            }
+                        });
+                    });
+                }
+            });
+        });
+
+        /*编辑*/
+        function member_edit(obj, s_id) {
+            if (!${empty sessionScope.s.s_id}) {
+                layer.alert("对不起，您没有权限:(");
+            } else {
+                window.location.href = '/findStudentById?s_id=' + s_id;
+            }
+        }
+        
+        /*删除*/
+        function member_del(obj, s_id) {
+            if (!${empty sessionScope.s.s_id}) {
+                layer.alert("对不起，您没有权限:(");
+            } else {
+                layer.confirm('确认要删除吗？', function () {
                     $.ajax({
-                        url: '/addStudent',
-                        type: "post",
-                        data: JSON.stringify(param),
+                        url: '/deleteStudent',
+                        type: "get",
+                        data: {"s_id": s_id},
                         contentType: "application/json; charset=utf-8",
                         success: function () {
-                            layer.msg('添加成功', {icon: 1, time: 2000});
+                            layer.msg('删除成功', {icon: 1, time: 1000});
                             setTimeout(function () {
                                 window.location.href = '/findStudent';
                             }, 2000);
                         },
                         error: function () {
-                            layer.msg('添加失败', {icon: 0, time: 2000});
+                            layer.msg('删除失败', {icon: 0, time: 1000});
                             setTimeout(function () {
                                 window.location.href = '/findStudent';
                             }, 2000);
                         }
-                    });
+                    })
                 });
-            });
-        });
-        
-        /*删除*/
-        function member_del(obj, s_id) {
-            layer.confirm('确认要删除吗？', function () {
-                $.ajax({
-                    url: '/deleteStudent',
-                    type: "get",
-                    data: {"s_id": s_id},
-                    contentType: "application/json; charset=utf-8",
-                    success: function () {
-                        layer.msg('删除成功', {icon: 1, time: 1000});
-                        setTimeout(function () {
-                            window.location.href = '/findStudent';
-                        }, 2000);
-                    },
-                    error: function () {
-                        layer.msg('删除失败', {icon: 0, time: 1000});
-                        setTimeout(function () {
-                            window.location.href = '/findStudent';
-                        }, 2000);
-                    }
-                })
-            });
+            }
         }
     </script>
 </body>

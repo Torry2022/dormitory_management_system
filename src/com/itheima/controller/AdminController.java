@@ -23,40 +23,6 @@ import java.util.List;
 public class AdminController {
     @Autowired
     private AdminService adminService;
-
-    /**
-     * 用户登录
-     * 将提交数据(username,password)写入Admin对象
-     */
-    @RequestMapping(value = "/login")
-    public String login(Admin admin, Model model, HttpSession session, HttpServletRequest request) throws NoSuchAlgorithmException {
-        if (admin.getA_username() == null) return "login";
-        //账号或密码为空
-        if (admin.getA_username().isEmpty() || admin.getA_password().isEmpty()) {
-            model.addAttribute("msg", "请输入用户名及密码！");
-            return "login";
-        }
-        //通过账号和密码查询用户
-        admin.setA_password(MD5Util.MD5EncodeUtf8(admin.getA_password()));
-        Admin ad = adminService.findAdmin(admin);
-        if (ad != null) {
-            session.setAttribute("ad", ad);
-            return "homepage";
-        }
-        //登录失败
-        model.addAttribute("msg", "用户名或密码错误，请重新登录！");
-        return "login";
-    }
-
-    /**
-     * 退出登录
-     */
-    @RequestMapping(value = "/logout")
-    public String logout(Admin admin, Model model, HttpSession session) {
-        session.invalidate();
-        return "login";
-    }
-
     /**
      * 分页查询
      */

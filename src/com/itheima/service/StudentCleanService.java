@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface StudentCleanService {
     //分页查询
-    PageInfo<StudentClean> findPageInfo(Integer s_studentid, String s_name, Integer s_dormitoryid, Integer pageIndex, Integer pageSize);
+    PageInfo<StudentClean> findPageInfo(Integer s_studentid, Integer pageIndex, Integer pageSize);
     
     //添加宿舍信息
     void addStudentClean(StudentClean studentclean);

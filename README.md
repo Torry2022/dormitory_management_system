@@ -17,13 +17,15 @@
 #### 注意事项
 - [x] 运行前先执行dormitory.sql文件中的SQL语句；
 - [x] 运行前修改db.properties文件中的值以连接自己的数据库；
-- [x] 执行SQL语句生成的管理员的密码均为123。
+- [x] 执行SQL语句生成的管理员及学生的密码均为123。
 <hr>
 
 #### 网页截图
-![dorm](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-12-28_17-56-23.png)
+![dorm](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-12-30_18-34-03.png)
 
-![dorm](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-12-28_17-56-36.png)
+![dorm](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-12-30_18-46-47.png)
+
+![dorm](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-12-30_18-43-46.png)
 
 ![dorm](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-12-14_09-44-23.png)
 

@@ -84,7 +84,7 @@
             </div>
 
             <div class="layui-form-item" id="btn_xg">
-                <button class="layui-btn" id="btn_on" lay-submit="" lay-filter="updateAdmin">
+                <button class="layui-btn" id="btn_on" lay-submit>
                     修改
                 </button>
             </div>

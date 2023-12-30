@@ -19,7 +19,7 @@ public class VisitorServiceImpl implements VisitorService {
     //分页查询
     @Override
     public PageInfo<Visitor> findPageInfo(String v_name, Integer v_phone, Integer pageIndex, Integer pageSize) {
-        PageInfo<Visitor> pi = new PageInfo<Visitor>();
+        PageInfo<Visitor> pi = new PageInfo<>();
         pi.setPageIndex(pageIndex);
         pi.setPageSize(pageSize);
         //获取总条数

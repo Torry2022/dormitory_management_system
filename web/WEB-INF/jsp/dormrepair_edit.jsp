@@ -18,28 +18,6 @@
         <form class="layui-form" id="f_auto" action="/updateDormRepair" method="post">
             <input type="hidden" value="${sessionScope.d.r_id}" name="r_id" id="r_id"/>
             <div class="layui-form-item">
-                <label for="d_dormitoryid" class="layui-form-label">
-                    <span><i class="necessary">* </i>宿舍编号</span>
-                </label>
-                <div class="layui-input-inline">
-                    <input type="text" id="d_dormitoryid" name="d_dormitoryid" lay-verify="required|number"
-                           lay-reqtext="宿舍编号不能为空" autocomplete="off" value="${sessionScope.d.d_dormitoryid}"
-                           class="layui-input" placeholder="请输入宿舍编号">
-                </div>
-            </div>
-
-            <div class="layui-form-item">
-                <label for="d_dormbuilding" class="layui-form-label">
-                    <span><i class="necessary">* </i>宿舍楼</span>
-                </label>
-                <div class="layui-input-inline">
-                    <input type="text" id="d_dormbuilding" name="d_dormbuilding" autocomplete="off"
-                           lay-verify="required" lay-reqtext="宿舍楼不能为空" value="${sessionScope.d.d_dormbuilding}"
-                           class="layui-input" placeholder="请输入宿舍楼">
-                </div>
-            </div>
-
-            <div class="layui-form-item">
                 <label for="r_name" class="layui-form-label">
                     <span>维修人员</span>
                 </label>
@@ -74,4 +52,3 @@
     </script>
 </body>
 </html>
-

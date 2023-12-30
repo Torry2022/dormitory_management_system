@@ -42,7 +42,7 @@
 
 .middle {
     position: relative;
-    height: 290px;
+    height: 300px;
     margin: 10px 0;
     border-bottom: 1px solid #dff0d8;
 }
@@ -50,7 +50,7 @@
 .middle > form > input {
     height: 40px;
     width: 290px;
-    margin: 20px 30px;
+    margin: 14px 30px;
     border: 1px solid #e0e0e0;
 }
 
@@ -72,7 +72,7 @@
     width: 40px;
     position: absolute;
     left: 35px;
-    top: 44px;
+    top: 38px;
     background: url("../images/J1.PNG") no-repeat;
     background-size: 70%;
 }
@@ -82,15 +82,46 @@
     width: 40px;
     position: absolute;
     left: 35px;
-    top: 124px;
+    top: 107px;
     background: url("../images/J2.PNG") no-repeat;
     background-size: 70%;
+}
+
+.middle > form > .s3 {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 35px;
+    top: 173px;
+    background: url("../images/J3.PNG") no-repeat;
+    background-size: 68%;
+    opacity: 41%;
 }
 
 .middle > form > .erro {
     color: red;
     font-size: 14px;
     margin-left: 31px;
+}
+
+.middle > form > .select {
+    margin: 10px 30px;
+}
+
+select {
+    padding: 3px 3px 3px 37px;
+    font-size: 13.5px;
+    border: 1px solid #e0e0e0;
+    color: rgb(134,134,134);
+    width: 290px;
+    height: 40px;
+}
+
+/* 设置下拉框中选项的样式 */
+option {
+    background-color: #fff;
+    color: rgb(134,134,134);
+    font-size: 14px;
 }
 
 .tail > a {

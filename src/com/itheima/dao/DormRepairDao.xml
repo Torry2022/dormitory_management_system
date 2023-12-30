@@ -59,12 +59,6 @@
     <update id="updateDormRepair" parameterType="DormRepair">
         update d_dormrepair
         <set>
-            <if test="d_dormitoryid != null and d_dormitoryid != 0">
-                d_dormitoryid = #{d_dormitoryid},
-            </if>
-            <if test="d_dormbuilding != null and d_dormbuilding != ''">
-                d_dormbuilding = #{d_dormbuilding},
-            </if>
             <if test="r_name != null and r_name != ''">
                 r_name = #{r_name},
             </if>
