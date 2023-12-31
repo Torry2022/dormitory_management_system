@@ -2,7 +2,7 @@ package com.itheima.po;
 
 public class Student {
     private Integer s_id;
-    private Integer s_studentid;
+    private String s_studentid;
     private String s_name;
     private String s_sex;
     private Long s_phone;
@@ -20,11 +20,11 @@ public class Student {
         this.s_id = s_id;
     }
 
-    public Integer getS_studentid() {
+    public String getS_studentid() {
         return s_studentid;
     }
 
-    public void setS_studentid(Integer s_studentid) {
+    public void setS_studentid(String s_studentid) {
         this.s_studentid = s_studentid;
     }
 

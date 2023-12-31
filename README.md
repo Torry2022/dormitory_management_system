@@ -31,6 +31,4 @@
 
 ![dorm](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-12-14_10-29-25.png)
 
-![dorm](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/1AXGMTCK_Q4R%25KHK63XMX17.png)
-
 ![dorm](https://sky-take-out-jzh.oss-cn-beijing.aliyuncs.com/Snipaste_2023-12-14_10-37-13.png)

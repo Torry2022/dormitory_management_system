@@ -213,37 +213,41 @@
 
             /*添加弹出框*/
             $("#addVisitorBtn").click(function () {
-                layer.open({
-                    type: 1,
-                    title: "添加访客",
-                    shadeClose: true,
-                    shade: 0.4,
-                    area: ["55%"],
-                    anim: 2,
-                    content: $("#addVisitor").html()
-                });
-                $("#addVisitorForm")[0].reset();
-                form.on('submit(addForm)', function (data) {
-                    var param = data.field;
-                    $.ajax({
-                        url: '/addVisitor',
-                        type: "post",
-                        data: JSON.stringify(param),
-                        contentType: "application/json; charset=utf-8",
-                        success: function () {
-                            layer.msg('添加成功', {icon: 1, time: 2000});
-                            setTimeout(function () {
-                                window.location.href = '/findVisitor';
-                            }, 2000);
-                        },
-                        error: function () {
-                            layer.msg('添加失败', {icon: 0, time: 2000});
-                            setTimeout(function () {
-                                window.location.href = '/findVisitor';
-                            }, 2000);
-                        }
+                if (!${empty sessionScope.s.s_id}) {
+                    layer.alert("对不起，您没有权限:(");
+                } else {
+                    layer.open({
+                        type: 1,
+                        title: "添加访客",
+                        shadeClose: true,
+                        shade: 0.4,
+                        area: ["55%"],
+                        anim: 2,
+                        content: $("#addVisitor").html()
                     });
-                });
+                    $("#addVisitorForm")[0].reset();
+                    form.on('submit(addForm)', function (data) {
+                        var param = data.field;
+                        $.ajax({
+                            url: '/addVisitor',
+                            type: "post",
+                            data: JSON.stringify(param),
+                            contentType: "application/json; charset=utf-8",
+                            success: function () {
+                                layer.msg('添加成功', {icon: 1, time: 2000});
+                                setTimeout(function () {
+                                    window.location.href = '/findVisitor';
+                                }, 2000);
+                            },
+                            error: function () {
+                                layer.msg('添加失败', {icon: 0, time: 2000});
+                                setTimeout(function () {
+                                    window.location.href = '/findVisitor';
+                                }, 2000);
+                            }
+                        });
+                    });
+                }
             });
         });
     </script>

@@ -121,11 +121,12 @@
                     <td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${di.create_time}"/></td>
                     <td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${di.update_time}"/></td>
                     <td>
-                        <a title="编辑" onclick="member_edit(this,'${di.r_id}',${di.d_dormitoryid})"
+                        <a title="编辑" onclick="member_edit(this,${di.r_id},${di.d_dormitoryid})"
                            href="javascript:;">
                             <i class="layui-icon">&#xe642;</i>
                         </a>
-                        <a title="删除" onclick="member_del(this,'${di.r_id}',${di.d_dormitoryid})" href="javascript:;">
+                        <a title="删除" onclick="member_del(this,${di.r_id},${di.d_dormitoryid})"
+                           href="javascript:;">
                             <i class="layui-icon">&#xe640;</i>
                         </a>
                     </td>
@@ -148,6 +149,13 @@
             }).extend({
                 excel: 'excel',
             });
+            
+            let myDormId, myBuilding;
+            if (!${empty sessionScope.s.s_id}) {
+                //只写这条赋值语句学生在维修界面还能点按钮，两条都写的话学生和管理员在维修界面的按钮全部失效
+                myDormId = ${sessionScope.s.s_dormitoryid};
+                <%--myBuilding = ${sessionScope.s.s_dormbuilding};--%>
+            }
 
             layui.use(['jquery', 'excel', 'form', 'layer', 'laydate'], function () {
                 var form = layui.form,
@@ -222,60 +230,23 @@
 
                 /*添加弹出框*/
                 $("#addDormRepairBtn").click(function () {
-                    //如果用户为学生
-                    if (!${empty sessionScope.s.s_id}) {
-                        layer.open({
-                            type: 1,
-                            title: "添加维修登记",
-                            area: ["55%"],
-                            shadeClose: true,
-                            shade: 0.4,
-                            anim: 2,
-                            content: $("#addDormRepair").html()
-                        });
-                        form.on('submit(addForm)', function (data) {
-                            let param = data.field;
-                            //当前用户的宿舍编号
-                            let myDormId = ${sessionScope.s.s_dormitoryid};
-                            //当前用户的宿舍楼，加上这句代码按钮就全部失效
-                            //let myBuilding = ${sessionScope.s.s_dormbuilding};
-                            
-                            if (data.s_dormitoryid != myDormId) {
-                                layer.alert("请正确输入自己宿舍所在宿舍楼及编号！");
-                            } else {
-                                $.ajax({
-                                    url: '/addDormRepair',
-                                    type: "post",
-                                    data: JSON.stringify(param),
-                                    contentType: "application/json; charset=utf-8",
-                                    success: function () {
-                                        layer.msg('添加成功', {icon: 1, time: 2000});
-                                        setTimeout(function () {
-                                            window.location.href = '/findDormRepair';
-                                        }, 2000);
-                                    },
-                                    error: function () {
-                                        layer.msg('添加失败', {icon: 0, time: 2000});
-                                        setTimeout(function () {
-                                            window.location.href = '/findDormRepair';
-                                        }, 2000);
-                                    }
-                                });
-                            }
-                        });
-                    } else {
-                        layer.open({
-                            type: 1,
-                            title: "添加维修登记",
-                            area: ["55%"],
-                            shadeClose: true,
-                            shade: 0.4,
-                            anim: 2,
-                            content: $("#addDormRepair").html()
-                        });
-                        $("#addDormRepairForm")[0].reset();
-                        form.on('submit(addForm)', function (data) {
-                            var param = data.field;
+                    layer.open({
+                        type: 1,
+                        title: "添加维修登记",
+                        area: ["55%"],
+                        shadeClose: true,
+                        shade: 0.4,
+                        anim: 2,
+                        content: $("#addDormRepair").html()
+                    });
+                    $("#addDormRepairForm")[0].reset();
+                    form.on('submit(addForm)', function (data) {
+                        var param = data.field;
+                        let id = param.d_dormitoryid;
+
+                        if (myDormId != undefined && myDormId != id) {
+                            layer.alert("请正确输入自己宿舍的宿舍楼及编号！");
+                        } else {
 
                             $.ajax({
                                 url: '/addDormRepair',
@@ -295,21 +266,15 @@
                                     }, 2000);
                                 }
                             });
-                        });
-                    }
-                })
-            });
+                        }
+                    });
+                });
+            })
 
             /*编辑*/
             function member_edit(obj, r_id, d_dormitoryid) {
-                if (!${empty sessionScope.s.s_id}) {
-                    let myDormId = ${sessionScope.s.s_dormitoryid};
-                    //写法不正常，但不这么写Layui按钮就无效
-                    if (myDormId != d_dormitoryid) {
-                        layer.alert("您只能修改自己宿舍的维修信息:(");
-                    } else {
-                        window.location.href = '/findDormRepairById?r_id=' + r_id;
-                    }
+                if (myDormId != undefined && myDormId != d_dormitoryid) {
+                    layer.alert("您只能修改自己宿舍的维修信息:(");
                 } else {
                     window.location.href = '/findDormRepairById?r_id=' + r_id;
                 }
@@ -317,33 +282,8 @@
 
             /*删除*/
             function member_del(obj, r_id, d_dormitoryid) {
-                if (!${empty sessionScope.s.s_id}) {
-                    let myDormId = ${sessionScope.s.s_dormitoryid};
-                    if (myDormId != d_dormitoryid) {
-                        layer.alert("您只能删除自己宿舍的维修信息:(");
-                    } else {
-                        //可能是Layui存在bug，不得不这么写，否则按钮全部失效
-                        layer.confirm('确认要删除吗？', function () {
-                            $.ajax({
-                                url: '/deleteDormRepair',
-                                type: "get",
-                                data: {"r_id": r_id},
-                                contentType: "application/json; charset=utf-8",
-                                success: function () {
-                                    layer.msg('删除成功', {icon: 1, time: 1000});
-                                    setTimeout(function () {
-                                        window.location.href = '/findDormRepair';
-                                    }, 2000);
-                                },
-                                error: function () {
-                                    layer.msg('删除失败', {icon: 0, time: 1000});
-                                    setTimeout(function () {
-                                        window.location.href = '/findDormRepair';
-                                    }, 2000);
-                                }
-                            })
-                        });
-                    }
+                if (myDormId != undefined && myDormId != d_dormitoryid) {
+                    layer.alert("您只能删除自己宿舍的维修信息:(");
                 } else {
                     layer.confirm('确认要删除吗？', function () {
                         $.ajax({

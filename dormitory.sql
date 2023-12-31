@@ -210,7 +210,7 @@ DROP TABLE IF EXISTS `d_stgrade`;
 CREATE TABLE `d_stgrade`
 (
     `g_id`        int(11)  NOT NULL AUTO_INCREMENT,
-    `s_studentid` int(11)  NOT NULL,
+    `s_studentid` varchar(20) NOT NULL,
     `s_grade`     int(11)  NOT NULL,
     `create_time` datetime NOT NULL,
     `update_time` datetime NOT NULL,

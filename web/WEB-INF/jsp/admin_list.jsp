@@ -71,7 +71,7 @@
                     <td>${ai.a_phone}</td>
                     <td>${ai.a_describe}</td>
                     <td class="td-manage">
-                        <a title="编辑" href="#">
+                        <a title="编辑" onclick="member_edit()" href="javascript:;">
                             <i class="layui-icon">&#xe642;</i>
                         </a>
                         <a title="删除" onclick="member_del(this,'${ai.a_id}')" href="javascript:;">
@@ -156,7 +156,7 @@
             </c:import>
         </div>
     </div>
-    
+
     <script>
         layui.config({
             base: 'layui_exts/',
@@ -233,36 +233,91 @@
 
             /*添加弹出框*/
             $("#addAdminBtn").click(function () {
-                var power = ${sessionScope.ad.a_power};
+                if (!${empty sessionScope.s.s_id}) {
+                    layer.alert("对不起，您没有权限:(");
+                } else {
+                    let power = ${sessionScope.ad.a_power};
+                    if (power != 1) {
+                        layer.alert("对不起，您没有权限:(");
+                    } else {
+                        layer.open({
+                            type: 1,
+                            title: "添加管理员",
+                            area: ["55%"],
+                            shadeClose: true,
+                            shade: 0.4,
+                            anim: 2,
+                            content: $("#addAdmin").html()
+                        });
+                        $("#addAdminForm")[0].reset();
+                        form.on('submit(addForm)', function (data) {
+                            var param = data.field;
+                            $.ajax({
+                                url: '/addAdmin',
+                                type: "post",
+                                data: JSON.stringify(param),
+                                contentType: "application/json; charset=utf-8",
+                                success: function (da) {
+                                    console.log(da);
+                                    layer.msg('添加成功', {icon: 1, time: 2000});
+                                    setTimeout(function () {
+                                        window.location.href = '/findAdmin';
+                                    }, 2000);
+                                },
+                                error: function () {
+                                    layer.msg('添加失败', {icon: 0, time: 2000});
+                                    setTimeout(function () {
+                                        window.location.href = '/findAdmin';
+                                    }, 2000);
+                                }
+                            });
+                        });
+                    }
+                }
+            });
+        });
+
+        /*编辑*/
+        function member_edit() {
+            if (!${empty sessionScope.s.s_id}) {
+                layer.alert("对不起，您没有权限:(");
+            } else {
+                let power = ${sessionScope.ad.a_power};
+                let id = ${sessionScope.ad.a_id};
                 if (power != 1) {
                     layer.alert("对不起，您没有权限:(");
                 } else {
-                    layer.open({
-                        type: 1,
-                        title: "添加管理员",
-                        area: ["55%"],
-                        shadeClose: true,
-                        shade: 0.4,
-                        anim: 2,
-                        content: $("#addAdmin").html()
-                    });
-                    $("#addAdminForm")[0].reset();
-                    form.on('submit(addForm)', function (data) {
-                        var param = data.field;
+                    window.location.href = "/findAdminById?a_id=" + id;
+                }
+            }
+        }
+
+        /*删除*/
+        function member_del(obj, a_id) {
+            if (!${empty sessionScope.s.s_id}) {
+                layer.alert("对不起，您没有权限:(");
+            } else {
+                let power = ${sessionScope.ad.a_power};
+                let id = ${sessionScope.ad.a_id};
+                if (power != 1) {
+                    layer.alert("对不起，您没有权限:(");
+                } else if (id == a_id) {
+                    layer.alert("不能删除自己:(");
+                } else {
+                    layer.confirm('确认要删除吗？', function () {
                         $.ajax({
-                            url: '/addAdmin',
-                            type: "post",
-                            data: JSON.stringify(param),
+                            url: '/deleteAdmin',
+                            type: "get",
+                            data: {"a_id": a_id},
                             contentType: "application/json; charset=utf-8",
-                            success: function (da) {
-                                console.log(da);
-                                layer.msg('添加成功', {icon: 1, time: 2000});
+                            success: function () {
+                                layer.msg('删除成功', {icon: 1, time: 1000});
                                 setTimeout(function () {
                                     window.location.href = '/findAdmin';
                                 }, 2000);
                             },
                             error: function () {
-                                layer.msg('添加失败', {icon: 0, time: 2000});
+                                layer.msg('删除失败', {icon: 0, time: 1000});
                                 setTimeout(function () {
                                     window.location.href = '/findAdmin';
                                 }, 2000);
@@ -270,50 +325,6 @@
                         });
                     });
                 }
-            });
-        });
-
-        /*编辑*/
-        $(".updateEdit").click(function () {
-            let myid = $(this).parent("td").parent("tr").children(".myid").html();
-            let power = ${sessionScope.ad.a_power};
-            //判断
-            if (power != 1) {
-                layer.alert("对不起，您没有权限:(");
-            } else {
-                window.location.href = "/findAdminById?a_id=" + myid;
-            }
-        });
-
-        /*删除*/
-        function member_del(obj, a_id) {
-            let power = ${sessionScope.ad.a_power};
-            let id = ${sessionScope.ad.a_id};
-            if (power != 1) {
-                layer.alert("对不起，您没有权限:(");
-            } else if (id == a_id) {
-                layer.alert("不能删除自己:(");
-            } else {
-                layer.confirm('确认要删除吗？', function () {
-                    $.ajax({
-                        url: '/deleteAdmin',
-                        type: "get",
-                        data: {"a_id": a_id},
-                        contentType: "application/json; charset=utf-8",
-                        success: function () {
-                            layer.msg('删除成功', {icon: 1, time: 1000});
-                            setTimeout(function () {
-                                window.location.href = '/findAdmin';
-                            }, 2000);
-                        },
-                        error: function () {
-                            layer.msg('删除失败', {icon: 0, time: 1000});
-                            setTimeout(function () {
-                                window.location.href = '/findAdmin';
-                            }, 2000);
-                        }
-                    });
-                });
             }
         }
     </script>

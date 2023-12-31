@@ -26,7 +26,7 @@ public class LoginController {
      * 用户登录
      */
     @RequestMapping(value = "/login")
-    public String login(@RequestParam String username, @RequestParam String password, @RequestParam String role, Model model, HttpSession session, HttpServletRequest request) throws NoSuchAlgorithmException {
+    public String login(String username, String password, String role, Model model, HttpSession session, HttpServletRequest request) throws NoSuchAlgorithmException {
         //空参
         if (username == null) return "login";
         //账号或密码为空
@@ -42,12 +42,12 @@ public class LoginController {
         }
 
         if ("身份".equals(role)) {
-            model.addAttribute("msg", "请选择登录身份");
+            model.addAttribute("msg", "请选择登录身份！");
             return "login";
         } else if ("学生".equals(role)) {
             Student student = new Student();
             if (!username.matches("\\d+")) model.addAttribute("msg", "请输入正确格式的学号！");
-            student.setS_studentid(Integer.valueOf(username));
+            student.setS_studentid(username);
             student.setS_password(MD5Util.MD5EncodeUtf8(password));
             Student s = studentService.findStudent(student);
             if (s != null) {
